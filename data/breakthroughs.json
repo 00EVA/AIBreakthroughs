@@ -6,24 +6,57 @@
   "era": "foundations",
   "title": "First mathematical model of a neural network",
   "org": "University of Illinois / MIT",
-  "people": ["Warren McCulloch", "Walter Pitts"],
+  "people": [
+   "Warren McCulloch",
+   "Walter Pitts"
+  ],
   "paper": "\"A Logical Calculus of the Ideas Immanent in Nervous Activity\", Bulletin of Mathematical Biophysics",
   "url": "https://doi.org/10.1007/BF02478259",
-  "what_it_broke": "Proved that networks of simple binary neurons can compute any logical function — the founding result of neural computation. Thought before: brains were beyond mathematics.",
+  "what_it_broke": "Proved that networks of simple binary neurons can compute any logical function \u2014 the founding result of neural computation. Thought before: brains were beyond mathematics.",
   "why_impossible": "Nobody believed thought could be reduced to arithmetic on switches. This paper said it could, in 5 pages.",
   "category": "theory",
   "impact": 9,
   "surprise": 8,
-  "tags": ["neural-networks", "theory", "neurons"]
+  "tags": [
+   "neural-networks",
+   "theory",
+   "neurons"
+  ]
+ },
+ {
+  "id": "1950-shannon-chess-program",
+  "year": 1950,
+  "date": "1950-03-01",
+  "era": "foundations",
+  "title": "Shannon's chess paper \u2014 how a computer COULD play, before any did",
+  "org": "Bell Labs",
+  "people": [
+   "Claude Shannon"
+  ],
+  "paper": "\"Programming a Computer for Playing Chess\", Philosophical Magazine",
+  "url": "https://doi.org/10.1080/14786445008521796",
+  "what_it_broke": "First rigorous design for a game-playing program: minimax search, evaluation functions, quiescence search, even type-A vs type-B strategies that AlphaZero later resolved. Chess became THE benchmark for 47 years.",
+  "why_impossible": "Computers had barely been invented; Shannon estimated brute-force search needed 10^120 evaluations and proposed selective search instead \u2014 inventing heuristic search as a discipline.",
+  "category": "theory",
+  "impact": 8,
+  "surprise": 6,
+  "tags": [
+   "chess",
+   "search",
+   "shannon",
+   "minimax"
+  ]
  },
  {
   "id": "1950-turing-test",
   "year": 1950,
   "date": "1950-10-01",
   "era": "foundations",
-  "title": "Turing Test — 'Can machines think?' gets an operational answer",
+  "title": "Turing Test \u2014 'Can machines think?' gets an operational answer",
   "org": "University of Manchester",
-  "people": ["Alan Turing"],
+  "people": [
+   "Alan Turing"
+  ],
   "paper": "\"Computing Machinery and Intelligence\", Mind",
   "url": "https://doi.org/10.1093/mind/LIX.236.433",
   "what_it_broke": "Replaced the unanswerable question 'can machines think?' with a measurable imitation game. Founded machine intelligence as an empirical discipline and predicted machine learning from scratch.",
@@ -31,33 +64,122 @@
   "category": "theory",
   "impact": 10,
   "surprise": 7,
-  "tags": ["philosophy", "turing", "benchmark"]
+  "tags": [
+   "philosophy",
+   "turing",
+   "benchmark"
+  ]
+ },
+ {
+  "id": "1951-snarc-first-neural-machine",
+  "year": 1951,
+  "date": "1951-06-01",
+  "era": "foundations",
+  "title": "SNARC \u2014 first neural network MACHINE, built from vacuum tubes & B-24 bomb parts",
+  "org": "Princeton / Harvard",
+  "people": [
+   "Marvin Minsky",
+   "Dean Edmonds"
+  ],
+  "paper": "PhD dissertation \"Theory of Neural-Analog Reinforcement Systems and its Application to the Brain-Model Problem\"",
+  "url": "https://en.wikipedia.org/wiki/SNARC",
+  "what_it_broke": "First artificial neural network implemented in hardware: 40 neurons that LEARNED via hebbian reinforcement to run a maze. Physical proof that McCulloch-Pitts theory could exist as a machine.",
+  "why_impossible": "Built scavenged from surplus B-24 bomber parts because nobody would fund 'thinking machines'; the idea of hardware that rewired itself was considered science fiction.",
+  "category": "hardware-milestone",
+  "impact": 6,
+  "surprise": 7,
+  "tags": [
+   "neural-networks",
+   "hardware",
+   "reinforcement"
+  ]
+ },
+ {
+  "id": "1956-logic-theorist",
+  "year": 1956,
+  "date": "1956-01-01",
+  "era": "symbolic-dawn",
+  "title": "Logic Theorist \u2014 first AI program proves theorems like a mathematician",
+  "org": "RAND Corporation / Carnegie",
+  "people": [
+   "Allen Newell",
+   "Herbert Simon",
+   "Cliff Shaw"
+  ],
+  "paper": "\"Report on a general problem solving program\" (presented at Dartmouth summer)",
+  "url": "https://doi.org/10.1016/S0049-237X(09)70105-6",
+  "what_it_broke": "Proved 38 of 52 theorems from Whitehead & Russell's Principia Mathematica \u2014 finding one MORE elegant proof than Russell's own. First program reasoning in a formal domain humans consider intellectual.",
+  "why_impossible": "Russell's masterpiece was the summit of human logic; a machine re-deriving (and improving!) it in 1956 suggested minds were mechanisms after all.",
+  "category": "symbolic-ai",
+  "impact": 8,
+  "surprise": 8,
+  "tags": [
+   "symbolic-ai",
+   "theorem-proving",
+   "newell",
+   "simon"
+  ]
  },
  {
   "id": "1956-dartmouth-workshop",
   "year": 1956,
   "date": "1956-08-01",
   "era": "foundations",
-  "title": "Dartmouth Workshop — 'Artificial Intelligence' is named and founded as a field",
+  "title": "Dartmouth Workshop \u2014 'Artificial Intelligence' is named and founded as a field",
   "org": "Dartmouth College",
-  "people": ["John McCarthy", "Marvin Minsky", "Claude Shannon", "Nathaniel Rochester"],
+  "people": [
+   "John McCarthy",
+   "Marvin Minsky",
+   "Claude Shannon",
+   "Nathaniel Rochester"
+  ],
   "paper": "Dartmouth Summer Research Project proposal (1955)",
   "url": "https://dl.acm.org/doi/10.1145/365153.365168",
   "what_it_broke": "Coined the term 'artificial intelligence' and set the research agenda for the next 60 years: language, neural nets, self-improvement, abstraction.",
-  "why_impossible": "The proposal claimed 'every aspect of learning or intelligence can in principle be so precisely described that a machine can simulate it' — a wildly bold claim for 1955 hardware.",
+  "why_impossible": "The proposal claimed 'every aspect of learning or intelligence can in principle be so precisely described that a machine can simulate it' \u2014 a wildly bold claim for 1955 hardware.",
   "category": "field-founding",
   "impact": 10,
   "surprise": 6,
-  "tags": ["history", "field-founder"]
+  "tags": [
+   "history",
+   "field-founder"
+  ]
+ },
+ {
+  "id": "1957-general-problem-solver-lineage",
+  "year": 1957,
+  "date": "1957-12-01",
+  "era": "symbolic-dawn",
+  "title": "GPS \u2014 'General Problem Solver': means-ends analysis as universal reasoning",
+  "org": "RAND / Carnegie Institute of Technology",
+  "people": [
+   "Allen Newell",
+   "J.C. Shaw",
+   "Herbert Simon"
+  ],
+  "paper": "\"Empirical explorations of the logic theory machine: a case study in heuristic\" / GPS papers 1957\u201359",
+  "url": "https://doi.org/10.1145/1455567.1455571",
+  "what_it_broke": "Separated GENERAL problem-solving strategy (means-ends analysis, difference reduction) from domain knowledge \u2014 the founding bet that cognition is search through problem spaces. Direct ancestor of SOAR and cognitive architectures.",
+  "why_impossible": "Claiming ONE algorithm could solve puzzles, prove logic AND convert symbolic integrals implied intelligence might be one trick \u2014 heresy then, arguably vindicated later.",
+  "category": "symbolic-ai",
+  "impact": 7,
+  "surprise": 7,
+  "tags": [
+   "symbolic-ai",
+   "problem-solving",
+   "cognitive-architecture"
+  ]
  },
  {
   "id": "1958-perceptron",
   "year": 1958,
   "date": "1958-07-08",
   "era": "early-hype",
-  "title": "Perceptron — first learning machine that trains itself",
+  "title": "Perceptron \u2014 first learning machine that trains itself",
   "org": "Cornell Aeronautical Laboratory",
-  "people": ["Frank Rosenblatt"],
+  "people": [
+   "Frank Rosenblatt"
+  ],
   "paper": "\"The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain\", Psychological Review",
   "url": "https://doi.org/10.1037/h0042519",
   "what_it_broke": "First algorithm where a machine adjusts its own weights from labeled examples instead of being programmed. Hardware Mark I perceptron learned to recognize images.",
@@ -65,7 +187,59 @@
   "category": "learning-algorithm",
   "impact": 8,
   "surprise": 7,
-  "tags": ["neural-networks", "supervised-learning"]
+  "tags": [
+   "neural-networks",
+   "supervised-learning"
+  ]
+ },
+ {
+  "id": "1958-lisp-language",
+  "year": 1958,
+  "date": "1958-11-01",
+  "era": "symbolic-dawn",
+  "title": "LISP \u2014 the language AI thought in for 40 years",
+  "org": "MIT",
+  "people": [
+   "John McCarthy"
+  ],
+  "paper": "\"Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I\", CACM 1960",
+  "url": "https://doi.org/10.1145/367177.367199",
+  "what_it_broke": "Invented garbage collection, recursion as first-class control, code-as-data (homoiconicity), dynamic typing \u2014 the entire substrate for symbolic AI, expert systems shells, and eventually ideas absorbed into every modern language.",
+  "why_impossible": "FORTRAN-style numeric computing was the paradigm; treating symbols and programs themselves as manipulable data required imagining computation differently.",
+  "category": "infrastructure-commons",
+  "impact": 9,
+  "surprise": 7,
+  "tags": [
+   "lisp",
+   "programming-languages",
+   "symbolic-ai",
+   "garbage-collection"
+  ]
+ },
+ {
+  "id": "1959-samuel-checkers-selflearning",
+  "year": 1959,
+  "date": "1959-03-01",
+  "era": "early-hype",
+  "title": "Samuel's checkers program learns from playing itself \u2014 'machine learning' gets its name",
+  "org": "IBM",
+  "people": [
+   "Arthur Samuel"
+  ],
+  "paper": "\"Some Studies in Machine Learning Using the Game of Checkers\", IBM Journal of Research and Development",
+  "url": "https://doi.org/10.1147/rd.33.0210",
+  "what_it_broke": "Program improved beyond its own programmer by self-play + rote memorization + evaluation learning on 70KB of memory \u2014 beating Samuel himself. Coined the term 'machine learning'.",
+  "why_impossible": "The dominant view was programs only do what they're told; a program exceeding its creator's own skill contradicted the definition of programming.",
+  "category": "reinforcement-learning",
+  "impact": 8,
+  "surprise": 8,
+  "tags": [
+   "checkers",
+   "self-play",
+   "machine-learning",
+   "samuel",
+   "ibm"
+  ]
  },
  {
   "id": "1965-deep-learning-foundations",
@@ -74,7 +248,10 @@
   "era": "quiet-decades",
   "title": "First deep multilayer network trained by gradient descent (GMDH)",
   "org": "Institute of Cybernetics, Kyiv",
-  "people": ["Ivakhnenko", "Lapa"],
+  "people": [
+   "Ivakhnenko",
+   "Lapa"
+  ],
   "paper": "\"Cybernetic Predicting Devices\"",
   "url": "https://en.wikipedia.org/wiki/Group_method_of_data_handling",
   "what_it_broke": "The first working deep-learning method: layer-by-layer training of arbitrarily deep networks, 40+ years before 'deep learning' was cool. Often called the deepest buried milestone in AI.",
@@ -82,24 +259,84 @@
   "category": "learning-algorithm",
   "impact": 6,
   "surprise": 9,
-  "tags": ["deep-learning", "overlooked"]
+  "tags": [
+   "deep-learning",
+   "overlooked"
+  ]
+ },
+ {
+  "id": "1965-dendral-expert-system-begins",
+  "year": 1965,
+  "date": "1965-01-01",
+  "era": "symbolic-dawn",
+  "title": "DENDRAL \u2014 first expert system: knowledge beats general reasoning",
+  "org": "Stanford",
+  "people": [
+   "Edward Feigenbaum",
+   "Joshua Lederberg",
+   "Bruce Buchanan"
+  ],
+  "paper": "\"On generality and problem solving: A case study using the DENDRAL program\", Machine Intelligence (1970)",
+  "url": "https://dl.acm.org/doi/10.5555/1095642.1095666",
+  "what_it_broke": "Deduced molecular structure from mass spectrometry as well as PhD chemists \u2014 launching the knowledge-is-power paradigm: narrow + deep beats broad + shallow. Expert systems industry grew directly from it.",
+  "why_impossible": "General Problem Solver orthodoxy said generality was the goal; DENDRAL won by being deliberately narrow, forcing the field to accept domain knowledge as the fuel of performance.",
+  "category": "expert-systems",
+  "impact": 7,
+  "surprise": 6,
+  "tags": [
+   "expert-systems",
+   "chemistry",
+   "feigenbaum",
+   "knowledge-engineering"
+  ]
  },
  {
   "id": "1966-eliza",
   "year": 1966,
   "date": "1966-01-01",
   "era": "early-hype",
-  "title": "ELIZA — first chatbot; users confide in a pattern matcher",
+  "title": "ELIZA \u2014 first chatbot; users confide in a pattern matcher",
   "org": "MIT",
-  "people": ["Joseph Weizenbaum"],
-  "paper": "\"ELIZA — A Computer Program For the Study of Natural Language Communication Between Man And Machine\", CACM",
+  "people": [
+   "Joseph Weizenbaum"
+  ],
+  "paper": "\"ELIZA \u2014 A Computer Program For the Study of Natural Language Communication Between Man And Machine\", CACM",
   "url": "https://doi.org/10.1145/365153.365168",
-  "what_it_broke": "First program to hold a conversation good enough that humans poured their hearts out to it — the 'ELIZA effect' of over-attributing understanding is still named after this.",
+  "what_it_broke": "First program to hold a conversation good enough that humans poured their hearts out to it \u2014 the 'ELIZA effect' of over-attributing understanding is still named after this.",
   "why_impossible": "Weizenbaum was horrified: his secretary asked him to leave the room so she could chat privately with ~200 lines of keyword matching.",
   "category": "nlp-demo",
   "impact": 7,
   "surprise": 8,
-  "tags": ["chatbot", "nlp", "human-computer-interaction"]
+  "tags": [
+   "chatbot",
+   "nlp",
+   "human-computer-interaction"
+  ]
+ },
+ {
+  "id": "1969-perceptrons-book-freeze",
+  "year": 1969,
+  "date": "1969-11-01",
+  "era": "winters-and-experts",
+  "title": "'Perceptrons' proves single-layer limits \u2014 neural funding freezes for 15 years",
+  "org": "MIT",
+  "people": [
+   "Marvin Minsky",
+   "Seymour Papert"
+  ],
+  "paper": "\"Perceptrons: An Introduction to Computational Geometry\", MIT Press",
+  "url": "https://mitpress.mit.edu/9780262630221/perceptrons/",
+  "what_it_broke": "Formally showed perceptrons cannot learn XOR or parity \u2014 mathematically airtight for the SINGLE layer everyone used. Combined with Minsky's authority, killed neural-net research funding almost overnight.",
+  "why_impossible": "The irony: backpropagation (1970-86) solved multilayer training, but the book's shadow was so long the fix went unfunded for a generation. The most consequential negative result in CS history.",
+  "category": "winter-event",
+  "impact": 8,
+  "surprise": 5,
+  "tags": [
+   "neural-networks",
+   "ai-winter",
+   "perceptrons",
+   "negative-result"
+  ]
  },
  {
   "id": "1970-backprop-vision",
@@ -108,24 +345,233 @@
   "era": "quiet-decades",
   "title": "Backpropagation through arbitrary networks envisioned (Linnainmaa)",
   "org": "University of Helsinki",
-  "people": ["Seppo Linnainmaa"],
+  "people": [
+   "Seppo Linnainmaa"
+  ],
   "paper": "\"The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the local rounding errors\", Master's thesis",
   "url": "https://en.wikipedia.org/wiki/Backpropagation#History",
-  "what_it_broke": "Reverse-mode automatic differentiation — the exact mechanism inside every deep net trained today — invented as numerical analysis, not AI.",
+  "what_it_broke": "Reverse-mode automatic differentiation \u2014 the exact mechanism inside every deep net trained today \u2014 invented as numerical analysis, not AI.",
   "why_impossible": "It sat unused for ML for 16 years because nobody had networks worth differentiating.",
   "category": "learning-algorithm",
   "impact": 9,
   "surprise": 9,
-  "tags": ["backpropagation", "autodiff", "overlooked"]
+  "tags": [
+   "backpropagation",
+   "autodiff",
+   "overlooked"
+  ]
+ },
+ {
+  "id": "1971-shrdlu-micro worlds",
+  "year": 1971,
+  "date": "1971-01-01",
+  "era": "symbolic-dawn",
+  "title": "SHRDLU \u2014 natural language understanding inside a blocks world",
+  "org": "MIT AI Lab",
+  "people": [
+   "Terry Winograd"
+  ],
+  "paper": "\"Procedures as a Representation for Data in a Computer Program for Understanding Natural Language\", MIT AI TR-235",
+  "url": "https://dspace.mit.edu/handle/1721.1/7092",
+  "what_it_broke": "Full dialogue system resolving pronouns, context, and even 'Find a block which is taller than the one you are holding and put it into the box' \u2014 with planning, execution, and explanation. Peak symbolic-NLP demo.",
+  "why_impossible": "It seemed like understanding itself had been achieved \u2014 until nobody could extend it past the toy blocks world, a lesson about brittleness the field took 50 years to digest properly.",
+  "category": "nlp-demo",
+  "impact": 7,
+  "surprise": 8,
+  "tags": [
+   "nlp",
+   "dialogue",
+   "micro-worlds",
+   "winograd"
+  ]
+ },
+ {
+  "id": "1972-mycin-medical-expert",
+  "year": 1972,
+  "date": "1972-06-01",
+  "era": "winters-and-experts",
+  "title": "MYCIN \u2014 diagnoses blood infections better than junior doctors (and explains itself)",
+  "org": "Stanford",
+  "people": [
+   "Edward Shortliffe",
+   "Bruce Buchanan",
+   "Stanley Cohen"
+  ],
+  "paper": "\"Computer-based consultations in clinical therapeutics: explanation and rule acquisition\", ACM TOMS (MYCIN line)",
+  "url": "https://doi.org/10.1145/355603.355606",
+  "what_it_broke": "~600 certainty-factor rules achieving 69% acceptable-therapy vs 65% for faculty physicians \u2014 PLUS the MYCIN Explanatory subsystem: first system that justified its advice ('WHY did you ask that?').",
+  "why_impossible": "Medical expertise was assumed irreproducible outside brains; a rule-base matching physicians forced medicine to confront software diagnosis decades before modern medical AI.",
+  "category": "expert-systems",
+  "impact": 7,
+  "surprise": 7,
+  "tags": [
+   "expert-systems",
+   "medicine",
+   "explainability",
+   "certainty-factors"
+  ]
+ },
+ {
+  "id": "1972-prolog-invented",
+  "year": 1972,
+  "date": "1972-09-01",
+  "era": "symbolic-dawn",
+  "title": "PROLOG \u2014 logic programming: declare facts, get inference free",
+  "org": "Universit\u00e9 d'Aix-Marseille / Edinburgh",
+  "people": [
+   "Alain Colmerauer",
+   "Philippe Roussel",
+   "Robert Kowalski"
+  ],
+  "paper": "\"Un programme de d\u00e9monstration de th\u00e9or\u00e8mes\" / Colmerauer & Roussel birth of Prolog (technical report 1996 retrospective)",
+  "url": "https://doi.org/10.1145/248051.248055",
+  "what_it_broke": "Programming as logical specification: backtracking unification engine executes Horn clauses automatically. Became Japan's Fifth Generation bet and still runs scheduling/NLP/expert systems today.",
+  "why_impossible": "Imperative computing dominated; the idea that stating WHAT is true suffices without writing HOW felt like getting deduction for free.",
+  "category": "symbolic-ai",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "prolog",
+   "logic-programming",
+   "fifth-generation"
+  ]
+ },
+ {
+  "id": "1973-lighthill-report-winter-one",
+  "year": 1973,
+  "date": "1973-07-01",
+  "era": "winters-and-experts",
+  "title": "Lighthill Report triggers the FIRST AI WINTER",
+  "org": "UK Science Research Council",
+  "people": [
+   "James Lighthill"
+  ],
+  "paper": "\"Artificial Intelligence: A General Survey\" (the Lighthill Report)",
+  "url": "https://en.wikipedia.org/wiki/Lighthill_report",
+  "what_it_broke": "Official UK verdict that AI failed its 'combinatorial explosion' promises \u2014 funding slashed across Britain, ending the golden age and exporting researchers. The field learned hype cycles have teeth.",
+  "why_impossible": "Not impossible but inevitable in hindsight: grandiose claims (Simon: 'machines will do any work a man can do' by 1985) met reality; the report weaponized the gap. Winter #1 lasted until expert-system money arrived.",
+  "category": "winter-event",
+  "impact": 7,
+  "surprise": 4,
+  "tags": [
+   "ai-winter",
+   "funding-collapse",
+   "lighthill",
+   "history"
+  ]
+ },
+ {
+  "id": "1980-neocognitron-cnn-vision",
+  "year": 1980,
+  "date": "1980-10-01",
+  "era": "connectionist-revival",
+  "title": "Neocognitron \u2014 hierarchical visual architecture straight from neuroscience",
+  "org": "NHK Science & Technology Research Laboratories, Tokyo",
+  "people": [
+   "Kunihiko Fukushima"
+  ],
+  "paper": "\"Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position\", Biological Cybernetics",
+  "url": "https://doi.org/10.1007/BF00344251",
+  "what_it_broke": "Alternating S-cells/C-cells mirroring Hubel & Wiesel's simple/complex cells gave translation-invariant recognition \u2014 the exact blueprint convnets later followed. LeCun credits it explicitly.",
+  "why_impossible": "Built in Japan with no training algorithm (self-organized, unsupervised) and ignored by the West during winter; the right architecture existed BEFORE the learning rule to train it.",
+  "category": "architecture",
+  "impact": 7,
+  "surprise": 8,
+  "tags": [
+   "cnn",
+   "vision",
+   "fukushima",
+   "overlooked"
+  ]
+ },
+ {
+  "id": "1982-hopfield-networks",
+  "year": 1982,
+  "date": "1982-04-01",
+  "era": "connectionist-revival",
+  "title": "Hopfield Networks \u2014 physics makes neural nets respectable again",
+  "org": "Caltech",
+  "people": [
+   "John Hopfield"
+  ],
+  "paper": "\"Neural networks and physical systems with emergent collective computational abilities\", PNAS",
+  "url": "https://doi.org/10.1073/pnas.79.8.2554",
+  "what_it_broke": "Recurrent net as associative memory with an energy function drawn from spin-glass physics: memories are attractor basins, recall is descent. Brought physicists INTO neural nets and legitimized the field post-winter.",
+  "why_impossible": "After the Perceptrons freeze, publishing neural results in PNAS at all was transgressive; framing them as statistical mechanics made it publishable \u2014 and 2024's Physics Nobel agreed.",
+  "category": "architecture",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "hopfield",
+   "physics",
+   "associative-memory",
+   "revival",
+   "nobel"
+  ]
+ },
+ {
+  "id": "1982-japan-fifth-generation",
+  "year": 1982,
+  "date": "1982-04-01",
+  "era": "winters-and-experts",
+  "title": "Japan's Fifth Generation Computer Project \u2014 $400M national bet on logic AI",
+  "org": "MITI / ICOT",
+  "people": [
+   "Kazuhiro Fuchi",
+   "Koichi Furukawa"
+  ],
+  "paper": "\"Outline of the fifth generation computer project\" (ICOT reports)",
+  "url": "https://doi.org/10.1109/PROC.1984.12861",
+  "what_it_broke": "Ten-year national program betting on parallel PROLOG machines for knowledge processing \u2014 triggering US/UK counter-spending (MCC consortium, Alvey Programme) and the biggest AI investment wave before deep learning.",
+  "why_impossible": "A government believing logic programming = the future of computing now seems quaint, but the FEAR of Japanese dominance drove Western AI budgets; the project's failure helped trigger winter #2 when the paradigm didn't scale.",
+  "category": "winter-event",
+  "impact": 6,
+  "surprise": 6,
+  "tags": [
+   "fifth-generation",
+   "japan",
+   "prolog",
+   "national-programs"
+  ]
+ },
+ {
+  "id": "1985-boltzmann-machines",
+  "year": 1985,
+  "date": "1985-01-01",
+  "era": "connectionist-revival",
+  "title": "Boltzmann Machines \u2014 stochastic neurons learn probability distributions",
+  "org": "Carnegie-Mellon / Johns Hopkins",
+  "people": [
+   "Geoffrey Hinton",
+   "Terrence Sejnowski"
+  ],
+  "paper": "\"Learning and Relearning in Boltzmann Machines\" (Parallel Distributed Processing vol. 1)",
+  "url": "https://psycnet.apa.org/record/1986-98344-001",
+  "what_it_broke": "Networks as generative energy models learning internal representations WITHOUT labels via simulated annealing \u2014 the conceptual bridge from Hopfield dynamics to modern unsupervised/generative learning (DBNs, RBMs pretraining).",
+  "why_impossible": "Learning without teachers was the holy grail; making noise WORK (annealing escapes local minima) inverted the deterministic-computation intuition.",
+  "category": "generative-models",
+  "impact": 7,
+  "surprise": 8,
+  "tags": [
+   "boltzmann",
+   "energy-models",
+   "unsupervised",
+   "hinton",
+   "nobel"
+  ]
  },
  {
   "id": "1986-backprop-popularized",
   "year": 1986,
   "date": "1986-10-09",
   "era": "connectionist-revival",
-  "title": "Backpropagation popularized — multilayer nets finally trainable",
+  "title": "Backpropagation popularized \u2014 multilayer nets finally trainable",
   "org": "CMU / Johns Hopkins / UCSD",
-  "people": ["David Rumelhart", "Geoffrey Hinton", "Ronald Williams"],
+  "people": [
+   "David Rumelhart",
+   "Geoffrey Hinton",
+   "Ronald Williams"
+  ],
   "paper": "\"Learning representations by back-propagating errors\", Nature",
   "url": "https://doi.org/10.1038/323533a0",
   "what_it_broke": "Showed hidden layers learn internal representations, breaking Minsky & Papert's single-layer dead end and reviving neural networks after a 15-year freeze.",
@@ -133,16 +579,72 @@
   "category": "learning-algorithm",
   "impact": 9,
   "surprise": 7,
-  "tags": ["backpropagation", "neural-networks", "revival"]
+  "tags": [
+   "backpropagation",
+   "neural-networks",
+   "revival"
+  ]
+ },
+ {
+  "id": "1988-pearl-bayesian-networks",
+  "year": 1988,
+  "date": "1988-01-01",
+  "era": "bayesian-revolution",
+  "title": "Probabilistic Reasoning in Intelligent Systems \u2014 Bayesian networks replace brittle logic",
+  "org": "UCLA",
+  "people": [
+   "Judea Pearl"
+  ],
+  "paper": "\"Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference\", Morgan Kaufmann",
+  "url": "https://doi.org/10.1016/B978-0-08-049945-1.50007-2",
+  "what_it_broke": "Uncertainty became computable: factorized joint distributions + belief propagation handled evidence updating exactly where rule-based certainty factors collapsed. Won Pearl the 2011 Turing Award and founded causality as engineering.",
+  "why_impossible": "Symbolic AI treated uncertainty as ignorance to eliminate; Pearl made it the SUBJECT MATTER \u2014 a philosophical reversal that quietly underlies everything probabilistic since.",
+  "category": "uncertainty",
+  "impact": 9,
+  "surprise": 7,
+  "tags": [
+   "bayesian-networks",
+   "causality",
+   "probability",
+   "turing-award",
+   "pearl"
+  ]
+ },
+ {
+  "id": "1988-sutton-temporal-difference",
+  "year": 1988,
+  "date": "1988-01-01",
+  "era": "rl-foundations",
+  "title": "TD(\u03bb) formalized \u2014 Sutton's temporal difference learning becomes theory",
+  "org": "University of Massachusetts Amherst / GTE Labs",
+  "people": [
+   "Richard Sutton"
+  ],
+  "paper": "\"Learning to predict by the methods of temporal differences\", Machine Learning 3",
+  "url": "https://doi.org/10.1007/BF00115009",
+  "what_it_broke": "Learning to PREDICT rewards incrementally from raw experience without waiting for outcomes \u2014 the credit-assignment mechanism inside TD-Gammon, DQN, and every actor-critic system including RLHF's PPO core.",
+  "why_impossible": "Classical conditioning (Rescorla-Wagner) hinted animals did this; proving machines could learn value functions bootstrapped this way turned psychology into algorithm.",
+  "category": "reinforcement-learning",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "temporal-difference",
+   "sutton",
+   "credit-assignment"
+  ]
  },
  {
   "id": "1989-cnn-convolution",
   "year": 1989,
   "date": "1989-01-01",
   "era": "connectionist-revival",
-  "title": "Convolutional neural networks — weight sharing inspired by visual cortex",
+  "title": "Convolutional neural networks \u2014 weight sharing inspired by visual cortex",
   "org": "Bell Labs",
-  "people": ["Yann LeCun", "Yoshua Bengio", "Patrick Haffner"],
+  "people": [
+   "Yann LeCun",
+   "Yoshua Bengio",
+   "Patrick Haffner"
+  ],
   "paper": "\"Backpropagation Applied to Handwritten Zip Code Recognition\", Neural Computation",
   "url": "https://doi.org/10.1162/neco.1989.1.4.541",
   "what_it_broke": "LeNet read real US zip codes and checks. Convolutions made vision tractable and became the substrate of all modern computer vision.",
@@ -150,16 +652,72 @@
   "category": "architecture",
   "impact": 9,
   "surprise": 6,
-  "tags": ["cnn", "computer-vision", "convolution"]
+  "tags": [
+   "cnn",
+   "computer-vision",
+   "convolution"
+  ]
+ },
+ {
+  "id": "1989-hinton-dist-belief",
+  "year": 1989,
+  "date": "1989-05-01",
+  "era": "connectionist-revival",
+  "title": "\"The appeal of parallel distributed computation\" \u2014 connectionism gets its manifesto",
+  "org": "Carnegie Mellon / University of Toronto",
+  "people": [
+   "David Rumelhart",
+   "Geoffrey Hinton"
+  ],
+  "paper": "\"Parallel Distributed Processing\" vol.1 ch.2 + \"The Appeal of Parallel Distributed Computation\" (1988)",
+  "url": "https://psycnet.apa.org/record/1986-98344-001",
+  "what_it_broke": "PDP framework unified neural nets with cognitive science: knowledge as distributed activation patterns, not symbols. Gave the revival its intellectual identity and recruited a generation of researchers.",
+  "why_impossible": "Cognitive science was dominated by symbol-manipulation orthodoxy (Newell/Simon/Fodor); claiming cognition is subsymbolic statistics was fighting the establishment from within psychology itself.",
+  "category": "theory",
+  "impact": 7,
+  "surprise": 7,
+  "tags": [
+   "connectionism",
+   "pdp",
+   "cognitive-science",
+   "manifesto"
+  ]
+ },
+ {
+  "id": "1990-brooks-behavior-robotics",
+  "year": 1990,
+  "date": "1990-02-01",
+  "era": "embodied-turn",
+  "title": "\"Elephants Don't Play Chess\" \u2014 Brooks' subsumption architecture ditches representations",
+  "org": "MIT AI Lab",
+  "people": [
+   "Rodney Brooks"
+  ],
+  "paper": "\"Intelligence without representation\", Artificial Intelligence 47 (1991); \"Elephants don't play chess\" (1990)",
+  "url": "https://doi.org/10.1016/0004-3702(91)90053-M",
+  "what_it_broke": "Intelligence WITHOUT internal world-models: layered reactive behaviors (Genghis the hexapod walked; Roomba shipped 2002). Attacked symbolic AI's core assumption from robotics \u2014 the embodied turn that seeded modern robot learning debates.",
+  "why_impossible": "Classical AI equated cognition with representation-building (GOFAI); Brooks argued the world IS its own best model \u2014 heresy from INSIDE MIT's own AI lab.",
+  "category": "robotics",
+  "impact": 7,
+  "surprise": 8,
+  "tags": [
+   "robotics",
+   "subsumption",
+   "embodiment",
+   "brooks",
+   "roomba"
+  ]
  },
  {
   "id": "1992-td-gammon",
   "year": 1992,
   "date": "1992-03-01",
   "era": "connectionist-revival",
-  "title": "TD-Gammon — reinforcement learning reaches world-class play with zero human coaching",
+  "title": "TD-Gammon \u2014 reinforcement learning reaches world-class play with zero human coaching",
   "org": "IBM",
-  "people": ["Gerald Tesauro"],
+  "people": [
+   "Gerald Tesauro"
+  ],
   "paper": "\"Temporal difference learning and TD-Gammon\", CACM",
   "url": "https://doi.org/10.1145/128392.128398",
   "what_it_broke": "Learned backgammon purely by playing itself, reaching top-human level and inventing moves humans then adopted. First proof that RL + neural nets can exceed human strategy without imitation.",
@@ -167,50 +725,152 @@
   "category": "reinforcement-learning",
   "impact": 8,
   "surprise": 9,
-  "tags": ["reinforcement-learning", "self-play", "games"]
+  "tags": [
+   "reinforcement-learning",
+   "self-play",
+   "games"
+  ]
+ },
+ {
+  "id": "1992-q-learning-formal",
+  "year": 1992,
+  "date": "1992-05-01",
+  "era": "rl-foundations",
+  "title": "Q-learning converges \u2014 Watkins proves trial-and-error learning works optimally",
+  "org": "University of Cambridge",
+  "people": [
+   "Chris Watkins",
+   "Peter Dayan"
+  ],
+  "paper": "\"Q-learning\", Machine Learning 8 (Watkins & Dayan); Watkins PhD thesis 1989",
+  "url": "https://doi.org/10.1007/BF00992698",
+  "what_it_broke": "Model-FREE optimal control with a convergence PROOF: value iteration from experience alone reaches optimal policies without knowing environment dynamics. The mathematical foundation under TD-Gammon, DQN, AlphaZero, and RLHF.",
+  "why_impossible": "Dynamic programming needed known transition tables; learning optimal control purely from reward signals with guarantees contradicted control theory's assumptions.",
+  "category": "reinforcement-learning",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "q-learning",
+   "reinforcement-learning",
+   "watkins",
+   "convergence-proof"
+  ]
+ },
+ {
+  "id": "1995-svm-statistical-learning",
+  "year": 1995,
+  "date": "1995-11-01",
+  "era": "statistical-decade",
+  "title": "Support Vector Machines \u2014 kernels beat neural nets for a decade",
+  "org": "AT&T Bell Labs",
+  "people": [
+   "Corinna Cortes",
+   "Vladimir Vapnik"
+  ],
+  "paper": "\"Support-vector networks\", Machine Learning",
+  "url": "https://doi.org/10.1007/BF00994018",
+  "what_it_broke": "Maximum-margin classification with kernel tricks: infinite-dimensional feature spaces with convex optimization and generalization GUARANTEES (VC theory). SVMs dominated benchmarks 1995-2010 while neural nets were unfashionable.",
+  "why_impossible": "Neural nets were seen as unstable art; here was learning with THEOREMS. Statistical learning theory's victory shaped a whole generation \u2014 until GPUs flipped it back.",
+  "category": "learning-algorithm",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "svm",
+   "vapnik",
+   "statistical-learning",
+   "kernels",
+   "vc-theory"
+  ]
  },
  {
   "id": "1997-deep-blue",
   "year": 1997,
   "date": "1997-05-11",
   "era": "symbolic-peaks",
-  "title": "Deep Blue defeats Kasparov — chess falls to machines",
+  "title": "Deep Blue defeats Kasparov \u2014 chess falls to machines",
   "org": "IBM",
-  "people": ["Feng-hsiung Hsu", "Murray Campbell", "Garry Kasparov"],
+  "people": [
+   "Feng-hsiung Hsu",
+   "Murray Campbell",
+   "Garry Kasparov"
+  ],
   "paper": "\"Deep Blue\", Artificial Intelligence journal (2002 retrospective)",
   "url": "https://doi.org/10.1016/S0004-3702(01)00129-1",
-  "what_it_broke": "World chess champion beaten in a formal match — the first time a reigning human champion of an intellectual sport fell to a machine.",
+  "what_it_broke": "World chess champion beaten in a formal match \u2014 the first time a reigning human champion of an intellectual sport fell to a machine.",
   "why_impossible": "Kasparov had said no computer would beat a grandmaster 'in his lifetime.' It happened 6 years later.",
   "category": "games-milestone",
   "impact": 8,
   "surprise": 7,
-  "tags": ["chess", "search", "human-champion"]
+  "tags": [
+   "chess",
+   "search",
+   "human-champion"
+  ]
  },
  {
   "id": "1997-lstm",
   "year": 1997,
   "date": "1997-11-15",
   "era": "quiet-decades",
-  "title": "LSTM — memory cells solve vanishing gradients over time",
+  "title": "LSTM \u2014 memory cells solve vanishing gradients over time",
   "org": "TU Munich / IDSIA",
-  "people": ["Sepp Hochreiter", "Jürgen Schmidhuber"],
+  "people": [
+   "Sepp Hochreiter",
+   "J\u00fcrgen Schmidhuber"
+  ],
   "paper": "\"Long Short-Term Memory\", Neural Computation",
   "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
-  "what_it_broke": "Made sequence learning actually work — RNNs that remember across hundreds of steps. LSTM ran speech recognition, translation, and handwriting systems for a decade before Transformers replaced it.",
+  "what_it_broke": "Made sequence learning actually work \u2014 RNNs that remember across hundreds of steps. LSTM ran speech recognition, translation, and handwriting systems for a decade before Transformers replaced it.",
   "why_impossible": "Vanishing gradients were considered a fundamental wall for recurrent nets since 1991; LSTM tunneled under it with gated memory cells.",
   "category": "architecture",
   "impact": 8,
   "surprise": 7,
-  "tags": ["rnn", "sequence-modeling", "lstm"]
+  "tags": [
+   "rnn",
+   "sequence-modeling",
+   "lstm"
+  ]
+ },
+ {
+  "id": "1998-lenet5-gradient-document",
+  "year": 1998,
+  "date": "1998-11-01",
+  "era": "pre-imagenet",
+  "title": "LeNet-5 \u2014 the complete CNN recipe, working at bank scale",
+  "org": "AT&T Bell Labs",
+  "people": [
+   "Yann LeCun",
+   "L\u00e9on Bottou",
+   "Yoshua Bengio",
+   "Patrick Haffner"
+  ],
+  "paper": "\"Gradient-Based Learning Applied to Document Recognition\", Proceedings of the IEEE",
+  "url": "https://ieeexplore.ieee.org/document/726791",
+  "what_it_broke": "The modern convnet template end-to-end: conv-pool stacking, backprop everywhere, read MILLIONS of checks daily in production. AlexNet 14 years later was this recipe + GPUs + ImageNet.",
+  "why_impossible": "It worked brilliantly yet the field IGNORED it for a decade (SVM era); the lesson that good ideas need compute+data timing, not just correctness, is the meta-breakthrough.",
+  "category": "architecture",
+  "impact": 8,
+  "surprise": 6,
+  "tags": [
+   "cnn",
+   "lenet",
+   "production-ml",
+   "lecun",
+   "overlooked"
+  ]
  },
  {
   "id": "2006-deep-belief-nets",
   "year": 2006,
   "date": "2006-07-28",
   "era": "pre-imagenet",
-  "title": "Deep Belief Networks — 'deep learning' rebranded and made trainable",
+  "title": "Deep Belief Networks \u2014 'deep learning' rebranded and made trainable",
   "org": "University of Toronto",
-  "people": ["Geoffrey Hinton", "Simon Osindero", "Yee-Whye Teh"],
+  "people": [
+   "Geoffrey Hinton",
+   "Simon Osindero",
+   "Yee-Whye Teh"
+  ],
   "paper": "\"A Fast Learning Algorithm for Deep Belief Nets\", Neural Computation",
   "url": "https://doi.org/10.1162/neco.2006.18.7.1527",
   "what_it_broke": "Layer-wise unsupervised pretraining showed deep architectures could be trained effectively, directly triggering the modern deep learning era and its name.",
@@ -218,16 +878,23 @@
   "category": "learning-algorithm",
   "impact": 8,
   "surprise": 6,
-  "tags": ["deep-learning", "pretraining"]
+  "tags": [
+   "deep-learning",
+   "pretraining"
+  ]
  },
  {
   "id": "2009-imagenet",
   "year": 2009,
   "date": "2009-06-01",
   "era": "pre-imagenet",
-  "title": "ImageNet — the dataset bet that scaled vision",
+  "title": "ImageNet \u2014 the dataset bet that scaled vision",
   "org": "Princeton / Stanford",
-  "people": ["Fei-Fei Li", "Jia Deng", "Kai Li"],
+  "people": [
+   "Fei-Fei Li",
+   "Jia Deng",
+   "Kai Li"
+  ],
   "paper": "\"ImageNet: A Large-Scale Hierarchical Image Database\", CVPR",
   "url": "https://doi.org/10.1109/CVPR.2009.5206848",
   "what_it_broke": "14 million labeled images turned progress into a measurable race. The insight that DATA, not architecture, was the bottleneck set up everything after 2012.",
@@ -235,67 +902,128 @@
   "category": "dataset-benchmark",
   "impact": 9,
   "surprise": 6,
-  "tags": ["dataset", "computer-vision", "benchmarking"]
+  "tags": [
+   "dataset",
+   "computer-vision",
+   "benchmarking"
+  ]
  },
  {
   "id": "2012-alexnet",
   "year": 2012,
   "date": "2012-09-30",
   "era": "deep-learning-boom",
-  "title": "AlexNet — GPUs crush ImageNet, error drops 10 points overnight",
+  "title": "AlexNet \u2014 GPUs crush ImageNet, error drops 10 points overnight",
   "org": "University of Toronto",
-  "people": ["Alex Krizhevsky", "Ilya Sutskever", "Geoffrey Hinton"],
+  "people": [
+   "Alex Krizhevsky",
+   "Ilya Sutskever",
+   "Geoffrey Hinton"
+  ],
   "paper": "\"ImageNet Classification with Deep Convolutional Neural Networks\", NeurIPS",
   "url": "https://doi.org/10.1145/3065386",
-  "what_it_broke": "Top-5 error fell from 26% to 15.3% — the largest single-year jump in vision history. The entire field pivoted to deep learning within months; GPU-compute scaling became the roadmap.",
+  "what_it_broke": "Top-5 error fell from 26% to 15.3% \u2014 the largest single-year jump in vision history. The entire field pivoted to deep learning within months; GPU-compute scaling became the roadmap.",
   "why_impossible": "Classical vision researchers expected incremental gains forever. One student project on two gaming GPUs ended classical feature engineering as a discipline.",
   "category": "vision-breakthrough",
   "impact": 10,
   "surprise": 9,
-  "tags": ["gpu", "imagenet", "scaling", "deep-learning"]
+  "tags": [
+   "gpu",
+   "imagenet",
+   "scaling",
+   "deep-learning"
+  ]
  },
  {
   "id": "2013-word2vec",
   "year": 2013,
   "date": "2013-01-16",
   "era": "deep-learning-boom",
-  "title": "Word2Vec — meaning becomes geometry; king − man + woman = queen",
+  "title": "Word2Vec \u2014 meaning becomes geometry; king \u2212 man + woman = queen",
   "org": "Google",
-  "people": ["Tomas Mikolov", "Ilya Sutskever", "Kai Chen", "Greg Corrado", "Jeff Dean"],
+  "people": [
+   "Tomas Mikolov",
+   "Ilya Sutskever",
+   "Kai Chen",
+   "Greg Corrado",
+   "Jeff Dean"
+  ],
   "paper": "\"Distributed Representations of Words and Phrases and their Compositionality\", NeurIPS",
   "url": "https://arxiv.org/abs/1310.4546",
-  "what_it_broke": "Showed word meaning emerges as linear structure in embedding space from raw text co-occurrence alone — semantics you can do arithmetic on, with no labels.",
+  "what_it_broke": "Showed word meaning emerges as linear structure in embedding space from raw text co-occurrence alone \u2014 semantics you can do arithmetic on, with no labels.",
   "why_impossible": "Semantic relationships with algebraic regularity emerging from plain statistics felt like magic; many assumed such structure required hand-built knowledge graphs.",
   "category": "nlp-representation",
   "impact": 8,
   "surprise": 8,
-  "tags": ["embeddings", "nlp", "representation-learning"]
+  "tags": [
+   "embeddings",
+   "nlp",
+   "representation-learning"
+  ]
+ },
+ {
+  "id": "2013-vae-reparameterization",
+  "year": 2013,
+  "date": "2013-12-20",
+  "era": "generative-lineage",
+  "title": "VAEs \u2014 backprop through randomness via the reparameterization trick",
+  "org": "Universiteit van Amsterdam / Google Brain / UCLA",
+  "people": [
+   "Diederik Kingma",
+   "Max Welling"
+  ],
+  "paper": "\"Auto-Encoding Variational Bayes\", ICLR 2014",
+  "url": "https://arxiv.org/abs/1312.6114",
+  "what_it_broke": "Made latent-variable generative models trainable with SGD: sample = noise + differentiable transform. Opened the variational-inference-for-deep-learning industry and the modern generative modeling race alongside GANs.",
+  "why_impossible": "Intractable posteriors had blocked Bayesian deep nets for years; sidestepping them with one algebraic identity felt like cheating probability theory (it wasn't).",
+  "category": "generative-models",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "vae",
+   "variational-inference",
+   "kingma",
+   "welling",
+   "generative"
+  ]
  },
  {
   "id": "2014-dqn-atari",
   "year": 2014,
   "date": "2014-02-26",
   "era": "deep-learning-boom",
-  "title": "DQN learns Atari from pixels — one network, 49 games, no game-specific code",
+  "title": "DQN learns Atari from pixels \u2014 one network, 49 games, no game-specific code",
   "org": "Google DeepMind",
-  "people": ["Volodymyr Mnih", "Koray Kavukcuoglu", "Demis Hassabis"],
+  "people": [
+   "Volodymyr Mnih",
+   "Koray Kavukcuoglu",
+   "Demis Hassabis"
+  ],
   "paper": "\"Playing Atari with Deep Reinforcement Learning\", arXiv / Nature 2015",
   "url": "https://doi.org/10.1038/nature14236",
-  "what_it_broke": "One architecture mastered games from raw screen pixels with only score feedback — general intelligence behavior in miniature, and the moment DeepMind's AGI thesis became credible.",
+  "what_it_broke": "One architecture mastered games from raw screen pixels with only score feedback \u2014 general intelligence behavior in miniature, and the moment DeepMind's AGI thesis became credible.",
   "why_impossible": "RL was thought hopelessly unstable when combined with deep nets; experience replay + target networks tamed it, stunning both fields.",
   "category": "reinforcement-learning",
   "impact": 8,
   "surprise": 8,
-  "tags": ["reinforcement-learning", "atari", "deepmind"]
+  "tags": [
+   "reinforcement-learning",
+   "atari",
+   "deepmind"
+  ]
  },
  {
   "id": "2014-gan",
   "year": 2014,
   "date": "2014-06-10",
   "era": "deep-learning-boom",
-  "title": "GANs — two networks duel and photorealistic generation begins",
-  "org": "Université de Montréal",
-  "people": ["Ian Goodfellow", "Yoshua Bengio", "Aaron Courville"],
+  "title": "GANs \u2014 two networks duel and photorealistic generation begins",
+  "org": "Universit\u00e9 de Montr\u00e9al",
+  "people": [
+   "Ian Goodfellow",
+   "Yoshua Bengio",
+   "Aaron Courville"
+  ],
   "paper": "\"Generative Adversarial Networks\", NeurIPS",
   "url": "https://arxiv.org/abs/1406.2661",
   "what_it_broke": "Introduced adversarial training: a forger vs detective game producing images indistinguishable from photos within years. Opened the generative-media era.",
@@ -303,67 +1031,216 @@
   "category": "generative-models",
   "impact": 8,
   "surprise": 8,
-  "tags": ["gan", "generative", "adversarial"]
+  "tags": [
+   "gan",
+   "generative",
+   "adversarial"
+  ]
+ },
+ {
+  "id": "2014-seq2seq-encoder-decoder",
+  "year": 2014,
+  "date": "2014-09-01",
+  "era": "attention-lineage",
+  "title": "Seq2Seq \u2014 encoder-decoder pairs make translation end-to-end learnable",
+  "org": "Google",
+  "people": [
+   "Ilya Sutskever",
+   "Oriol Vinyals",
+   "Quoc Le"
+  ],
+  "paper": "\"Sequence to Sequence Learning with Neural Networks\", NeurIPS",
+  "url": "https://arxiv.org/abs/1409.3215",
+  "what_it_broke": "One LSTM reads a sentence into a vector; another writes it out in French. Replaced decades of phrase-table engineering and hit competitive BLEU \u2014 the template that attention would soon fix and transformers replace.",
+  "why_impossible": "Statistical MT researchers considered single-vector compression of arbitrary-length sentences information-theoretically absurd; it worked anyway (and the bottleneck became the motivation for attention).",
+  "category": "nlp-paradigm",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "seq2seq",
+   "translation",
+   "lstm",
+   "sutskever"
+  ]
+ },
+ {
+  "id": "2015-diffusion-foundations",
+  "year": 2015,
+  "date": "2015-03-01",
+  "era": "generative-lineage",
+  "title": "Diffusion idea planted \u2014 'Denoising' as generation (Sohl-Dickstein)",
+  "org": "UC Berkeley / Stanford",
+  "people": [
+   "Jascha Sohl-Dickstein",
+   "Eric Weiss",
+   "Niru Maheswaranathan",
+   "Surya Ganguli"
+  ],
+  "paper": "\"Deep Unsupervised Learning using Nonequilibrium Thermodynamics\", ICML",
+  "url": "https://arxiv.org/abs/1503.03585",
+  "what_it_broke": "Generate by REVERSING gradual noising \u2014 thermodynamics as ML. Ignored for four years until DDPM (2020) made it state-of-the-art, then it displaced GANs entirely (Stable Diffusion, DALL-E 2/3, Sora).",
+  "why_impossible": "Everyone knew destroying signal is easy and reversing it impossible; framing denoising as learned nonequilibrium thermodynamics made the impossible tractable. The most under-appreciated paper of its year.",
+  "category": "generative-models",
+  "impact": 9,
+  "surprise": 9,
+  "tags": [
+   "diffusion",
+   "thermodynamics",
+   "overlooked",
+   "sohl-dickstein",
+   "ddpm"
+  ]
+ },
+ {
+  "id": "2015-bahdanau-attention",
+  "year": 2015,
+  "date": "2015-09-01",
+  "era": "attention-lineage",
+  "title": "Bahdanau attention \u2014 the model learns WHERE to look",
+  "org": "Universit\u00e9 de Montr\u00e9al",
+  "people": [
+   "Dzmitry Bahdanau",
+   "Kyunghyun Cho",
+   "Yoshua Bengio"
+  ],
+  "paper": "\"Neural Machine Translation by Jointly Learning to Align and Translate\", ICLR",
+  "url": "https://arxiv.org/abs/1409.0473",
+  "what_it_broke": "Replaced the fixed-vector bottleneck with learned soft-alignment: decoder attends over ALL encoder states weighted by relevance. Fixed seq2seq's fatal flaw and named the mechanism that ate deep learning.",
+  "why_impossible": "Alignment tables in MT were hand-engineered statistical objects for decades; discovering they emerge as a BYPRODUCT of gradient descent on translation error was the quiet earthquake.",
+  "category": "architecture",
+  "impact": 9,
+  "surprise": 7,
+  "tags": [
+   "attention",
+   "alignment",
+   "bengio",
+   "machine-translation"
+  ]
  },
  {
   "id": "2016-alphago",
   "year": 2016,
   "date": "2016-03-15",
   "era": "agi-foreshadowing",
-  "title": "AlphaGo defeats Lee Sedol — Go falls a decade early; Move 37",
+  "title": "AlphaGo defeats Lee Sedol \u2014 Go falls a decade early; Move 37",
   "org": "Google DeepMind",
-  "people": ["Demis Hassabis", "David Silver", "Aja Huang", "Lee Sedol"],
+  "people": [
+   "Demis Hassabis",
+   "David Silver",
+   "Aja Huang",
+   "Lee Sedol"
+  ],
   "paper": "\"Mastering the game of Go with deep neural networks and tree search\", Nature",
   "url": "https://doi.org/10.1038/nature16961",
-  "what_it_broke": "Beat the world's best at Go, which experts said was 10+ years away. Move 37 of game 2 was a move no human would play — and won the game. Creativity without instruction.",
+  "what_it_broke": "Beat the world's best at Go, which experts said was 10+ years away. Move 37 of game 2 was a move no human would play \u2014 and won the game. Creativity without instruction.",
   "why_impossible": "Go's search space dwarfed chess by orders of magnitude; experts estimated decades remaining. It took 18 months from DQN.",
   "category": "games-milestone",
   "impact": 10,
   "surprise": 10,
-  "tags": ["go", "self-play", "move-37", "deepmind"]
+  "tags": [
+   "go",
+   "self-play",
+   "move-37",
+   "deepmind"
+  ]
+ },
+ {
+  "id": "2016-huggingface-launch",
+  "year": 2016,
+  "date": "2016-08-01",
+  "era": "open-ecosystem-era",
+  "title": "Hugging Face founded \u2014 later becomes the 'GitHub of machine learning'",
+  "org": "Hugging Face",
+  "people": [
+   "Cl\u00e9ment Delangue",
+   "Julien Chaumond",
+   "Thomas Wolf"
+  ],
+  "paper": "\"Transformers: State-of-the-Art Natural Language Processing\" (the library paper that made it the standard, EMNLP 2019 demos)",
+  "url": "https://arxiv.org/abs/1910.03771",
+  "what_it_broke": "Started as a chatbot app, pivoted into the shared infrastructure layer of AI: model weights, datasets, and demos all public by default. Made reproducibility one click instead of one thesis.",
+  "why_impossible": "ML artifacts were locked in lab repos and supplementary PDFs; nobody believed a central commons could hold frontier-adjacent weights AND stay neutral infrastructure for both Google and Meta.",
+  "category": "infrastructure-commons",
+  "impact": 9,
+  "surprise": 7,
+  "tags": [
+   "huggingface",
+   "open-science",
+   "infrastructure",
+   "ecosystem"
+  ]
+ },
+ {
+  "id": "2017-mixture-of-experts-sparsely",
+  "year": 2017,
+  "date": "2017-01-01",
+  "era": "transformer-era",
+  "title": "Sparsely-Gated MoE \u2014 trillion-parameter capacity without trillion-parameter compute",
+  "org": "Google Brain",
+  "people": [
+   "Noam Shazeer",
+   "Azalia Mirhoseini",
+   "Krzysztof Maziarz",
+   "Quoc Le"
+  ],
+  "paper": "\"Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer\", ICLR",
+  "url": "https://arxiv.org/abs/1701.06538",
+  "what_it_broke": "Conditional computation at scale: routers activate only a few expert FFNs per token, decoupling CAPACITY from FLOPS. The mechanism inside Switch Transformer, GPT-4 (reported), DeepSeek-V3, and Mixtral.",
+  "why_impossible": "Dense-scaling orthodoxy held that all parameters must fire always; making routing differentiable-and-stable was considered hopelessly brittle. It became how ALL frontier models control cost.",
+  "category": "architecture",
+  "impact": 9,
+  "surprise": 8,
+  "tags": [
+   "moe",
+   "sparse",
+   "shazeer",
+   "routing",
+   "efficiency"
+  ]
  },
  {
   "id": "2017-transformer",
   "year": 2017,
   "date": "2017-06-12",
   "era": "transformer-era",
-  "title": "Attention Is All You Need — the Transformer",
+  "title": "Attention Is All You Need \u2014 the Transformer",
   "org": "Google Brain / Google Research",
-  "people": ["Ashish Vaswani", "Noam Shazeer", "Jakob Uszkoreit", "Llion Jones", "Aidan Gomez", "Łukasz Kaiser", "Illia Polosukhin"],
+  "people": [
+   "Ashish Vaswani",
+   "Noam Shazeer",
+   "Jakob Uszkoreit",
+   "Llion Jones",
+   "Aidan Gomez",
+   "\u0141ukasz Kaiser",
+   "Illia Polosukhin"
+  ],
   "paper": "\"Attention Is All You Need\", NeurIPS",
   "url": "https://arxiv.org/abs/1706.03762",
-  "what_it_broke": "Removed recurrence entirely; pure attention parallelizes across sequences. Became the architecture underneath GPT, BERT, Claude, Gemini, image/video diffusion, and protein models — possibly the most consequential ML architecture ever.",
+  "what_it_broke": "Removed recurrence entirely; pure attention parallelizes across sequences. Became the architecture underneath GPT, BERT, Claude, Gemini, image/video diffusion, and protein models \u2014 possibly the most consequential ML architecture ever.",
   "why_impossible": "Recurrence was assumed essential for language; deleting it and winning translation benchmarks within a year was heresy that worked.",
   "category": "architecture",
   "impact": 10,
   "surprise": 8,
-  "tags": ["transformer", "attention", "architecture", "foundation"]
- },
- {
-  "id": "2018-bert",
-  "year": 2018,
-  "date": "2018-10-11",
-  "era": "transformer-era",
-  "title": "BERT — pretrain once, fine-tune everywhere",
-  "org": "Google AI Language",
-  "people": ["Jacob Devlin", "Ming-Wei Chang", "Kenton Lee", "Kristina Toutanova"],
-  "paper": "\"BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\", NAACL",
-  "url": "https://arxiv.org/abs/1810.04805",
-  "what_it_broke": "Established the pretrain → fine-tune paradigm; one model beat state-of-the-art on 11 NLP benchmarks. Made transfer learning the default recipe for all of NLP.",
-  "why_impossible": "NLP was a zoo of task-specific engineering; the claim that ONE pretrained model could dominate every task simultaneously upended the field's methodology.",
-  "category": "nlp-paradigm",
-  "impact": 9,
-  "surprise": 7,
-  "tags": ["bert", "transfer-learning", "nlp"]
+  "tags": [
+   "transformer",
+   "attention",
+   "architecture",
+   "foundation"
+  ]
  },
  {
   "id": "2018-gpt1-scaling-hint",
   "year": 2018,
   "date": "2018-06-11",
   "era": "transformer-era",
-  "title": "GPT-1 — generative pretraining hints that scale predicts ability",
+  "title": "GPT-1 \u2014 generative pretraining hints that scale predicts ability",
   "org": "OpenAI",
-  "people": ["Alec Radford", "Karthik Narasimhan", "Tim Salimans", "Ilya Sutskever"],
+  "people": [
+   "Alec Radford",
+   "Karthik Narasimhan",
+   "Tim Salimans",
+   "Ilya Sutskever"
+  ],
   "paper": "\"Improving Language Understanding by Generative Pre-Training\"",
   "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
   "what_it_broke": "Showed plain next-word prediction on raw internet text produces transferable understanding. Planted the scaling hypothesis that became OpenAI's whole strategy.",
@@ -371,50 +1248,428 @@
   "category": "llm-paradigm",
   "impact": 8,
   "surprise": 7,
-  "tags": ["gpt", "scaling", "openai"]
+  "tags": [
+   "gpt",
+   "scaling",
+   "openai"
+  ]
  },
  {
-  "id": "2020-gpt3-emergence",
-  "year": 2020,
-  "date": "2020-05-28",
-  "era": "llm-scaling",
-  "title": "GPT-3 — 175B parameters; few-shot learning emerges from scale",
+  "id": "2018-bert",
+  "year": 2018,
+  "date": "2018-10-11",
+  "era": "transformer-era",
+  "title": "BERT \u2014 pretrain once, fine-tune everywhere",
+  "org": "Google AI Language",
+  "people": [
+   "Jacob Devlin",
+   "Ming-Wei Chang",
+   "Kenton Lee",
+   "Kristina Toutanova"
+  ],
+  "paper": "\"BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\", NAACL",
+  "url": "https://arxiv.org/abs/1810.04805",
+  "what_it_broke": "Established the pretrain \u2192 fine-tune paradigm; one model beat state-of-the-art on 11 NLP benchmarks. Made transfer learning the default recipe for all of NLP.",
+  "why_impossible": "NLP was a zoo of task-specific engineering; the claim that ONE pretrained model could dominate every task simultaneously upended the field's methodology.",
+  "category": "nlp-paradigm",
+  "impact": 9,
+  "surprise": 7,
+  "tags": [
+   "bert",
+   "transfer-learning",
+   "nlp"
+  ]
+ },
+ {
+  "id": "2019-openai-five-dota",
+  "year": 2019,
+  "date": "2019-04-13",
+  "era": "agi-foreshadowing",
+  "title": "OpenAI Five defeats world champions at Dota 2 \u2014 long-horizon teamwork emerges",
   "org": "OpenAI",
-  "people": ["Tom Brown", "Benjamin Mann", "Nick Ryder", "Melanie Subbiah", "Jared Kaplan", "Sam McCandlish", "AJ Brimley", "Greg Brockman", "Ilya Sutskever"],
-  "paper": "\"Language Models are Few-Shot Learners\", NeurIPS",
-  "url": "https://papers.nips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html",
-  "what_it_broke": "Without fine-tuning, GPT-3 performed tasks from natural-language instructions alone. In-context learning appeared at scale like a phase transition — nobody had engineered it.",
-  "why_impossible": "The field consensus was bigger models would be marginally better at grammar. Instead new CAPABILITIES emerged that smaller versions lacked entirely.",
-  "category": "emergence",
-  "impact": 10,
-  "surprise": 10,
-  "tags": ["gpt-3", "emergence", "few-shot", "scaling"]
+  "people": [
+   "OpenAI Five team",
+   "Greg Brockman"
+  ],
+  "paper": "\"Dota 2 with Large Scale Deep Reinforcement Learning\", arXiv",
+  "url": "https://arxiv.org/abs/1912.06680",
+  "what_it_broke": "Real-time strategy game with imperfect information, 45-minute horizons, 5-agent coordination: beat OG (world champions). Self-play at unprecedented scale (~10k years of games) proved LONG-horizon RL was trainable.",
+  "why_impossible": "Go is turn-based with full information; Dota was considered decades away because of horizon length + coordination. Batch-RL engineering made it work \u2014 foreshadowing exactly the scale-first culture that produced GPT models.",
+  "category": "games-milestone",
+  "impact": 7,
+  "surprise": 8,
+  "tags": [
+   "dota",
+   "openai",
+   "self-play",
+   "long-horizon",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "2019-vq-vae-2-masks-to-image",
+  "year": 2019,
+  "date": "2019-06-01",
+  "era": "multimodal-dawn",
+  "title": "VQ-VAE lineage \u2014 discrete latent tokens make generative media composable",
+  "org": "DeepMind / UC Berkeley",
+  "people": [
+   "Aaron van den Oord",
+   "Oriol Vinyals",
+   "Koray Kavukcuoglu"
+  ],
+  "paper": "\"Neural Discrete Representation Learning\" (VQ-VAE); \"Generating Diverse High-Fidelity Images with VQ-VAE-2\"",
+  "url": "https://arxiv.org/abs/1711.00937",
+  "what_it_broke": "Quantized continuous latents into discrete tokens \u2014 the trick that lets transformers treat images/audio as language. Every token-based generator (DALL\u00b7E v1, AudioLM, MusicLM) descends from this.",
+  "why_impossible": "Continuous diffusion dominated thinking; discretization was considered lossy dead-endery until it turned out to be THE bridge between modalities.",
+  "category": "generative-models",
+  "impact": 7,
+  "surprise": 8,
+  "tags": [
+   "vq-vae",
+   "tokenization",
+   "multimodal",
+   "discrete-latents"
+  ]
+ },
+ {
+  "id": "2019-t5-text-to-text",
+  "year": 2019,
+  "date": "2019-10-23",
+  "era": "transformer-era",
+  "title": "T5 \u2014 everything becomes text-to-text; the transfer-learning atlas",
+  "org": "Google",
+  "people": [
+   "Colin Raffel",
+   "Noam Shazeer",
+   "Adam Roberts",
+   "Peter Liu"
+  ],
+  "paper": "\"Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer\", JMLR",
+  "url": "https://doi.org/10.48550/arXiv.1910.10683",
+  "what_it_broke": "Recast EVERY NLP task (translation, QA, classification, summarization) as text-in/text-out with task prefixes \u2014 the conceptual bridge from BERT-style heads to GPT-style prompting. Also gave the field C4 and rigorous ablations.",
+  "why_impossible": "Fine-tuning architectures were task-specific scaffolding; unifying ALL tasks into one format anticipated instruction-following and made the eventual chat interface feel inevitable rather than novel.",
+  "category": "nlp-paradigm",
+  "impact": 8,
+  "surprise": 6,
+  "tags": [
+   "t5",
+   "text-to-text",
+   "raffel",
+   "unification",
+   "instruction-format"
+  ]
+ },
+ {
+  "id": "2019-huggingface-transformers-library",
+  "year": 2019,
+  "date": "2019-11-05",
+  "era": "open-ecosystem-era",
+  "title": "\ud83e\udd17 Transformers library \u2014 every major architecture behind one API",
+  "org": "Hugging Face",
+  "people": [
+   "Thomas Wolf",
+   "Lysandre Debut",
+   "Victor Sanh",
+   "Julien Chaumond"
+  ],
+  "paper": "\"Transformers: State-of-the-Art Natural Language Processing\", EMNLP System Demonstrations",
+  "url": "https://doi.org/10.18653/v1/D19-3007",
+  "what_it_broke": "BERT/GPT/XLNet/etc. unified behind `AutoModel.from_pretrained()` \u2014 three lines from paper to production. The single biggest democratization event in ML history; became the field's de facto dependency.",
+  "why_impossible": "Reproducing papers used to take weeks per architecture; the claim that one pip-install covers them ALL was treated as naive until it simply became how everyone works.",
+  "category": "infrastructure-commons",
+  "impact": 9,
+  "surprise": 8,
+  "tags": [
+   "huggingface",
+   "transformers",
+   "democratization",
+   "library"
+  ]
  },
  {
   "id": "2020-scaling-laws",
   "year": 2020,
   "date": "2020-01-23",
   "era": "llm-scaling",
-  "title": "Scaling Laws — capability follows power laws predictably",
+  "title": "Scaling Laws \u2014 capability follows power laws predictably",
   "org": "OpenAI",
-  "people": ["Jared Kaplan", "Sam McCandlish", "Tom Henighan", "Tom Brown", "Dario Amodei"],
+  "people": [
+   "Jared Kaplan",
+   "Sam McCandlish",
+   "Tom Henighan",
+   "Tom Brown",
+   "Dario Amodei"
+  ],
   "paper": "\"Scaling Laws for Neural Language Models\", arXiv",
   "url": "https://arxiv.org/abs/2001.08361",
   "what_it_broke": "Turned model-building into engineering: loss decreases as a smooth predictable power law across 8 orders of magnitude. Companies could now forecast billion-dollar training runs before spending them.",
-  "why_impossible": "ML had always been alchemy — tune and pray. Discovering that performance was FORECASTABLE changed AI from craft to industry and justified massive capital bets.",
+  "why_impossible": "ML had always been alchemy \u2014 tune and pray. Discovering that performance was FORECASTABLE changed AI from craft to industry and justified massive capital bets.",
   "category": "scaling-science",
   "impact": 10,
   "surprise": 9,
-  "tags": ["scaling-laws", "kaplan", "forecastability"]
+  "tags": [
+   "scaling-laws",
+   "kaplan",
+   "forecastability"
+  ]
+ },
+ {
+  "id": "2020-retrieval-augmentation",
+  "year": 2020,
+  "date": "2020-05-22",
+  "era": "llm-scaling",
+  "title": "RAG \u2014 models that look things up instead of memorizing",
+  "org": "Facebook AI Research",
+  "people": [
+   "Patrick Lewis",
+   "Ethan Perez",
+   "Douwe Kiela"
+  ],
+  "paper": "\"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\", NeurIPS",
+  "url": "https://arxiv.org/abs/2005.11401",
+  "what_it_broke": "Separated KNOWING from ACCESSING: parametric memory + non-parametric retriever. Became the enterprise pattern for grounding LLMs in fresh/private data without retraining.",
+  "why_impossible": "The scaling path said all knowledge should live in weights; RAG bet that external memory beats internal recall for facts \u2014 heresy that every company deploying LLMs now follows.",
+  "category": "architecture",
+  "impact": 8,
+  "surprise": 6,
+  "tags": [
+   "rag",
+   "retrieval",
+   "grounding",
+   "enterprise"
+  ]
+ },
+ {
+  "id": "2020-gpt3-emergence",
+  "year": 2020,
+  "date": "2020-05-28",
+  "era": "llm-scaling",
+  "title": "GPT-3 \u2014 175B parameters; few-shot learning emerges from scale",
+  "org": "OpenAI",
+  "people": [
+   "Tom Brown",
+   "Benjamin Mann",
+   "Nick Ryder",
+   "Melanie Subbiah",
+   "Jared Kaplan",
+   "Sam McCandlish",
+   "AJ Brimley",
+   "Greg Brockman",
+   "Ilya Sutskever"
+  ],
+  "paper": "\"Language Models are Few-Shot Learners\", NeurIPS",
+  "url": "https://papers.nips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html",
+  "what_it_broke": "Without fine-tuning, GPT-3 performed tasks from natural-language instructions alone. In-context learning appeared at scale like a phase transition \u2014 nobody had engineered it.",
+  "why_impossible": "The field consensus was bigger models would be marginally better at grammar. Instead new CAPABILITIES emerged that smaller versions lacked entirely.",
+  "category": "emergence",
+  "impact": 10,
+  "surprise": 10,
+  "tags": [
+   "gpt-3",
+   "emergence",
+   "few-shot",
+   "scaling"
+  ]
+ },
+ {
+  "id": "2020-ddpm-diffusion-works",
+  "year": 2020,
+  "date": "2020-06-19",
+  "era": "generative-explosion",
+  "title": "DDPM \u2014 diffusion beats GANs on fidelity AND diversity",
+  "org": "UC Berkeley",
+  "people": [
+   "Jonathan Ho",
+   "Ajay Jain",
+   "Pieter Abbeel"
+  ],
+  "paper": "\"Denoising Diffusion Probabilistic Models\", NeurIPS",
+  "url": "https://arxiv.org/abs/2006.11239",
+  "what_it_broke": "Four years after Sohl-Dickstein's ignored paper: simple MSE denoising objective + U-Net beat GANs at their own game. Every major image/video/audio generator since descends from this paper.",
+  "why_impossible": "GANs were unbeatable for six YEARS and diffusion was considered too slow; Ho's simplifications (fixed variance schedule) flipped the field in months. Mode collapse simply stopped being a thing.",
+  "category": "generative-models",
+  "impact": 10,
+  "surprise": 9,
+  "tags": [
+   "diffusion",
+   "ddpm",
+   "jonathan-ho",
+   "image-generation"
+  ]
+ },
+ {
+  "id": "2020-alphafold2-casp14",
+  "year": 2020,
+  "date": "2020-11-30",
+  "era": "science-transformation",
+  "title": "AlphaFold2 at CASP14 \u2014 the moment folding was considered SOLVED live",
+  "org": "Google DeepMind",
+  "people": [
+   "John Jumper",
+   "Kathryn Tunyasuvunakool",
+   "Demis Hassabis"
+  ],
+  "paper": "\"Highly accurate protein structure prediction with AlphaFold\" (Nature 2021); CASP14 results",
+  "url": "https://doi.org/10.1038/s41586-021-03819-2",
+  "what_it_broke": "Median GDT ~92 at CASP14 \u2014 experimental accuracy on the LIVE benchmark, announced by organizers as effectively solving the 50-year challenge. The public reveal preceded the Nature paper and 200M-structure release by 20 months.",
+  "why_impossible": "CASP13's best was far from competitive with wet labs; two years later evaluators ran out of ways to say 'this is as good as measuring it'. Attention + equivariance + co-evolution did what physics simulations couldn't.",
+  "category": "ai-for-science",
+  "impact": 10,
+  "surprise": 10,
+  "tags": [
+   "alphafold",
+   "casp14",
+   "biology",
+   "grand-challenge",
+   "attention"
+  ]
+ },
+ {
+  "id": "2021-dalle-clip",
+  "year": 2021,
+  "date": "2021-01-05",
+  "era": "multimodal-dawn",
+  "title": "CLIP + DALL\u00b7E \u2014 text-to-image and zero-shot vision",
+  "org": "OpenAI",
+  "people": [
+   "Alec Radford",
+   "Jong Wook Kim",
+   "Chris Hallacy",
+   "Aditya Ramesh",
+   "Ilya Sutskever"
+  ],
+  "paper": "\"Learning Transferable Visual Models From Natural Language Supervision (CLIP)\"; \"Zero-Shot Text-to-Image Generation (DALL\u00b7E)\"",
+  "url": "https://arxiv.org/abs/2103.00020",
+  "what_it_broke": "CLIP matched ResNet-50 on ImageNet with ZERO training examples via web text supervision; DALL\u00b7E generated coherent images from sentences. Modalities fused into one representational space.",
+  "why_impossible": "Cross-modal grounding was a decade-old dream requiring curated labels; raw web-scale pairs did it better than anyone predicted.",
+  "category": "multimodal",
+  "impact": 8,
+  "surprise": 8,
+  "tags": [
+   "clip",
+   "text-to-image",
+   "multimodal"
+  ]
+ },
+ {
+  "id": "2021-huggingface-hub-datasets",
+  "year": 2021,
+  "date": "2021-04-01",
+  "era": "open-ecosystem-era",
+  "title": "Hugging Face Hub + Datasets \u2014 weights and data become public utilities",
+  "org": "Hugging Face",
+  "people": [
+   "Hugging Face team"
+  ],
+  "paper": "\"Datasets: A Community Library for Natural Language Processing\", EMNLP 2021",
+  "url": "https://doi.org/10.18653/v1/2021.emnlp-demo.21",
+  "what_it_broke": "Versioned dataset hosting with streaming made multi-terabyte corpora loadable on laptops. The Hub grew to 1M+ models/datasets \u2014 the substrate everyone from Meta to Mistral ships through.",
+  "why_impossible": "Data access was the dirtiest bottleneck in ML; making petabytes versioned, streamable, and free inverted who can train competitive models.",
+  "category": "infrastructure-commons",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "huggingface",
+   "datasets",
+   "data-access",
+   "hub"
+  ]
+ },
+ {
+  "id": "2021-megatron-trident-scaling-infra",
+  "year": 2021,
+  "date": "2021-04-01",
+  "era": "llm-scaling",
+  "title": "Systems breakthrough: trillion-parameter training becomes routine infrastructure",
+  "org": "NVIDIA / Microsoft / Google",
+  "people": [
+   "Deepak Narayanan",
+   "Mohammad Shoeybi",
+   "Jeff Rasley",
+   "Samyam Rajbhandari"
+  ],
+  "paper": "\"Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM Sequence Parallelism and Activation Checkpointing\"; ZeRO/DeepSpeed line",
+  "url": "https://arxiv.org/abs/2104.04473",
+  "what_it_broke": "Tensor+pipeline+data parallelism combined with ZeRO optimizer sharding made thousand-GPU training runs reliable. The unglamorous systems work every frontier lab depends on \u2014 capability follows infrastructure.",
+  "why_impossible": "GPU clusters were assumed to top out around hundreds of chips due to communication overhead; 3D parallelism pushed usable fleets to thousands and made $100M runs schedulable.",
+  "category": "infrastructure-commons",
+  "impact": 8,
+  "surprise": 5,
+  "tags": [
+   "megatron",
+   "deepspeed",
+   "distributed-training",
+   "systems",
+   "nvidia"
+  ]
+ },
+ {
+  "id": "2021-lora-lowrank",
+  "year": 2021,
+  "date": "2021-06-17",
+  "era": "open-ecosystem-era",
+  "title": "LoRA \u2014 fine-tuning big models on one GPU via low-rank adapters",
+  "org": "Microsoft",
+  "people": [
+   "Edward Hu",
+   "Yelong Shen",
+   "Weizhu Chen"
+  ],
+  "paper": "\"LoRA: Low-Rank Adaptation of Large Language Models\", arXiv",
+  "url": "https://arxiv.org/abs/2106.09685",
+  "what_it_broke": "Freeze weights, train tiny rank-decomposition matrices: frontier-model specialization on consumer hardware, mergeable at inference. QLoRA (2023) pushed it to 4-bit. The reason thousands of fine-tunes exist on HuggingFace today.",
+  "why_impossible": "Full fine-tuning required datacenter hardware by definition; decomposing weight UPDATES instead of weights made adaptation ~1000x cheaper and unlocked the open fine-tune ecosystem.",
+  "category": "open-ecosystem",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "lora",
+   "fine-tuning",
+   "democratization",
+   "qlora",
+   "adapters"
+  ]
+ },
+ {
+  "id": "2021-codex-human-eval",
+  "year": 2021,
+  "date": "2021-07-07",
+  "era": "llm-scaling",
+  "title": "HumanEval + Codex \u2014 code generation becomes measurable science",
+  "org": "OpenAI",
+  "people": [
+   "Mark Chen",
+   "Jerry Tworek",
+   "Heewoo Jun"
+  ],
+  "paper": "\"Evaluating Large Language Models Trained on Code\", arXiv",
+  "url": "https://arxiv.org/abs/2107.03374",
+  "what_it_broke": "Introduced functional correctness testing for generated code (pass@k) \u2014 replacing fuzzy BLEU-style metrics. GPT model trained on code hit 72% pass@100. Made 'can it actually run' THE standard every coding agent still uses.",
+  "why_impossible": "Program synthesis was stuck on toy DSLs for decades; showing a general language model writing WORKING Python from docstrings collapsed a subfield into an eval suite.",
+  "category": "applied-capability",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "codex",
+   "code-generation",
+   "benchmarks",
+   "human-eval"
+  ]
  },
  {
   "id": "2021-codex-copilot",
   "year": 2021,
   "date": "2021-08-10",
   "era": "llm-scaling",
-  "title": "Copilot — LLMs write production code",
+  "title": "Copilot \u2014 LLMs write production code",
   "org": "OpenAI / GitHub",
-  "people": ["Mark Chen", "Jerry Tworek", "Heewoo Jun", "Qiming Yuan"],
+  "people": [
+   "Mark Chen",
+   "Jerry Tworek",
+   "Heewoo Jun",
+   "Qiming Yuan"
+  ],
   "paper": "\"Evaluating Large Language Models Trained on Code\", arXiv",
   "url": "https://arxiv.org/abs/2107.03374",
   "what_it_broke": "First mass-market tool where an AI writes functional software inside developers' editors. Programming became the first profession transformed in daily practice.",
@@ -422,84 +1677,300 @@
   "category": "applied-capability",
   "impact": 8,
   "surprise": 7,
-  "tags": ["code", "copilot", "developer-tools"]
+  "tags": [
+   "code",
+   "copilot",
+   "developer-tools"
+  ]
  },
  {
-  "id": "2021-dalle-clip",
-  "year": 2021,
-  "date": "2021-01-05",
-  "era": "multimodal-dawn",
-  "title": "CLIP + DALL·E — text-to-image and zero-shot vision",
-  "org": "OpenAI",
-  "people": ["Alec Radford", "Jong Wook Kim", "Chris Hallacy", "Aditya Ramesh", "Ilya Sutskever"],
-  "paper": "\"Learning Transferable Visual Models From Natural Language Supervision (CLIP)\"; \"Zero-Shot Text-to-Image Generation (DALL·E)\"",
-  "url": "https://arxiv.org/abs/2103.00020",
-  "what_it_broke": "CLIP matched ResNet-50 on ImageNet with ZERO training examples via web text supervision; DALL·E generated coherent images from sentences. Modalities fused into one representational space.",
-  "why_impossible": "Cross-modal grounding was a decade-old dream requiring curated labels; raw web-scale pairs did it better than anyone predicted.",
-  "category": "multimodal",
-  "impact": 8,
-  "surprise": 8,
-  "tags": ["clip", "text-to-image", "multimodal"]
- },
- {
-  "id": "2022-stable-diffusion-openweights",
+  "id": "2022-instructgpt-align-first",
   "year": 2022,
-  "date": "2022-08-22",
-  "era": "generative-explosion",
-  "title": "Stable Diffusion — photorealistic generation goes open-weight",
-  "org": "CompVis / Runway / Stability AI",
-  "people": ["Robin Rombach", "Andreas Blattmann", "Dominik Lorenz", "Patrick Esser", "Björn Ommer"],
-  "paper": "\"High-Resolution Image Synthesis with Latent Diffusion Models\", CVPR",
-  "url": "https://doi.org/10.1109/CVPR52688.2022.01068",
-  "what_it_broke": "Latent diffusion cut generation compute by orders of magnitude AND shipped open weights — anyone could run frontier-quality image generation on a gaming PC, unleashing an ecosystem.",
-  "why_impossible": "Frontier labs assumed generative quality required datacenter budgets; suddenly it ran locally, and the closed-source moat evaporated for images.",
-  "category": "generative-models",
+  "date": "2022-03-04",
+  "era": "frontier-race",
+  "title": "InstructGPT \u2014 'align first, scale later' becomes the product recipe",
+  "org": "OpenAI",
+  "people": [
+   "Long Ouyang",
+   "Ryan Lowe",
+   "Paul Christiano",
+   "Jan Leike",
+   "John Schulman"
+  ],
+  "paper": "\"Training language models to follow instructions with human feedback\", NeurIPS",
+  "url": "https://arxiv.org/abs/2203.02155",
+  "what_it_broke": "1.3B aligned model PREFERRED over 175B GPT-3 by human raters \u2014 proving alignment quality beats raw scale for usefulness. The exact recipe ChatGPT shipped nine months later.",
+  "why_impossible": "Scaling religion said bigger always wins; here 1% of the parameters won on preference. RLHF went from research curiosity to mandatory production step overnight.",
+  "category": "alignment",
   "impact": 9,
   "surprise": 8,
-  "tags": ["diffusion", "open-weights", "latent-space"]
+  "tags": [
+   "rlhf",
+   "instructgpt",
+   "alignment-beats-scale",
+   "chatgpt-precursor"
+  ]
  },
  {
-  "id": "2022-chatgpt-moment",
+  "id": "2022-chinchilla-compute-optimal",
   "year": 2022,
-  "date": "2022-11-30",
-  "era": "generative-explosion",
-  "title": "ChatGPT — AI reaches 100M users; the public era begins",
-  "org": "OpenAI",
-  "people": ["Sam Altman", "Greg Brockman", "Ilya Sutskever", "John Schulman", "Jan Leike"],
-  "paper": "\"Training language models to follow instructions with human feedback (InstructGPT)\", PNAS",
-  "url": "https://doi.org/10.1073/pnas.2216138119",
-  "what_it_broke": "RLHF-aligned chat crossed from research demo to fastest-adopted consumer product in history (~100M users in 2 months). AI stopped being a field and became infrastructure overnight.",
-  "why_impossible": "It was a low-key research-preview release of technology labs already had; NOBODY — including OpenAI — predicted the societal detonation. The surprise was cultural, not technical.",
-  "category": "societal-shockwave",
-  "impact": 10,
-  "surprise": 10,
-  "tags": ["chatgpt", "rlhf", "mass-adoption", "alignment"]
+  "date": "2022-03-29",
+  "era": "llm-scaling",
+  "title": "Chinchilla \u2014 everyone was training models wrong-sized; data scales too",
+  "org": "Google DeepMind",
+  "people": [
+   "Jordan Hoffmann",
+   "Sebastian Borgeaud",
+   "Arthur Mensch",
+   "Laurent Sifre"
+  ],
+  "paper": "\"Training Compute-Optimal Large Language Models\", NeurIPS",
+  "url": "https://arxiv.org/abs/2203.15556",
+  "what_it_broke": "Showed GPT-3-class models were badly UNDER-trained: tokens should scale proportionally with parameters (~20 tok/param). A smaller 70B model beat the 280B Gopher. Rewrote every lab's training recipe overnight.",
+  "why_impossible": "The Kaplan scaling laws had become gospel; falsifying the gospel with a cleaner experiment \u2014 and forcing giants to admit their flagships were misprovisioned \u2014 was a rare public correction.",
+  "category": "scaling-science",
+  "impact": 9,
+  "surprise": 8,
+  "tags": [
+   "chinchilla",
+   "scaling-laws",
+   "compute-optimal",
+   "deepmind"
+  ]
+ },
+ {
+  "id": "2022-flashattention-exact",
+  "year": 2022,
+  "date": "2022-05-27",
+  "era": "llm-scaling",
+  "title": "FlashAttention \u2014 IO-aware exact attention makes long context affordable",
+  "org": "Stanford",
+  "people": [
+   "Tri Dao",
+   "Daniel Fu",
+   "Stefano Ermon",
+   "Atri Rudra",
+   "Christopher R\u00e9"
+  ],
+  "paper": "\"FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness\", NeurIPS",
+  "url": "https://arxiv.org/abs/2205.14135",
+  "what_it_broke": "Reordered attention's memory access to fit SRAM: 2-4x faster training, linear memory in sequence length \u2014 EXACT, no approximation. The quiet systems paper enabling 128K+ contexts everywhere including this repo's own subject matter.",
+  "why_impossible": "Attention's O(n\u00b2) memory was treated as physics; proving it was an ARTIFACT of naive GPU utilization turned a wall into a hallway. Context windows went quadratic-to-long within two years.",
+  "category": "systems-breakthrough",
+  "impact": 9,
+  "surprise": 8,
+  "tags": [
+   "flashattention",
+   "gpu",
+   "tri-dao",
+   "long-context",
+   "systems"
+  ]
  },
  {
   "id": "2022-alphafold2-solved",
   "year": 2022,
   "date": "2022-07-28",
   "era": "science-transformation",
-  "title": "AlphaFold2 releases 200M protein structures — a 50-year grand challenge solved",
+  "title": "AlphaFold2 releases 200M protein structures \u2014 a 50-year grand challenge solved",
   "org": "Google DeepMind / EMBL-EBI",
-  "people": ["John Jumper", "Demis Hassabis", "Kathryn Tunyasuvunakool"],
+  "people": [
+   "John Jumper",
+   "Demis Hassabis",
+   "Kathryn Tunyasuvunakool"
+  ],
   "paper": "\"Highly accurate protein structure prediction with AlphaFold\", Nature",
   "url": "https://doi.org/10.1038/s41586-021-03819-2",
-  "what_it_broke": "Solved protein folding prediction at experimental accuracy and gave away ALL structures — 200 million of them, nearly every known protein. Structural biology compressed decades into a database query.",
+  "what_it_broke": "Solved protein folding prediction at experimental accuracy and gave away ALL structures \u2014 200 million of them, nearly every known protein. Structural biology compressed decades into a database query.",
   "why_impossible": "Levinthal's paradox implied folding prediction was computationally hopeless; CASP13 in 2018 still had mediocre results. Two years later the 50-year problem was DONE, and Nobel-level impact followed in 2024.",
   "category": "ai-for-science",
   "impact": 10,
   "surprise": 9,
-  "tags": ["alphafold", "biology", "grand-challenge", "nobel"]
+  "tags": [
+   "alphafold",
+   "biology",
+   "grand-challenge",
+   "nobel"
+  ]
+ },
+ {
+  "id": "2022-emergent-abilities-paper",
+  "year": 2022,
+  "date": "2022-08-01",
+  "era": "llm-scaling",
+  "title": "'Emergent Abilities' named and catalogued \u2014 phase transitions become a research agenda",
+  "org": "Google Brain / Stanford",
+  "people": [
+   "Jason Wei",
+   "Yi Tay",
+   "Rishi Bommasani",
+   "Percy Liang"
+  ],
+  "paper": "\"Emergent Abilities of Large Language Models\", TMLR",
+  "url": "https://arxiv.org/abs/2206.07682",
+  "what_it_broke": "Systematized WHAT appears when: arithmetic, multi-step reasoning, instruction following all show sharp discontinuities vs scale across models/labs. Turned anecdote ('GPT-3 can do X!') into measurable scaling science.",
+  "why_impossible": "ML expected smooth loss curves; documenting step-function CAPABILITY jumps across independent labs suggested something structural about scale itself \u2014 and made forecasting capabilities a discipline.",
+  "category": "emergence",
+  "impact": 8,
+  "surprise": 8,
+  "tags": [
+   "emergence",
+   "scaling",
+   "phase-transition",
+   "jason-wei"
+  ]
+ },
+ {
+  "id": "2022-stable-diffusion-openweights",
+  "year": 2022,
+  "date": "2022-08-22",
+  "era": "generative-explosion",
+  "title": "Stable Diffusion \u2014 photorealistic generation goes open-weight",
+  "org": "CompVis / Runway / Stability AI",
+  "people": [
+   "Robin Rombach",
+   "Andreas Blattmann",
+   "Dominik Lorenz",
+   "Patrick Esser",
+   "Bj\u00f6rn Ommer"
+  ],
+  "paper": "\"High-Resolution Image Synthesis with Latent Diffusion Models\", CVPR",
+  "url": "https://doi.org/10.1109/CVPR52688.2022.01068",
+  "what_it_broke": "Latent diffusion cut generation compute by orders of magnitude AND shipped open weights \u2014 anyone could run frontier-quality image generation on a gaming PC, unleashing an ecosystem.",
+  "why_impossible": "Frontier labs assumed generative quality required datacenter budgets; suddenly it ran locally, and the closed-source moat evaporated for images.",
+  "category": "generative-models",
+  "impact": 9,
+  "surprise": 8,
+  "tags": [
+   "diffusion",
+   "open-weights",
+   "latent-space"
+  ]
+ },
+ {
+  "id": "2022-whisper-robust-asr",
+  "year": 2022,
+  "date": "2022-09-21",
+  "era": "multimodal-dawn",
+  "title": "Whisper \u2014 human-level speech recognition released OPEN to everyone",
+  "org": "OpenAI",
+  "people": [
+   "Alec Radford",
+   "Jong Wook Kim",
+   "Tao Xu",
+   "Greg Brockman"
+  ],
+  "paper": "\"Robust Speech Recognition via Large-Scale Weak Supervision\", arXiv",
+  "url": "https://arxiv.org/abs/2212.04356",
+  "what_it_broke": "680k hours of weakly-labeled audio \u2192 near-human multilingual ASR with zero-shot transfer, shipped as MIT-licensed weights. Commercial speech APIs were instantly commoditized; accessibility tooling exploded.",
+  "why_impossible": "Speech was a walled-garden industry (Google/Watson/Nuance) with decades of specialized pipelines; weak supervision at internet scale beat them all and gave it away the same week.",
+  "category": "multimodal",
+  "impact": 7,
+  "surprise": 7,
+  "tags": [
+   "whisper",
+   "speech-recognition",
+   "open-weights",
+   "accessibility"
+  ]
+ },
+ {
+  "id": "2022-chatgpt-moment",
+  "year": 2022,
+  "date": "2022-11-30",
+  "era": "generative-explosion",
+  "title": "ChatGPT \u2014 AI reaches 100M users; the public era begins",
+  "org": "OpenAI",
+  "people": [
+   "Sam Altman",
+   "Greg Brockman",
+   "Ilya Sutskever",
+   "John Schulman",
+   "Jan Leike"
+  ],
+  "paper": "\"Training language models to follow instructions with human feedback (InstructGPT)\", PNAS",
+  "url": "https://doi.org/10.1073/pnas.2216138119",
+  "what_it_broke": "RLHF-aligned chat crossed from research demo to fastest-adopted consumer product in history (~100M users in 2 months). AI stopped being a field and became infrastructure overnight.",
+  "why_impossible": "It was a low-key research-preview release of technology labs already had; NOBODY \u2014 including OpenAI \u2014 predicted the societal detonation. The surprise was cultural, not technical.",
+  "category": "societal-shockwave",
+  "impact": 10,
+  "surprise": 10,
+  "tags": [
+   "chatgpt",
+   "rlhf",
+   "mass-adoption",
+   "alignment"
+  ]
+ },
+ {
+  "id": "2023-llama-open-frontier",
+  "year": 2023,
+  "date": "2023-02-24",
+  "era": "frontier-race",
+  "title": "LLaMA leak \u2014 near-frontier weights escape into everyone's hands",
+  "org": "Meta AI",
+  "people": [
+   "Guillaume Touvron",
+   "Thibaut Lavril",
+   "Hugo Touvron",
+   "Yann LeCun"
+  ],
+  "paper": "\"LLaMA: Open and Efficient Foundation Language Models\", arXiv",
+  "url": "https://arxiv.org/abs/2302.13971",
+  "what_it_broke": "Research-only weights leaked within a week; fine-tunes (Alpaca, Vicuna) proved frontier-adjacent capability ran on laptops. The open-weights ecosystem exploded permanently.",
+  "why_impossible": "Closed labs' core assumption \u2014 capability advantage requires control of weights \u2014 was publicly falsified when a leaked 7B fine-tune rivaled early ChatGPT on many tasks.",
+  "category": "open-ecosystem",
+  "impact": 9,
+  "surprise": 7,
+  "tags": [
+   "llama",
+   "open-weights",
+   "leak",
+   "fine-tuning"
+  ]
+ },
+ {
+  "id": "2023-rlhf-alignment-scaling",
+  "year": 2023,
+  "date": "2023-03-01",
+  "era": "frontier-race",
+  "title": "RLHF at scale \u2014 alignment becomes the product differentiator",
+  "org": "Anthropic / OpenAI",
+  "people": [
+   "Paul Christiano",
+   "Ryan Lowe",
+   "Jan Leike",
+   "John Schulman",
+   "Yuntao Bai",
+   "Jared Kaplan"
+  ],
+  "paper": "\"Deep reinforcement learning from human preferences\" (2017); \"Training a Helpful and Harmless Assistant with RLHF\" (Anthropic 2022); \"Constitutional AI: Harmlessness from AI Feedback\"",
+  "url": "https://arxiv.org/abs/2212.08073",
+  "what_it_broke": "Turned alignment research from philosophy seminar into engineering pipeline: preference models + PPO/Constitutional training made models usable enough to ship to consumers. The chatbot era is downstream of these papers.",
+  "why_impossible": "Alignment was widely seen as unmeasurable do-gooding; papers like Constitutional AI showed you can specify behavior with written principles and get measurably safer systems at scale.",
+  "category": "alignment",
+  "impact": 9,
+  "surprise": 6,
+  "tags": [
+   "rlhf",
+   "alignment",
+   "constitutional-ai",
+   "anthropic"
+  ]
  },
  {
   "id": "2023-gpt4-multimodal-reasoning",
   "year": 2023,
   "date": "2023-03-14",
   "era": "frontier-race",
-  "title": "GPT-4 — multimodal reasoning; passes professional exams",
+  "title": "GPT-4 \u2014 multimodal reasoning; passes professional exams",
   "org": "OpenAI",
-  "people": ["OpenAI (whole-org authorship)", "Sam Altman", "Greg Brockman", "Ilya Sutskever"],
+  "people": [
+   "OpenAI (whole-org authorship)",
+   "Sam Altman",
+   "Greg Brockman",
+   "Ilya Sutskever"
+  ],
   "paper": "\"GPT-4 Technical Report\", arXiv",
   "url": "https://arxiv.org/abs/2303.08774",
   "what_it_broke": "Passed the bar exam at ~90th percentile, aced medical licensing exams, handled images. First model widely argued to show 'sparks of AGI' in Microsoft Research's famous analysis.",
@@ -507,33 +1978,24 @@
   "category": "capability-leap",
   "impact": 9,
   "surprise": 8,
-  "tags": ["gpt-4", "reasoning", "exams", "multimodal"]
- },
- {
-  "id": "2023-llama-open-frontier",
-  "year": 2023,
-  "date": "2023-02-24",
-  "era": "frontier-race",
-  "title": "LLaMA leak — near-frontier weights escape into everyone's hands",
-  "org": "Meta AI",
-  "people": ["Guillaume Touvron", "Thibaut Lavril", "Hugo Touvron", "Yann LeCun"],
-  "paper": "\"LLaMA: Open and Efficient Foundation Language Models\", arXiv",
-  "url": "https://arxiv.org/abs/2302.13971",
-  "what_it_broke": "Research-only weights leaked within a week; fine-tunes (Alpaca, Vicuna) proved frontier-adjacent capability ran on laptops. The open-weights ecosystem exploded permanently.",
-  "why_impossible": "Closed labs' core assumption — capability advantage requires control of weights — was publicly falsified when a leaked 7B fine-tune rivaled early ChatGPT on many tasks.",
-  "category": "open-ecosystem",
-  "impact": 9,
-  "surprise": 7,
-  "tags": ["llama", "open-weights", "leak", "fine-tuning"]
+  "tags": [
+   "gpt-4",
+   "reasoning",
+   "exams",
+   "multimodal"
+  ]
  },
  {
   "id": "2023-agents-tool-use",
   "year": 2023,
   "date": "2023-03-23",
   "era": "frontier-race",
-  "title": "Tool use & plugins — LLMs act on the world; AutoGPT moment",
+  "title": "Tool use & plugins \u2014 LLMs act on the world; AutoGPT moment",
   "org": "OpenAI / community",
-  "people": ["Significant Gravitas (AutoGPT)", "OpenAI functions team"],
+  "people": [
+   "Significant Gravitas (AutoGPT)",
+   "OpenAI functions team"
+  ],
   "paper": "\"Toolformer: Language Models Can Teach Themselves to Use Tools\" (Meta, precursor)",
   "url": "https://arxiv.org/abs/2302.04761",
   "what_it_broke": "Models began calling APIs, browsing, executing code, chaining goals autonomously. AutoGPT hit #1 on GitHub faster than any repo before it. The agent era started here.",
@@ -541,67 +2003,186 @@
   "category": "agency",
   "impact": 8,
   "surprise": 8,
-  "tags": ["agents", "tool-use", "function-calling", "autogpt"]
+  "tags": [
+   "agents",
+   "tool-use",
+   "function-calling",
+   "autogpt"
+  ]
+ },
+ {
+  "id": "2023-segment-anything-vision-foundation",
+  "year": 2023,
+  "date": "2023-04-05",
+  "era": "multimodal-dawn",
+  "title": "Segment Anything \u2014 promptable vision: the GPT-moment for images",
+  "org": "Meta AI",
+  "people": [
+   "Alexander Kirillov",
+   "Eric Mintun",
+   "Nikhila Ravi",
+   "Yann LeCun"
+  ],
+  "paper": "\"Segment Anything\", ICCV",
+  "url": "https://arxiv.org/abs/2304.02643",
+  "what_it_broke": "One model segments ANY object from click/box/text prompts with zero-shot generalization \u2014 vision's shift from task-specific models to promptable foundation models, backed by the largest segmentation dataset ever (1.1B masks).",
+  "why_impossible": "Segmentation was the most hand-labeled task in CV with bespoke models per domain; SAM generalized across ALL of them from prompts alone, then open-sourced everything.",
+  "category": "vision-breakthrough",
+  "impact": 8,
+  "surprise": 7,
+  "tags": [
+   "segmentation",
+   "sam",
+   "meta",
+   "foundation-model",
+   "promptable"
+  ]
+ },
+ {
+  "id": "2024-alphageometry-olympiad",
+  "year": 2024,
+  "date": "2024-01-17",
+  "era": "test-time-compute",
+  "title": "AlphaGeometry \u2014 silver-medal geometry proofs via neuro-symbolic synthesis",
+  "org": "Google DeepMind / Oxford",
+  "people": [
+   "Trieu H. Trinh",
+   "Yuhang Wu",
+   "Quoc V. Le",
+   "He He",
+   "Thang Luong"
+  ],
+  "paper": "\"Solving olympiad geometry without human demonstrations\", Nature",
+  "url": "https://doi.org/10.1038/s41586-023-06747-5",
+  "what_it_broke": "Solved 25/30 IMO geometry problems \u2014 near gold-medal \u2014 combining a language model proposing constructions with symbolic deduction verifying them. First non-trivial olympiad math beyond arithmetic-style benchmarks.",
+  "why_impossible": "Formal geometry proofs need exhaustive search no LM can brute-force; hybridizing neural intuition with symbolic rigor cracked a problem class pure-scaling approaches failed at. Foreshadowed o1-style reasoning hybrids.",
+  "category": "reasoning-milestone",
+  "impact": 8,
+  "surprise": 8,
+  "tags": [
+   "alphageometry",
+   "olympiad",
+   "neuro-symbolic",
+   "proofs"
+  ]
+ },
+ {
+  "id": "2024-mamba-state-space",
+  "year": 2024,
+  "date": "2024-01-31",
+  "era": "test-time-compute",
+  "title": "Mamba \u2014 selective state-space models challenge the transformer monopoly",
+  "org": "CMU / Princeton",
+  "people": [
+   "Albert Gu",
+   "Tri Dao"
+  ],
+  "paper": "\"Mamba: Linear-Time Sequence Modeling with Selective State Spaces\", arXiv/Colm",
+  "url": "https://arxiv.org/abs/2312.00752",
+  "what_it_broke": "Linear-time sequences with transformer-comparable quality: input-dependent state selection fixes SSM rigidity. First serious architectural CHALLENGE to attention since 2017 \u2014 whether or not it wins, the monopoly broke.",
+  "why_impossible": "'Transformer wins' had become physics since 2017; a fundamentally different recurrence matching quality while scaling linearly reopened architecture research everyone had abandoned as settled.",
+  "category": "architecture",
+  "impact": 8,
+  "surprise": 8,
+  "tags": [
+   "mamba",
+   "ssm",
+   "linear-attention",
+   "architecture-race"
+  ]
  },
  {
   "id": "2024-sora-video",
   "year": 2024,
   "date": "2024-02-15",
   "era": "world-simulation",
-  "title": "Sora — minute-long coherent video from text; world-simulator claims",
+  "title": "Sora \u2014 minute-long coherent video from text; world-simulator claims",
   "org": "OpenAI",
-  "people": ["Tim Brooks", "Bill Peebles", "Aditya Ramesh"],
+  "people": [
+   "Tim Brooks",
+   "Bill Peebles",
+   "Aditya Ramesh"
+  ],
   "paper": "\"Video generation models as world simulators\" (technical report)",
   "url": "https://openai.com/research/video-generation-models-as-world-simulators",
   "what_it_broke": "Minute-long, physically-plausible multi-shot video emerged from diffusion transformers at scale. Object permanence and 3D consistency appeared WITHOUT explicit physics programming.",
-  "why_impossible": "Video coherence past seconds was considered blocked by compounding errors; emergent object permanence suggested video models learn implicit world models — a philosophical earthquake.",
+  "why_impossible": "Video coherence past seconds was considered blocked by compounding errors; emergent object permanence suggested video models learn implicit world models \u2014 a philosophical earthquake.",
   "category": "generative-models",
   "impact": 8,
   "surprise": 9,
-  "tags": ["video-generation", "world-model", "sora", "diffusion-transformer"]
+  "tags": [
+   "video-generation",
+   "world-model",
+   "sora",
+   "diffusion-transformer"
+  ]
  },
  {
   "id": "2024-o1-reasoning-paradigm",
   "year": 2024,
   "date": "2024-09-12",
   "era": "test-time-compute",
-  "title": "o1 — inference-time 'thinking' becomes a new scaling axis",
+  "title": "o1 \u2014 inference-time 'thinking' becomes a new scaling axis",
   "org": "OpenAI",
-  "people": ["OpenAI o-series team", "Hyung Won Chung", "Jason Wei (precursors)", "Ilya Sutskever (advisor)"],
+  "people": [
+   "OpenAI o-series team",
+   "Hyung Won Chung",
+   "Jason Wei (precursors)",
+   "Ilya Sutskever (advisor)"
+  ],
   "paper": "\"Chain-of-Thought Reasoning Without Prompting\" / o1 system card; \"Let's Verify Step by Step\" (process supervision)",
   "url": "https://openai.com/index/learning-to-reason-with-llms/",
-  "what_it_broke": "Spending more COMPUTE AT INFERENCE made models dramatically smarter — IMO gold-medal math, PhD-level science. A second scaling dimension beyond parameters/training was opened.",
+  "what_it_broke": "Spending more COMPUTE AT INFERENCE made models dramatically smarter \u2014 IMO gold-medal math, PhD-level science. A second scaling dimension beyond parameters/training was opened.",
   "why_impossible": "Scaling laws were about TRAINING compute; discovering test-time compute scaled too doubled the road ahead and reset every capability ceiling estimate.",
   "category": "new-scaling-axis",
   "impact": 10,
   "surprise": 9,
-  "tags": ["o1", "chain-of-thought", "test-time-compute", "reasoning"]
+  "tags": [
+   "o1",
+   "chain-of-thought",
+   "test-time-compute",
+   "reasoning"
+  ]
  },
  {
   "id": "2024-nobel-ai",
   "year": 2024,
   "date": "2024-10-08",
   "era": "science-transformation",
-  "title": "Nobel Prizes go to neural network pioneers — twice in one week",
+  "title": "Nobel Prizes go to neural network pioneers \u2014 twice in one week",
   "org": "Royal Swedish Academy",
-  "people": ["Geoffrey Hinton", "John Hopfield", "Demis Hassabis", "John Jumper", "David Baker"],
+  "people": [
+   "Geoffrey Hinton",
+   "John Hopfield",
+   "Demis Hassabis",
+   "John Jumper",
+   "David Baker"
+  ],
   "paper": "Physics: Hopfield networks & Boltzmann machines; Chemistry: AlphaFold2 & protein design",
   "url": "https://www.nobelprize.org/prizes/physics/2024/summary/",
-  "what_it_broke": "Physics Nobel to Hinton+Hopfield, Chemistry Nobel to Hassabis+Jumper+Baker — the establishment canonization of AI as foundational science, 42 years after the field was laughed at.",
+  "what_it_broke": "Physics Nobel to Hinton+Hopfield, Chemistry Nobel to Hassabis+Jumper+Baker \u2014 the establishment canonization of AI as foundational science, 42 years after the field was laughed at.",
   "why_impossible": "Neural networks spent decades as a discredited fringe; two Nobels in one week for connectionism would have been unthinkable even five years prior.",
   "category": "recognition",
   "impact": 8,
   "surprise": 8,
-  "tags": ["nobel", "recognition", "hopfield", "alphafold"]
+  "tags": [
+   "nobel",
+   "recognition",
+   "hopfield",
+   "alphafold"
+  ]
  },
  {
   "id": "2024-deepseek-v3-efficiency",
   "year": 2024,
   "date": "2024-12-26",
   "era": "efficiency-disruption",
-  "title": "DeepSeek-V3 — frontier-class training for ~$5.6M",
+  "title": "DeepSeek-V3 \u2014 frontier-class training for ~$5.6M",
   "org": "DeepSeek",
-  "people": ["DeepSeek-AI", "Liang Wenfeng"],
+  "people": [
+   "DeepSeek-AI",
+   "Liang Wenfeng"
+  ],
   "paper": "\"DeepSeek-V3 Technical Report\", arXiv",
   "url": "https://arxiv.org/abs/2412.19437",
   "what_it_broke": "671B-parameter MoE trained on ~2048 GPUs for a fraction of Western costs via FP8 precision + Multi-head Latent Attention + load-balancing innovations. Cost-of-frontier collapsed.",
@@ -609,40 +2190,65 @@
   "category": "efficiency-breakthrough",
   "impact": 9,
   "surprise": 9,
-  "tags": ["deepseek", "moe", "fp8", "cost-collapse", "export-controls"]
+  "tags": [
+   "deepseek",
+   "moe",
+   "fp8",
+   "cost-collapse",
+   "export-controls"
+  ]
  },
  {
   "id": "2025-deepseek-r1-open-reasoning",
   "year": 2025,
   "date": "2025-01-20",
   "era": "efficiency-disruption",
-  "title": "DeepSeek-R1 — open-weights reasoning model matches o1; markets panic",
+  "title": "DeepSeek-R1 \u2014 open-weights reasoning model matches o1; markets panic",
   "org": "DeepSeek",
-  "people": ["DeepSeek-R1 team", "Liang Wenfeng"],
+  "people": [
+   "DeepSeek-R1 team",
+   "Liang Wenfeng"
+  ],
   "paper": "\"DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning\", arXiv",
   "url": "https://arxiv.org/abs/2501.12948",
-  "what_it_broke": "Pure RL produced verifiable reasoning chains matching OpenAI's closed o1 — released OPEN WEIGHTS, MIT license. Nvidia lost ~$600B market cap in one day, the largest single-stock loss in history. App #1 worldwide.",
+  "what_it_broke": "Pure RL produced verifiable reasoning chains matching OpenAI's closed o1 \u2014 released OPEN WEIGHTS, MIT license. Nvidia lost ~$600B market cap in one day, the largest single-stock loss in history. App #1 worldwide.",
   "why_impossible": "Three assumptions died together: (1) reasoning needs closed frontier labs, (2) RL-for-reasoning needs secret recipes, (3) export controls guarantee Western lead. A Chinese hedge-fund lab shattered all three for ~$5M.",
   "category": "efficiency-breakthrough",
   "impact": 10,
   "surprise": 10,
-  "tags": ["deepseek-r1", "reinforcement-learning", "open-weights", "market-shock", "reasoning"]
+  "tags": [
+   "deepseek-r1",
+   "reinforcement-learning",
+   "open-weights",
+   "market-shock",
+   "reasoning"
+  ]
  },
  {
   "id": "2025-agentic-coding-mainstream",
   "year": 2025,
   "date": "2025-02-24",
   "era": "agents-everywhere",
-  "title": "Agentic coding goes mainstream — Claude Code, Devin, OpenHands",
+  "title": "Agentic coding goes mainstream \u2014 Claude Code, Devin, OpenHands",
   "org": "Anthropic / Cognition / All Hands AI",
-  "people": ["Anthropic engineering", "Scott Wu (Cognition)", "OpenHands community"],
+  "people": [
+   "Anthropic engineering",
+   "Scott Wu (Cognition)",
+   "OpenHands community"
+  ],
   "paper": "\"SWE-bench Verified: Proving autonomous software engineering\" (evaluation lineage)",
   "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
-  "what_it_broke": "Agents completing real multi-hour engineering tasks — resolving GitHub issues end-to-end — moved from demo to daily tool. SWE-bench Verified pass rates climbed from 4% to >70% within a year.",
+  "what_it_broke": "Agents completing real multi-hour engineering tasks \u2014 resolving GitHub issues end-to-end \u2014 moved from demo to daily tool. SWE-bench Verified pass rates climbed from 4% to >70% within a year.",
   "why_impossible": "Long-horizon autonomy was supposed to be years away due to compounding errors; agentic scaffolding + better models got there while skeptics were writing explainers about why it couldn't work.",
   "category": "agency",
   "impact": 9,
   "surprise": 8,
-  "tags": ["agents", "coding", "claude-code", "devin", "swe-bench"]
+  "tags": [
+   "agents",
+   "coding",
+   "claude-code",
+   "devin",
+   "swe-bench"
+  ]
  }
 ]
