@@ -332,9 +332,10 @@ function palRun(i){const it=palItems[i];if(it){palClose();it.run();updateCount()
 function closeAll(){palClose();closeDrawer();}
 
 /* ================= shell ================= */
-function setView(v){VIEW=v;document.querySelectorAll('.viewtabs button').forEach(b=>b.classList.toggle('active',b.dataset.v===v));render();}
+function setView(v){VIEW=v;document.title=`${v} · ${filtered().length} — AI Breakthroughs`;document.querySelectorAll('.viewtabs button').forEach(b=>b.classList.toggle('active',b.dataset.v===v));render();}
 function render(){
   const m=$('main');
+  document.title=`${VIEW} · ${filtered().length} — AI Breakthroughs`;
   if(!DATA.length){m.innerHTML='<div class="empty-state">loading…</div>';return;}
   if(VIEW==='timeline')m.innerHTML=vTimeline();
   else if(VIEW==='table')m.innerHTML=vTable();
