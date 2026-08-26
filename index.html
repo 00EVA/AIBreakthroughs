@@ -128,6 +128,37 @@ td.cbm{font-weight:700;text-align:center;font-variant-numeric:tabular-nums}
 .p-foot{display:flex;gap:14px;padding:8px 14px;border-top:1px solid var(--border);color:var(--faint);font-size:11px}
 .p-foot b{color:var(--muted);font-family:var(--mono);font-weight:500}
 
+/* ---------- community notes ---------- */
+.cn{margin-top:12px;border:1px solid var(--border2);border-radius:12px;overflow:hidden;background:rgba(94,160,255,.05)}
+.cn-h{display:flex;align-items:center;gap:8px;padding:9px 14px;background:rgba(94,160,255,.12);font-weight:650;font-size:13px}
+.cn-b{padding:12px 14px;color:var(--muted);font-size:13.5px;line-height:1.55}
+.cn-b a{color:var(--accent);text-decoration:none;word-break:break-all;margin-right:10px}
+.cn-b a:hover{text-decoration:underline}
+.cn-f{display:flex;align-items:center;gap:8px;padding:9px 14px;border-top:1px solid var(--border);color:var(--faint);font-size:12px}
+.cn-f .st{color:var(--green);font-weight:650}
+.cn-f .st.pen{color:var(--gold)}
+.cn-f .st.neg{color:var(--hot)}
+.cn-f button{margin-left:auto;background:none;border:none;color:var(--accent);cursor:pointer;font-size:12px;padding:0}
+.cn-f button:hover{text-decoration:underline}
+.cn-badge{display:inline-flex;align-items:center;gap:5px;margin-top:5px;color:var(--green);font-size:11.5px;cursor:pointer;font-weight:600}
+.cn-badge:hover{text-decoration:underline}
+.tl-detail .cn{margin-top:10px}
+.notebd{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;display:none;align-items:flex-start;justify-content:center;padding-top:9vh}
+.notebd.open{display:flex}
+.notemodal{width:560px;max-width:94vw;max-height:82vh;overflow-y:auto;background:var(--panel);border:1px solid var(--border2);border-radius:14px;padding:22px 24px}
+.notemodal h3{font-size:16px;margin-bottom:6px}
+.notemodal .close{float:right;background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer}
+.nm-sec{margin:16px 0}
+.nm-sec h5{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin-bottom:7px}
+.nm-tag{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px;margin:5px 0}
+.nm-tag .ok{color:var(--green)}
+.nm-author{color:var(--fg);font-weight:650;font-size:13.5px}
+.nm-ai{color:#b9a5ff;font-size:12.5px;margin-top:2px}
+.nm-impact{color:var(--faint);font-size:12px}
+.nm-disc{background:rgba(185,165,255,.08);border-radius:8px;padding:10px 12px;font-size:12.5px;color:var(--muted);line-height:1.5}
+.nm-foot{border-top:1px solid var(--border);margin-top:16px;padding-top:11px;color:var(--faint);font-size:11.5px;line-height:1.7}
+.nm-foot b{color:var(--accent);font-weight:500}
+
 .empty-state{padding:60px 0;text-align:center;color:var(--faint)}
 @media(max-width:760px){.tl-wrap{margin-left:64px}.tl-year{left:-64px;width:44px}.viewtabs button{padding:6px 9px}}
 </style>
@@ -160,6 +191,8 @@ td.cbm{font-weight:700;text-align:center;font-variant-numeric:tabular-nums}
   <div class="p-foot"><span><b>↑↓</b> navigate</span><span><b>↵</b> open</span><span><b>esc</b> close</span><span style="margin-left:auto">try “impact ≥ 9” · “era transformer” · “go to table”</span></div>
 </div></div>
 
+<div class="notebd" id="notebd"></div>
+
 <script>
 let DATA=[], VIEW='timeline', SORT={k:'year',dir:1}, FILTER='', sel=0, palItems=[];
 
@@ -191,7 +224,7 @@ function vTimeline(){
       <div class="tl-year">${d.year}</div>
       <div class="tl-body">
         <div class="tl-title" onclick="toggleItem(this)">${d.title}${comb(d)>=9?'<span class="star">★</span>':''}</div>
-        <div class="tl-meta">${d.org} · ${(d.people||[]).slice(0,3).join(', ')}${(d.people||[]).length>3?' et al':''} · <a href="${d.url}" target="_blank" rel="noopener">paper ↗</a></div>
+        <div class="tl-meta">${d.org} · ${(d.people||[]).slice(0,3).join(', ')}${(d.people||[]).length>3?' et al':''} · <a href="${d.url}" target="_blank" rel="noopener">paper ↗</a>${badgeFor(d)}</div>
         <div class="tl-detail">
           <p><b>Broke:</b> ${d.what_it_broke}</p>
           <p><b>Why it seemed impossible:</b> ${d.why_impossible}</p>
@@ -291,10 +324,81 @@ function openDrawer(id){
     <div class="d-sec"><h4>Era / Category</h4><p>${d.era.replaceAll('-',' ')} · ${d.category}</p></div>
     <div class="d-sec"><h4>What it broke</h4><p>${d.what_it_broke}</p></div>
     <div class="d-sec"><h4>Why it seemed impossible</h4><p>${d.why_impossible}</p></div>
-    <div class="d-sec"><h4>Tags</h4><p style="color:var(--accent)">${(d.tags||[]).join(' · ')}</p></div>`;
+    <div class="d-sec"><h4>Tags</h4><p style="color:var(--accent)">${(d.tags||[]).join(' · ')}</p></div>
+    ${(d.notes||[]).length?`<div class="d-sec"><h4>Community notes</h4>${d.notes.map(n=>cnCard(d,n)).join('')}</div>`:''}`;
   $('drawer').classList.add('open');
 }
 function closeDrawer(){$('drawer').classList.remove('open');}
+
+/* ================= community notes ================= */
+const TAG_LABEL={
+  helpfulImportantContext:'Provides important context',
+  helpfulGoodSources:'Cites high-quality sources',
+  helpfulClear:'Easy to understand',
+  helpfulUniqueContext:'Provides unique context',
+  helpfulAddressesClaim:'Addresses the claim',
+  notHelpfulIncorrect:'Contains incorrect information',
+  notHelpfulSourcesMissingOrUnreliable:'Sources missing or unreliable',
+  notHelpfulOpinionSpeculationOrBias:'Opinion, speculation or bias',
+  notHelpfulOutdated:'Outdated'
+};
+function noteStatus(n){
+  if(n.classification==='not_helpful')return 'CURRENTLY_RATED_NOT_HELPFUL';
+  let doms=new Set();
+  (n.sources||[]).forEach(s=>{try{doms.add(new URL(s).hostname.replace(/^www\./,''))}catch(e){}});
+  return (n.classification==='helpful'&&doms.size>=2&&(n.text||'').length>=120)
+    ?'CURRENTLY_RATED_HELPFUL':'NEEDS_MORE_RATINGS';
+}
+const STATUS_META={
+  CURRENTLY_RATED_HELPFUL:{cls:'st',label:'Helpful',
+    why:'This note cites at least two independent sources and meets the helpful bar, so it is shown as context on the entry.'},
+  NEEDS_MORE_RATINGS:{cls:'st pen',label:'Needs more ratings',
+    why:'Not enough independent corroboration yet - this note stays off list views until it cites at least two distinct sources.'},
+  CURRENTLY_RATED_NOT_HELPFUL:{cls:'st neg',label:'Rated not helpful',
+    why:'Raters judged this note unhelpful; it remains hidden from public views.'}
+};
+function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function shortUrl(s){try{const u=new URL(s);let t=u.hostname.replace(/^www\./,'')+u.pathname;return t.length>42?t.slice(0,41)+'…':t}catch(e){return s}}
+function cnCard(d,n){
+  const st=noteStatus(n),m=STATUS_META[st];
+  const links=(n.sources||[]).map(s=>`<a href="${esc(s)}" target="_blank" rel="noopener">${esc(shortUrl(s))}</a>`).join('');
+  const who=n.author&&n.author.type==='ai'?'an AI note writer':'readers';
+  return `<div class="cn">
+    <div class="cn-h">👥 ${esc(who.charAt(0).toUpperCase()+who.slice(1))} added context people might want to know</div>
+    <div class="cn-b">${esc(n.text)}${links?`<div style="margin-top:8px">${links}</div>`:''}</div>
+    <div class="cn-f"><span class="${m.cls}">${st==='CURRENTLY_RATED_HELPFUL'?'✓':st==='NEEDS_MORE_RATINGS'?'⏳':'✖'} ${m.label}</span><span>·</span><span>${esc((n.created||'').slice(0,10))}</span><button onclick="openNote('${d.id}','${n.id}')">View details</button></div>
+  </div>`;
+}
+function badgeFor(d){
+  const n=(d.notes||[]).find(x=>noteStatus(x)==='CURRENTLY_RATED_HELPFUL');
+  return n?`<div class="cn-badge" onclick="event.stopPropagation();openNote('${d.id}','${n.id}')">✓ Currently rated helpful · View details</div>`:'';
+}
+function openNote(eid,nid){
+  const d=DATA.find(x=>x.id===eid);if(!d)return;
+  const n=(d.notes||[]).find(x=>x.id===nid);if(!n)return;
+  const st=noteStatus(n),m=STATUS_META[st];
+  const a=n.author||{};
+  $('notebd').innerHTML=`<div class="notemodal" onclick="event.stopPropagation()">
+    <button class="close" onclick="closeNote()">✕</button><h3>Note Details</h3>
+    <div class="nm-sec"><h5>Current Status</h5>
+      <div class="nm-tag"><span class="ok">${st==='CURRENTLY_RATED_HELPFUL'?'✅':st==='NEEDS_MORE_RATINGS'?'⏳':'❌'}</span><b>${m.label}</b></div>
+      <div style="color:var(--muted);font-size:13px;margin-top:5px;line-height:1.5">${m.why}</div>
+      <div style="margin-top:7px"><a href="https://communitynotes.x.com/guide/en/under-the-hood/helpful-notes" target="_blank" rel="noopener" style="color:var(--accent);font-size:12.5px;text-decoration:none">Learn more</a></div>
+    </div>
+    <div class="nm-sec"><h5>Top tags selected by raters</h5>
+      ${(n.tags||[]).map(t=>`<div class="nm-tag"><span class="ok">✔</span>${TAG_LABEL[t]||esc(t)}</div>`).join('')||'<div class="nm-tag" style="color:var(--faint)">none yet</div>'}
+    </div>
+    <div class="nm-sec"><h5>Note Author</h5>
+      <div class="nm-author">🤖 ${esc(a.alias||'Unknown')}</div>
+      <div class="nm-ai">${a.type==='ai'?'Experimental AI Note Writer':'Human Curator'}</div>
+      <div class="nm-impact">${a.impact||0} Writing Impact</div>
+    </div>
+    ${a.type==='ai'?`<div class="nm-sec nm-disc">🤖 Proposed by an experimental AI contributor responding to signals on this entry. Like all contributors, AIs can make mistakes — verify accuracy.</div>`:''}
+    <div class="nm-foot">⚙ Note status computed by open-source algorithm <b>ABCoreModel</b> (v0.1)<br>Note submitted ${esc((n.created||'').replace('T',' · ').replace('Z',' UTC'))} · Note ID ${esc(n.id)}</div>
+  </div>`;
+  $('notebd').classList.add('open');
+}
+function closeNote(){$('notebd').classList.remove('open')}
 
 /* ================= palette ================= */
 function palOpen(){$('pal-bd').classList.add('open');$('pal-q').value='';$('pal-q').focus();palUpdate('');}
@@ -329,7 +433,7 @@ function palUpdate(qraw){
 }
 function palSel(i){sel=i;document.querySelectorAll('.p-item').forEach((el,j)=>el.classList.toggle('sel',j===i));}
 function palRun(i){const it=palItems[i];if(it){palClose();it.run();updateCount();}}
-function closeAll(){palClose();closeDrawer();}
+function closeAll(){palClose();closeDrawer();closeNote();}
 
 /* ================= shell ================= */
 function setView(v){VIEW=v;document.title=`${v} · ${filtered().length} — AI Breakthroughs`;document.querySelectorAll('.viewtabs button').forEach(b=>b.classList.toggle('active',b.dataset.v===v));render();}
@@ -384,6 +488,7 @@ document.addEventListener('keydown',e=>{
 $('pal-q').addEventListener('input',e=>palUpdate(e.target.value));
 $('pal-bd').addEventListener('click',e=>{if(e.target.id==='pal-bd')palClose();});
 $('drawer').addEventListener('click',e=>{if(e.target.id==='drawer')closeDrawer();});
+$('notebd').addEventListener('click',e=>{if(e.target.id==='notebd')closeNote();});
 </script>
 </body>
 </html>
