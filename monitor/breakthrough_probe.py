@@ -135,6 +135,16 @@ RSSHUB_INSTANCES = ["https://rsshub.app", "https://rsshub.rssforever.com",
                     "https://rsshub.pseudoyu.com"]
 
 FEEDS = [
+    # --- primary / official (labs publish here first) ---
+    ("OpenAI News", "https://openai.com/news/rss.xml"),
+    ("Anthropic News", "https://www.anthropic.com/rss.xml"),
+    ("DeepMind Blog", "https://deepmind.google/blog/rss.xml"),
+    ("Hugging Face Blog", "https://huggingface.co/blog/feed.xml"),
+    ("NVIDIA Newsroom", "https://nvidianews.nvidia.com/rss"),
+    ("Nature", "https://www.nature.com/nature.rss"),
+    ("Science", "https://www.science.org/rss/news_current.xml"),
+    ("NEJM", "https://www.nejm.org/action/showFeed?jc=nejm&type=etoc"),
+    # --- press / aggregators ---
     ("The Register", "https://www.theregister.com/headlines.atom"),
     ("Ars Technica", "https://arstechnica.com/feed/"),
     ("The Decoder", "https://the-decoder.com/feed/"),
@@ -163,6 +173,7 @@ ORG_PATTERNS = [
     (r"isomorphic", "Isomorphic Labs"),
     (r"\bwaymo\b", "Waymo"),
     (r"unitree|figure|optimus|tesla", "Humanoid robotics"),
+    (r"metr|redwood", "METR / Redwood"),
 ]
 
 CATEGORY_MAP = [
