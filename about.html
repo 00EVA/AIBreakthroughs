@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Breakthroughs — Methodology & Site Map</title>
+<style>
+:root{--bg:#0b0e14;--panel:#10141d;--card:#121722;--border:#232b3d;--border2:#2e3a52;
+--fg:#e6ebf4;--muted:#8b95a9;--faint:#5b6478;--accent:#5ea0ff;--gold:#ffc857;--green:#4ade80;--hot:#ff6b6b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"SF Pro Text",Helvetica,Arial,sans-serif}
+.snav{display:flex;gap:2px;justify-content:center;padding:16px 22px 0;flex-wrap:wrap}
+.snav a{color:var(--muted);text-decoration:none;font-size:12.5px;padding:6px 12px;border-radius:8px}
+.snav a:hover{color:var(--fg);background:var(--card)}
+.snav a.on{color:#0b0e14;background:var(--accent);font-weight:650}
+header{text-align:center;padding:44px 16px 10px}
+h1{font-size:clamp(24px,4vw,34px);letter-spacing:-.02em}
+.sub{color:var(--muted);max-width:720px;margin:10px auto 0;font-size:14.5px}
+main{max-width:900px;margin:0 auto;padding:22px 20px 80px}
+.sect{margin:34px 0}
+.sect h2{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:10px 0;font-size:14px;color:var(--muted)}
+.card b{color:var(--fg)}
+.card code{color:var(--accent);font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:12.5px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
+.flow .step{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.flow .step b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:3px}
+.flow .arr{color:var(--faint);font-size:16px}
+.pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:14px 0}
+.pages a{display:block;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--fg);transition:border-color .15s}
+.pages a:hover{border-color:var(--accent)}
+.pages .pt{font-weight:700;font-size:14.5px;color:var(--accent)}
+.pages .pd{color:var(--muted);font-size:12.5px;margin-top:4px}
+.tiers{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.tier{flex:1;min-width:180px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-size:13px;color:var(--muted)}
+.tier b{display:block;font-size:14px;margin-bottom:5px}
+.tier.h b{color:var(--gold)} .tier.m b{color:var(--green)}
+footer{max-width:900px;margin:30px auto 0;padding:0 20px 40px;color:var(--faint);font-size:12.5px;text-align:center}
+footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<nav class="snav">
+  <a href="index.html">Timeline</a>
+  <a href="review.html">Review</a>
+  <a href="about.html" class="on">Methodology</a>
+  <a href="data/breakthroughs.json">Data&nbsp;JSON</a>
+</nav>
+<header>
+  <h1>Methodology &amp; Site Map</h1>
+  <div class="sub">How entries get found, gated, published, reviewed — and how every page on this site connects.</div>
+</header>
+<main>
+
+<div class="sect">
+  <h2>Site map — every page, reachable from everywhere</h2>
+  <div class="pages">
+    <a href="index.html"><div class="pt">Timeline ↗</div><div class="pd">The main app: 1943→now, 4 views (timeline/table/graph/list), detail drawers, ⌘K palette, community notes.</div></a>
+    <a href="review.html"><div class="pt">Review Queue ↗</div><div class="pd">Judge auto-ingested entries: ★ Gold / ✓ Keep / ✖ Remove. Exports decisions the watcher applies automatically.</div></a>
+    <a href="about.html"><div class="pt">Methodology ↗</div><div class="pd">This page: pipeline, scoring tiers, verification model, site map.</div></a>
+    <a href="data/breakthroughs.json"><div class="pt">Data JSON ↗</div><div class="pd">The canonical dataset (also CSV + SQLite in the repo). Free to query, no auth.</div></a>
+  </div>
+</div>
+
+<div class="sect">
+  <h2>Automation pipeline — site stays current with zero human steps</h2>
+  <div class="flow">
+    <div class="step"><b>every 2h</b>Watcher polls sources</div><div class="arr">→</div>
+    <div class="step"><b>gate</b>Signal regex + fluff filter + arXiv strict bar</div><div class="arr">→</div>
+    <div class="step"><b>auto-publish</b>Conservative entry (≤7/7), tagged <code>auto</code></div><div class="arr">→</div>
+    <div class="step"><b>build</b>CSV rebuilt</div><div class="arr">→</div>
+    <div class="step"><b>push</b>GitHub Pages rebuilds</div>
+  </div>
+  <div class="card">Sources polled: <b>arXiv</b> (cs.AI/cs.CL/cs.LG new listings), <b>lab newsrooms first</b> (OpenAI, Anthropic, DeepMind, Hugging Face, NVIDIA), <b>journals</b> (Nature, Science, NEJM), <b>Hacker News</b>, <b>Reddit</b> (15 subs), <b>Google News</b> (12 query tracks), tech press feeds, HF daily papers. Hot finds (score ≥3) ring the desktop bell and land in <code>HOTLIST.md</code>. A daily 06:15 refresh keeps derived artifacts consistent even on quiet days.</div>
+</div>
+
+<div class="sect">
+  <h2>Human review — optional, structured, non-blocking</h2>
+  <div class="card">Auto entries are <b>never gated</b> before publishing (the site must stay fresh), but they're visibly conservative: capped scores, <code>auto</code> tag, era <code>live-discovery</code>, honest <i>why_impossible</i> = "Not yet assessed". The <a href="review.html" style="color:var(--accent)">Review Queue</a> lets you promote verified finds to gold tier, confirm them, or remove noise. Export → drop <code>review_decisions.json</code> into <code>data/</code> → applied within 2h. Removals archive to <code>removed_entries.json</code> — nothing is ever lost.</div>
+</div>
+
+<div class="sect">
+  <h2>Community Notes — verification model</h2>
+  <div class="card">Entries carry X-style Community Notes: anonymous animal-alias authors (AI or human), CN tag taxonomy, and an <b>open status algorithm</b> (<code>ABCoreModel v0.1</code>, deterministic, identical in CLI and frontend): <b style="color:var(--green)">Helpful</b> = cites ≥2 distinct source domains + substance; <b style="color:var(--gold)">Needs more ratings</b> = single-source, stays off list views; <b style="color:var(--hot)">Not helpful</b> = hidden. Attach notes with <code>python3 cli.py note &lt;id&gt; --text … --sources url1,url2</code>.</div>
+</div>
+
+<div class="sect">
+  <h2>Scoring tiers</h2>
+  <div class="tiers">
+    <div class="tier h"><b>★ Gold (combined ≥ 9)</b>Paradigm-level, verified, star-marked across all views. Auto entries can never self-promote here — requires human ★ in review.</div>
+    <div class="tier m"><b>Standard</b>Curated historical entries (impact × surprise ranked). Auto entries enter capped at 7/7 pending review.</div>
+  </div>
+</div>
+
+</main>
+<footer>Open data · <a href="https://github.com/00EVA/AIBreakthroughs">github.com/00EVA/AIBreakthroughs</a> · built by humans + a watcher daemon</footer>
+</body>
+</html>

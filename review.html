@@ -8,6 +8,10 @@
   :root{--bg:#0b0e14;--panel:#141925;--ink:#e6ebf4;--mut:#8b95a9;--acc:#5ea0ff;--gold:#ffc857;--ok:#4ade80;--hot:#ff6b6b;--line:#232b3d}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Helvetica,Arial,sans-serif}
+  .snav{display:flex;gap:2px;justify-content:center;padding:0 22px 14px}
+  .snav a{color:var(--mut);text-decoration:none;font-size:12.5px;padding:6px 12px;border-radius:8px}
+  .snav a:hover{color:var(--ink);background:var(--panel)}
+  .snav a.on{color:#0b0e14;background:var(--acc);font-weight:650}
   header{padding:28px 22px 12px;border-bottom:1px solid var(--line)}
   h1{margin:0 0 6px;font-size:21px}
   .sub{color:var(--mut);max-width:860px}
@@ -35,6 +39,12 @@
 </head>
 <body>
 <header>
+  <nav class="snav">
+    <a href="index.html">Timeline</a>
+    <a href="review.html" class="on">Review</a>
+    <a href="about.html">Methodology</a>
+    <a href="data/breakthroughs.json">Data&nbsp;JSON</a>
+  </nav>
   <h1>🔬 AIBreakthroughs — Auto-Entry Review</h1>
   <div class="sub">The watcher auto-publishes every qualifying item <b>live</b> (conservatively scored, tagged <code>auto</code>, era <code>live-discovery</code>) — so the site is 100% automated. This page is the optional judgment layer: promote a verified find to gold tier, confirm it, or remove noise. Decisions are applied by the watcher on its next run after you export.</div>
 </header>
