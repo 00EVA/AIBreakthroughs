@@ -45,6 +45,9 @@ ROOT = os.path.dirname(HERE)
 SEEN = os.path.join(ROOT, "seen_urls.json")
 DATA = os.path.join(ROOT, "data")
 DBJSON = os.path.join(DATA, "breakthroughs.json")
+DECISIONS = os.path.join(DATA, "review_decisions.json")
+REMOVED = os.path.join(DATA, "removed_entries.json")
+HOTLIST = os.path.join(ROOT, "HOTLIST.md")
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AIBreakthroughsWatch/1.0"
 
@@ -408,7 +411,7 @@ def guess_category(text):
     return "capability-leap"
 
 
-def score(item):
+def score_entry(item):
     """Conservative heuristic scoring - auto entries never reach gold tier."""
     blob = f"{item['title']} {item['snippet']}"
     impact, surprise = 6, 5
@@ -420,6 +423,87 @@ def score(item):
     return min(impact, 7), min(surprise, 7)
 
 
+def hot_score(item):
+    """Mirror of AIincidents' hot-signal idea: 3+ means ping the human."""
+    blob = f"{item['title']} {item['snippet']}"
+    s = len(BREAKTHROUGH_STRONG.findall(blob))
+    try:
+        host = urllib.parse.urlsplit(item["url"]).netloc.lower()
+    except Exception:
+        host = ""
+    if re.search(r"(openai\.com|anthropic\.com|deepmind\.google|nature\.com|"
+                 r"science\.org|nejm\.org|nvidia\.com|huggingface\.co)", host):
+        s += 2  # primary-source domain: big weight
+    if re.search(r"superhuman|first[- ]ever|new record|millennium|nobel", blob, re.I):
+        s += 1
+    return s
+
+
+def notify_hot(hot_items):
+    """Append to HOTLIST.md and ping macOS Notification Center."""
+    if not hot_items:
+        return
+    stamp = datetime.datetime.now().strftime("%F %T")
+    with open(HOTLIST, "a", encoding="utf-8") as f:
+        f.write(f"## {stamp}\n")
+        for it in hot_items:
+            f.write(f"- **{it['title']}** ({it['source']}, {it['date']})\n  {it['url']}\n")
+        f.write("\n")
+    try:
+        msg = hot_items[0]["title"][:110].replace('"', "'")
+        subprocess.run(["osascript", "-e",
+                        f'display notification "{msg}" with title '
+                        f'"AIBreakthroughs: {len(hot_items)} hot signal(s)"'],
+                       timeout=10, check=False)
+    except Exception:
+        pass
+
+
+def apply_decisions(rows):
+    """Apply data/review_decisions.json (exported from review.html).
+
+    gold  -> impact/surprise bumped to 9/9, 'auto' tag replaced by 'reviewed'
+    keep  -> 'auto' tag replaced by 'reviewed' (scores stay)
+    remove-> entry moved to data/removed_entries.json
+    Processed decisions are consumed (file rewritten without them).
+    Returns (rows, applied_count).
+    """
+    if not os.path.exists(DECISIONS):
+        return rows, 0
+    dec = load_json(DECISIONS, {}).get("decisions", {})
+    if not dec:
+        return rows, 0
+    removed = load_json(REMOVED, [])
+    applied = 0
+    by_id = {r["id"]: r for r in rows}
+    for eid, d in list(dec.items()):
+        action = d.get("decision")
+        if action not in ("gold", "keep", "remove") or eid not in by_id:
+            dec.pop(eid, None)
+            continue
+        r = by_id.pop(eid)
+        if action == "remove":
+            r["removed_reason"] = "human-review"
+            r["removed_at"] = datetime.date.today().isoformat()
+            removed.append(r)
+        else:
+            tags = [t for t in r.get("tags", []) if t != "auto"]
+            tags.append("reviewed")
+            r["tags"] = tags
+            if action == "gold":
+                r["impact"], r["surprise"] = 9, 9
+            by_id[eid] = r
+        applied += 1
+        dec.pop(eid, None)
+    save_json(DBJSON, list(by_id.values()))
+    if removed:
+        save_json(REMOVED, removed)
+    if applied:
+        save_json(DECISIONS, {"exported": load_json(DECISIONS, {}).get("exported"),
+                              "decisions": dec})
+    return list(by_id.values()), applied
+
+
 def main():
     ap = argparse.ArgumentParser(description="Breakthrough watcher (auto-publish)")
     ap.add_argument("--limit", type=int, default=4)
@@ -428,6 +512,9 @@ def main():
     args = ap.parse_args()
 
     rows = load_json(DBJSON, [])
+    rows, applied = apply_decisions(rows)
+    if applied:
+        print(f"[decisions] applied {applied} human review decision(s)")
     seen = set(load_json(SEEN, []))
     known_urls = {r.get("url") for r in rows}
     known_titles_norm = {
@@ -436,7 +523,8 @@ def main():
 
     today = datetime.date.today().isoformat()
     promoted, skipped = [], 0
-    for item in collect():
+    raw_items = collect()
+    for item in raw_items:
         if len(promoted) >= args.limit:
             break
         url = item["url"]
@@ -460,7 +548,7 @@ def main():
             continue  # the timeline covers history; the watcher adds current events
         year = int(year_s)
         item_date = parse_date(item["date"]) or today
-        imp, sur = score(item)
+        imp, sur = score_entry(item)
         org = guess_org(blob)
         eid = f"{year}-{slugify(title)}"
         base = eid
@@ -470,20 +558,22 @@ def main():
             eid = f"{base}-auto{n}"
         rows.append({
             "id": eid,
-            "year": year,
-            "date": item_date,
-            "era": "live-discovery",
-            "title": title,
-            "org": org,
-            "people": [],
-            "paper": f"auto-flagged via {item['source']}",
-            "url": url,
-            "what_it_broke": f"{item['snippet'].strip()} [Source: {item['source']}].",
-            "why_impossible": "Not yet assessed - auto-ingested by the watcher feed pending a curation pass.",
-            "category": guess_category(blob),
-            "impact": imp,
-            "surprise": sur,
-            "tags": ["auto", item["source"].split()[0].lower()],
+             "year": year,
+             "date": item_date,
+             "era": "live-discovery",
+             "title": title,
+             "org": org,
+             "people": [],
+             "paper": f"auto-flagged via {item['source']}",
+             "url": url,
+             "source_hint": item["source"],
+             "what_it_broke": f"{item['snippet'].strip()} [Source: {item['source']}].",
+             "why_impossible": "Not yet assessed - auto-ingested by the watcher feed pending a curation pass.",
+             "category": guess_category(blob),
+             "impact": imp,
+             "surprise": sur,
+             "tier": "huge" if imp + sur >= 13 else "high" if imp + sur >= 11 else "minor",
+             "tags": ["auto", item["source"].split()[0].lower()],
         })
         promoted.append((eid, title, url))
 
@@ -494,8 +584,26 @@ def main():
         return
 
     if not promoted:
+        if applied:
+            subprocess.run([sys.executable, os.path.join(ROOT, "build_csv.py")], check=True)
+            def g0(*a):
+                return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True)
+            g0("add", "data/breakthroughs.json", "data/breakthroughs.csv",
+               "data/review_decisions.json", "data/removed_entries.json")
+            g0("commit", "-m", f"[review] {applied} decision(s) applied [auto]")
+            g0("pull", "--rebase", "-q", "origin", "main")
+            g0("push", "-q", "origin", "main")
         print(f"[probe] 0 new entr(ies) (total in db: {len(rows)})")
         return
+
+    # hot-signal fanfare: big finds ping the desktop + HOTLIST.md
+    hot = []
+    for eid, t, u in promoted:
+        src = next((x["source"] for x in raw_items if x["url"] == u), "?")
+        snip = next((x["snippet"] for x in raw_items if x["url"] == u), "")
+        if hot_score({"title": t, "snippet": snip, "url": u}) >= 3:
+            hot.append({"title": t, "source": src, "date": "", "url": u})
+    notify_hot(hot[:3])
 
     save_json(DBJSON, rows)
     seen.update(u for _, _, u in promoted)
@@ -505,8 +613,9 @@ def main():
     def git(*a):
         return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True)
 
-    lines = "\n".join(f"- {t}" for _, t, _ in promoted)
-    git("add", "data/breakthroughs.json", "data/breakthroughs.csv", "seen_urls.json")
+    lines2 = "\n".join(f"- {t}" for _, t, _ in promoted)
+    git("add", "data/breakthroughs.json", "data/breakthroughs.csv", "seen_urls.json",
+        "data/review_decisions.json", "data/removed_entries.json", "HOTLIST.md")
     c = git("commit", "-m", f"[auto-watch] +{len(promoted)} entries\n\n{lines}")
     if c.returncode != 0:
         print(f"[err] commit failed: {c.stderr.strip()}")

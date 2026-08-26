@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIBreakthroughs — Auto-Entry Review</title>
+<style>
+  :root{--bg:#0b0e14;--panel:#141925;--ink:#e6ebf4;--mut:#8b95a9;--acc:#5ea0ff;--gold:#ffc857;--ok:#4ade80;--hot:#ff6b6b;--line:#232b3d}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Helvetica,Arial,sans-serif}
+  header{padding:28px 22px 12px;border-bottom:1px solid var(--line)}
+  h1{margin:0 0 6px;font-size:21px}
+  .sub{color:var(--mut);max-width:860px}
+  .controls{padding:14px 22px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--line)}
+  select,input{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:14px}
+  .wrap{padding:18px 22px 60px;max-width:1000px;margin:0 auto}
+  .cand{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+  .cand .t{font-weight:650;font-size:15px}
+  .cand .t a{color:var(--acc);text-decoration:none}
+  .cand .m{color:var(--mut);font-size:12.5px;margin-top:4px;word-break:break-all}
+  .badge{display:inline-block;font-size:11px;font-weight:700;border-radius:3px;padding:1px 7px;margin-right:8px}
+  .HUGE{background:rgba(255,200,87,.15);color:var(--gold);border:1px solid var(--gold)}
+  .HIGH{background:rgba(74,222,128,.13);color:var(--ok);border:1px solid var(--ok)}
+  .MINOR{background:rgba(139,149,169,.12);color:var(--mut);border:1px solid var(--line)}
+  .SCORE{float:right;color:var(--mut);font-size:12px}
+  .count{color:var(--mut);font-size:13px}
+  .actions{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+  .actions button{background:#0d1119;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;cursor:pointer}
+  .actions button.on-star{background:rgba(255,200,87,.15);border-color:var(--gold);color:var(--gold);font-weight:700}
+  .actions button.on-accept{background:rgba(74,222,128,.15);border-color:var(--ok);color:var(--ok);font-weight:700}
+  .actions button.on-remove{background:rgba(255,107,107,.15);border-color:var(--hot);color:var(--hot)}
+  .cand.decided-remove{opacity:.5}
+  #hintbox{margin:12px 22px;padding:10px 14px;background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--mut);font-size:13px;display:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>🔬 AIBreakthroughs — Auto-Entry Review</h1>
+  <div class="sub">The watcher auto-publishes every qualifying item <b>live</b> (conservatively scored, tagged <code>auto</code>, era <code>live-discovery</code>) — so the site is 100% automated. This page is the optional judgment layer: promote a verified find to gold tier, confirm it, or remove noise. Decisions are applied by the watcher on its next run after you export.</div>
+</header>
+<div class="controls">
+  <select id="filter">
+    <option value="">All auto entries</option>
+    <option value="HUGE">★ Huge tier</option>
+    <option value="HIGH">High tier</option>
+    <option value="MINOR">Minor tier</option>
+    <option value="decided">My pending decisions</option>
+  </select>
+  <input id="q" placeholder="Filter titles…" style="flex:1">
+  <span class="count" id="count"></span>
+  <button id="export" style="background:var(--acc);color:#0b0e14;border:none;border-radius:8px;padding:8px 14px;font-weight:700;cursor:pointer">⬇ Export decisions</button>
+</div>
+<div id="hintbox"></div>
+<div class="wrap" id="list"></div>
+<script>
+fetch('data/breakthroughs.json').then(r=>r.json()).then(DATA=>{
+const autos = DATA.filter(d=>(d.tags||[]).includes('auto'));
+const LS_KEY='aib_decisions_v1';
+let DEC=JSON.parse(localStorage.getItem(LS_KEY)||'{}');
+const persist=()=>localStorage.setItem(LS_KEY,JSON.stringify(DEC));
+const tier=d=>{const s=d.impact+d.surprise;return s>=13?'HUGE':s>=11?'HIGH':'MINOR'};
+const meta={huge:['var(--gold)','★ Gold-tier verified'],high:['var(--ok)','✓ Verified keep'],remove:['var(--hot)','✖ Remove'],reset:['','']};
+function decide(id,d){
+  if(d==='reset'){delete DEC[id]}
+  else{DEC[id]={decision:d,at:new Date().toISOString()}}
+  persist();render();
+}
+window.decide=decide;
+function render(){
+  const f=$("#filter").value,q=$("#q").value.toLowerCase();
+  let rows=autos.filter(d=>
+    (!f|| (f==='decided'? !!DEC[d.id] : tier(d)===f)) &&
+    (!q||d.title.toLowerCase().includes(q)));
+  rows.sort((a,b)=>(b.impact+b.surprise)-(a.impact+a.surprise));
+  $("#list").innerHTML=rows.map(d=>{
+    const dec=DEC[d.id];const t=tier(d);
+    const cls=dec&&dec.decision!=='reset'?`decided-${dec.decision}`:'';
+    const btns=[['huge','★ Gold'],['high','✓ Keep'],['remove','✖ Remove']].map(([v,l])=>
+      `<button class="${dec&&dec.decision===v?(v==='huge'?'on-star':v==='high'?'on-accept':'on-remove'):''}" onclick="decide('${d.id}','${v}')">${l}</button>`).join('');
+    return `<div class="cand ${cls}">
+      <span class="SCORE">impact ${d.impact} · surprise ${d.surprise} · ${d.date}</span>
+      <span class="badge ${t}">${t}</span>
+      <div class="t"><a href="${d.url}" target="_blank" rel="noopener">${d.title}</a></div>
+      <div class="m">${d.org} · ${d.source_hint||''} · id: <code>${d.id}</code></div>
+      <div class="m" style="margin-top:6px">${(d.what_it_broke||'').slice(0,220)}</div>
+      <div class="actions">${btns}
+        <button title="Copy the cli.py note command to attach a Community Note" onclick="navigator.clipboard.writeText('python3 cli.py note ${d.id} --text \\"...\\" --sources \\"https://...,https://...\\"').then(()=>this.textContent='copied ✓')">📝 note cmd</button>
+        ${dec&&dec.decision&&dec.decision!=='reset'?`<span style="color:${meta[dec.decision][0]};font-size:12px;align-self:center">${meta[dec.decision][1]}</span>`:''}
+      </div>
+    </div>`;
+  }).join('')||'<div style="color:var(--mut);padding:40px 0;text-align:center">No auto entries yet — the watcher fills this as it finds things.</div>';
+  $("#count").textContent=`${rows.length} shown · ${Object.keys(DEC).length} decision(s) pending export · ${autos.length} auto total`;
+}
+const $=s=>document.querySelector(s);
+$("#filter").addEventListener("change",render);
+$("#q").addEventListener("input",render);
+$("#export").addEventListener("click",()=>{
+  const out={exported:new Date().toISOString(),decisions:DEC};
+  const blob=new Blob([JSON.stringify(out,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);a.download="review_decisions.json";a.click();
+  const hb=$("#hintbox");hb.style.display='block';
+  hb.innerHTML="Saved <b>review_decisions.json</b> → drop it into <code>data/</code> in the repo (or hand it to your assistant). The watcher applies gold/keep/remove on its next run and GitHub Pages refreshes automatically. Removing archives the entry to <code>data/removed_entries.json</code> — nothing is lost.";
+});
+render();
+});
+</script>
+</body>
+</html>
