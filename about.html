@@ -9,8 +9,12 @@
 --fg:#e6ebf4;--muted:#8b95a9;--faint:#5b6478;--accent:#5ea0ff;--gold:#ffc857;--green:#4ade80;--hot:#ff6b6b}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"SF Pro Text",Helvetica,Arial,sans-serif}
-.snav{display:flex;gap:2px;justify-content:center;padding:16px 22px 0;flex-wrap:wrap}
-.snav a{color:var(--muted);text-decoration:none;font-size:12.5px;padding:6px 12px;border-radius:8px}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.topbar-in{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px}
+.brand{font-weight:700;font-size:15px;white-space:nowrap}
+.brand span{color:var(--accent)}
+.snav{display:flex;gap:2px;margin-left:auto}
+.snav a{color:var(--muted);text-decoration:none;font-size:12.5px;padding:6px 11px;border-radius:8px;white-space:nowrap}
 .snav a:hover{color:var(--fg);background:var(--card)}
 .snav a.on{color:#0b0e14;background:var(--accent);font-weight:650}
 header{text-align:center;padding:44px 16px 10px}
@@ -40,12 +44,15 @@ footer a{color:var(--accent);text-decoration:none}
 </style>
 </head>
 <body>
-<nav class="snav">
-  <a href="index.html">Timeline</a>
-  <a href="review.html">Review</a>
-  <a href="about.html" class="on">Methodology</a>
-  <a href="data/breakthroughs.json">Data&nbsp;JSON</a>
-</nav>
+<div class="topbar"><div class="topbar-in">
+  <div class="brand">AI&nbsp;<span>Breakthroughs</span></div>
+  <nav class="snav">
+    <a href="index.html">Timeline</a>
+    <a href="review.html">Review</a>
+    <a href="about.html" class="on">Methodology</a>
+    <a href="data/breakthroughs.json">Data&nbsp;JSON</a>
+  </nav>
+</div></div>
 <header>
   <h1>Methodology &amp; Site Map</h1>
   <div class="sub">How entries get found, gated, published, reviewed — and how every page on this site connects.</div>

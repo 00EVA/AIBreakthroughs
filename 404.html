@@ -17,10 +17,23 @@ nav a:hover{border-color:#5ea0ff;color:#5ea0ff}
 <h1>404</h1>
 <p>That page drifted off the timeline. These are the real ones:</p>
 <nav>
-  <a href="/">Timeline</a>
-  <a href="/review.html">Review</a>
-  <a href="/about.html">Methodology</a>
-  <a href="/data/breakthroughs.json">Data JSON</a>
+  <a id="l-index" href="index.html">Timeline</a>
+  <a id="l-review" href="review.html">Review</a>
+  <a id="l-about" href="about.html">Methodology</a>
+  <a id="l-data" href="data/breakthroughs.json">Data JSON</a>
 </nav>
+<script>
+/* GitHub Pages project sites serve 404.html at the mistyped URL's directory,
+   so resolve repo-root links against the location path. */
+(function(){
+  var seg=location.pathname.split('/').filter(Boolean);
+  var root=location.origin+'/';
+  /* repo name = first path segment when hosted under github.io/<repo>/ */
+  if(location.hostname.endsWith('github.io')&&seg.length){root+=seg[0]+'/';}
+  ['index.html','review.html','about.html','data/breakthroughs.json'].forEach(function(f,i){
+    document.getElementById(['l-index','l-review','l-about','l-data'][i]).href=root+f;
+  });
+})();
+</script>
 </div></body>
 </html>

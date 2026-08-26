@@ -5,114 +5,198 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AIBreakthroughs — Auto-Entry Review</title>
 <style>
-  :root{--bg:#0b0e14;--panel:#141925;--ink:#e6ebf4;--mut:#8b95a9;--acc:#5ea0ff;--gold:#ffc857;--ok:#4ade80;--hot:#ff6b6b;--line:#232b3d}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,Helvetica,Arial,sans-serif}
-  .snav{display:flex;gap:2px;justify-content:center;padding:0 22px 14px}
-  .snav a{color:var(--mut);text-decoration:none;font-size:12.5px;padding:6px 12px;border-radius:8px}
-  .snav a:hover{color:var(--ink);background:var(--panel)}
-  .snav a.on{color:#0b0e14;background:var(--acc);font-weight:650}
-  header{padding:28px 22px 12px;border-bottom:1px solid var(--line)}
-  h1{margin:0 0 6px;font-size:21px}
-  .sub{color:var(--mut);max-width:860px}
-  .controls{padding:14px 22px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--line)}
-  select,input{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:14px}
-  .wrap{padding:18px 22px 60px;max-width:1000px;margin:0 auto}
-  .cand{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px}
-  .cand .t{font-weight:650;font-size:15px}
-  .cand .t a{color:var(--acc);text-decoration:none}
-  .cand .m{color:var(--mut);font-size:12.5px;margin-top:4px;word-break:break-all}
-  .badge{display:inline-block;font-size:11px;font-weight:700;border-radius:3px;padding:1px 7px;margin-right:8px}
-  .HUGE{background:rgba(255,200,87,.15);color:var(--gold);border:1px solid var(--gold)}
-  .HIGH{background:rgba(74,222,128,.13);color:var(--ok);border:1px solid var(--ok)}
-  .MINOR{background:rgba(139,149,169,.12);color:var(--mut);border:1px solid var(--line)}
-  .SCORE{float:right;color:var(--mut);font-size:12px}
-  .count{color:var(--mut);font-size:13px}
-  .actions{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
-  .actions button{background:#0d1119;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12.5px;cursor:pointer}
+  :root{--bg:#0b0e14;--panel:#10141d;--card:#121722;--border:#232b3d;--border2:#2e3a52;
+    --fg:#e6ebf4;--muted:#8b95a9;--faint:#5b6478;--accent:#5ea0ff;--gold:#ffc857;--ok:#4ade80;--hot:#ff6b6b;
+    --mono:"SF Mono",ui-monospace,Menlo,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,"SF Pro Text",Helvetica,Arial,sans-serif}
+
+  /* ---------- unified topbar (same as index) ---------- */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  .topbar-in{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px}
+  .brand{font-weight:700;font-size:15px;white-space:nowrap}
+  .brand span{color:var(--accent)}
+  .snav{display:flex;gap:2px;margin-left:auto}
+  .snav a{color:var(--muted);text-decoration:none;font-size:12.5px;padding:6px 11px;border-radius:8px;white-space:nowrap}
+  .snav a:hover{color:var(--fg);background:var(--card)}
+  .snav a.on{color:#0b0e14;background:var(--accent);font-weight:650}
+
+  header{max-width:1280px;margin:0 auto;padding:26px 20px 14px}
+  h1{font-size:21px}
+  .sub{color:var(--muted);max-width:860px;margin-top:5px;font-size:13.5px}
+  .controls{position:sticky;top:49px;z-index:40;background:rgba(11,14,20,.94);backdrop-filter:blur(10px);max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--border)}
+  select,input{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:8px;padding:7px 10px;font-size:13.5px;outline:none}
+  select:focus,input:focus{border-color:var(--accent)}
+  .count{color:var(--muted);font-size:12.5px;font-variant-numeric:tabular-nums}
+  #export{margin-left:auto;background:var(--accent);color:#0b0e14;border:none;border-radius:8px;padding:7px 14px;font-weight:700;font-size:13px;cursor:pointer}
+  #export:hover{filter:brightness(1.1)}
+
+  /* ---------- table system (matches index .db) ---------- */
+  .wrap{max-width:1280px;margin:0 auto;padding:14px 20px 80px}
+  table.db{width:100%;border-collapse:collapse;font-size:13.5px}
+  table.db th{position:sticky;top:97px;z-index:30;background:var(--bg);text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--border2);cursor:pointer;white-space:nowrap}
+  table.db th:hover{color:var(--accent)}
+  table.db td{padding:10px;border-bottom:1px solid var(--border);vertical-align:top}
+  table.db tr.row:hover td{background:rgba(94,160,255,.04)}
+  .badge{display:inline-block;font-size:10.5px;font-weight:700;border-radius:3px;padding:1px 7px;white-space:nowrap}
+  .HUGE{background:rgba(255,200,87,.13);color:var(--gold);border:1px solid var(--gold)}
+  .HIGH{background:rgba(74,222,128,.12);color:var(--ok);border:1px solid var(--ok)}
+  .MINOR{background:rgba(139,149,169,.1);color:var(--muted);border:1px solid var(--border)}
+  .tt{font-weight:600}
+  .tt a{color:var(--fg);text-decoration:none}
+  .tt a:hover{color:var(--accent)}
+  .meta{color:var(--muted);font-size:12px;margin-top:2px}
+  .yr{color:var(--accent);font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .imp,.sup{text-align:center;font-variant-numeric:tabular-nums;font-weight:650}
+  .cbm{text-align:center;font-variant-numeric:tabular-nums;font-weight:750}
+  .era-chip{display:inline-block;font-size:10.5px;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:0 8px;margin-top:3px}
+  .actions{display:flex;gap:5px;flex-wrap:wrap}
+  .actions button{background:var(--card);color:var(--muted);border:1px solid var(--border);border-radius:7px;padding:4px 9px;font-size:11.5px;cursor:pointer;white-space:nowrap}
+  .actions button:hover{border-color:var(--accent);color:var(--fg)}
   .actions button.on-star{background:rgba(255,200,87,.15);border-color:var(--gold);color:var(--gold);font-weight:700}
   .actions button.on-accept{background:rgba(74,222,128,.15);border-color:var(--ok);color:var(--ok);font-weight:700}
   .actions button.on-remove{background:rgba(255,107,107,.15);border-color:var(--hot);color:var(--hot)}
-  .cand.decided-remove{opacity:.5}
-  #hintbox{margin:12px 22px;padding:10px 14px;background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--mut);font-size:13px;display:none}
+  .decided-remove td{opacity:.45}
+  .decided-huge td:first-child{box-shadow:inset 3px 0 0 var(--gold)}
+  .verdict{font-size:11px;white-space:nowrap}
+  #hintbox{max-width:1280px;margin:12px auto 0;padding:10px 14px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-size:13px;display:none}
+  #hintbox code{color:var(--accent);font-family:var(--mono);font-size:12px}
+  .empty{padding:60px 0;text-align:center;color:var(--faint)}
+  @media(max-width:860px){.hide-m{display:none}}
 </style>
 </head>
 <body>
-<header>
+
+<div class="topbar"><div class="topbar-in">
+  <div class="brand">AI&nbsp;<span>Breakthroughs</span></div>
   <nav class="snav">
     <a href="index.html">Timeline</a>
     <a href="review.html" class="on">Review</a>
     <a href="about.html">Methodology</a>
     <a href="data/breakthroughs.json">Data&nbsp;JSON</a>
   </nav>
-  <h1>🔬 AIBreakthroughs — Auto-Entry Review</h1>
-  <div class="sub">The watcher auto-publishes every qualifying item <b>live</b> (conservatively scored, tagged <code>auto</code>, era <code>live-discovery</code>) — so the site is 100% automated. This page is the optional judgment layer: promote a verified find to gold tier, confirm it, or remove noise. Decisions are applied by the watcher on its next run after you export.</div>
+</div></div>
+
+<header>
+  <h1>Auto-Entry Review</h1>
+  <div class="sub">The watcher auto-publishes every qualifying find <b>live</b> (conservatively scored ≤7/7, tagged <code style="color:var(--accent)">auto</code>) — the site never waits on a human. This is the judgment layer: ★ Gold promotes a verified find to star tier, ✓ Keep confirms it, ✖ Remove archives it. Export drops <code style="color:var(--accent)">review_decisions.json</code> into <code style="color:var(--accent)">data/</code>; the watcher applies it within 2h and Pages refreshes.</div>
 </header>
+
 <div class="controls">
   <select id="filter">
-    <option value="">All auto entries</option>
-    <option value="HUGE">★ Huge tier</option>
-    <option value="HIGH">High tier</option>
-    <option value="MINOR">Minor tier</option>
-    <option value="decided">My pending decisions</option>
+    <option value="">All tiers</option>
+    <option value="HUGE">★ Huge</option>
+    <option value="HIGH">High</option>
+    <option value="MINOR">Minor</option>
+    <option value="decided">My decisions</option>
   </select>
-  <input id="q" placeholder="Filter titles…" style="flex:1">
+  <input id="q" placeholder="Filter titles…  ( / )" style="flex:1;min-width:180px">
   <span class="count" id="count"></span>
-  <button id="export" style="background:var(--acc);color:#0b0e14;border:none;border-radius:8px;padding:8px 14px;font-weight:700;cursor:pointer">⬇ Export decisions</button>
+  <button id="export">⬇ Export decisions</button>
 </div>
 <div id="hintbox"></div>
-<div class="wrap" id="list"></div>
+<div class="wrap">
+  <table class="db">
+    <thead><tr>
+      <th>Tier</th>
+      <th>Breakthrough</th>
+      <th class="hide-m">Source</th>
+      <th class="hide-m" data-s="date">Date</th>
+      <th data-s="impact" style="text-align:center">Imp</th>
+      <th data-s="surprise" style="text-align:center">Spr</th>
+      <th data-s="comb" style="text-align:center">Cmb</th>
+      <th>Decision</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="empty" id="empty" style="display:none">No auto entries yet — the watcher fills this as it finds things.</div>
+</div>
+
 <script>
-fetch('data/breakthroughs.json').then(r=>r.json()).then(DATA=>{
-const autos = DATA.filter(d=>(d.tags||[]).includes('auto'));
+const $=s=>document.querySelector(s);
+let DATA=[],SORT={k:'comb',dir:-1};
 const LS_KEY='aib_decisions_v1';
 let DEC=JSON.parse(localStorage.getItem(LS_KEY)||'{}');
 const persist=()=>localStorage.setItem(LS_KEY,JSON.stringify(DEC));
 const tier=d=>{const s=d.impact+d.surprise;return s>=13?'HUGE':s>=11?'HIGH':'MINOR'};
-const meta={huge:['var(--gold)','★ Gold-tier verified'],high:['var(--ok)','✓ Verified keep'],remove:['var(--hot)','✖ Remove'],reset:['','']};
+const verdictMeta={huge:['var(--gold)','★ Gold-tier verified'],high:['var(--ok)','✓ Verified keep'],remove:['var(--hot)','✖ Archived on export']};
+
 function decide(id,d){
-  if(d==='reset'){delete DEC[id]}
+  if(d==='reset'||DEC[id]&&DEC[id].decision===d){delete DEC[id]}
   else{DEC[id]={decision:d,at:new Date().toISOString()}}
   persist();render();
 }
 window.decide=decide;
-function render(){
-  const f=$("#filter").value,q=$("#q").value.toLowerCase();
-  let rows=autos.filter(d=>
+function copyNote(btn,id){
+  const cmd='python3 cli.py note '+id+' --text "..." --sources "https://...,https://..."';
+  navigator.clipboard.writeText(cmd).then(()=>{btn.textContent='copied ✓';setTimeout(()=>btn.textContent='📝 note',1200)});
+}
+window.copyNote=copyNote;
+
+function rowsHtml(){
+  const f=$('#filter').value,q=$('#q').value.toLowerCase();
+  let rows=DATA.filter(d=>
     (!f|| (f==='decided'? !!DEC[d.id] : tier(d)===f)) &&
     (!q||d.title.toLowerCase().includes(q)));
-  rows.sort((a,b)=>(b.impact+b.surprise)-(a.impact+a.surprise));
-  $("#list").innerHTML=rows.map(d=>{
-    const dec=DEC[d.id];const t=tier(d);
-    const cls=dec&&dec.decision!=='reset'?`decided-${dec.decision}`:'';
-    const btns=[['huge','★ Gold'],['high','✓ Keep'],['remove','✖ Remove']].map(([v,l])=>
-      `<button class="${dec&&dec.decision===v?(v==='huge'?'on-star':v==='high'?'on-accept':'on-remove'):''}" onclick="decide('${d.id}','${v}')">${l}</button>`).join('');
-    return `<div class="cand ${cls}">
-      <span class="SCORE">impact ${d.impact} · surprise ${d.surprise} · ${d.date}</span>
-      <span class="badge ${t}">${t}</span>
-      <div class="t"><a href="${d.url}" target="_blank" rel="noopener">${d.title}</a></div>
-      <div class="m">${d.org} · ${d.source_hint||''} · id: <code>${d.id}</code></div>
-      <div class="m" style="margin-top:6px">${(d.what_it_broke||'').slice(0,220)}</div>
-      <div class="actions">${btns}
-        <button title="Copy the cli.py note command to attach a Community Note" onclick="navigator.clipboard.writeText('python3 cli.py note ${d.id} --text \\"...\\" --sources \\"https://...,https://...\\"').then(()=>this.textContent='copied ✓')">📝 note cmd</button>
-        ${dec&&dec.decision&&dec.decision!=='reset'?`<span style="color:${meta[dec.decision][0]};font-size:12px;align-self:center">${meta[dec.decision][1]}</span>`:''}
-      </div>
-    </div>`;
-  }).join('')||'<div style="color:var(--mut);padding:40px 0;text-align:center">No auto entries yet — the watcher fills this as it finds things.</div>';
-  $("#count").textContent=`${rows.length} shown · ${Object.keys(DEC).length} decision(s) pending export · ${autos.length} auto total`;
+  const val=d=>SORT.k==='date'?d.date:SORT.k==='comb'?d.impact+d.surprise:d[SORT.k];
+  rows.sort((a,b)=>{const va=val(a),vb=val(b);
+    return (typeof va==='number'?va-vb:String(va).localeCompare(String(vb)))*SORT.dir});
+  return rows.map(d=>{
+    const dec=DEC[d.id],t=tier(d),v=dec&&dec.decision;
+    const cls=v==='remove'?'decided-remove':v==='huge'?'decided-huge':'';
+    const btn=(val,label,c)=>`<button class="${v===c?c==='huge'?'on-star':c==='high'?'on-accept':'on-remove':''}" onclick="decide('${d.id}','${val}')" title="${label}">${label}</button>`;
+    return `<tr class="row ${cls}">
+      <td><span class="badge ${t}">${t}</span></td>
+      <td class="tt"><a href="${d.url}" target="_blank" rel="noopener">${d.title}</a>
+        <div class="meta">${d.org}${d.source_hint?' · via '+d.source_hint:''} · <code style="font-family:var(--mono);font-size:11px">${d.id}</code></div>
+        <div class="meta" style="margin-top:4px;color:var(--muted)">${(d.what_it_broke||'').slice(0,180)}</div>
+        <span class="era-chip">${d.era}</span></td>
+      <td class="hide-m" style="color:var(--muted);font-size:12.5px">${(d.url.replace(/^https?:\/\//,'').split('/')[0]||'')}</td>
+      <td class="hide-m yr">${d.date}</td>
+      <td class="imp">${d.impact}</td>
+      <td class="sup">${d.surprise}</td>
+      <td class="cbm" style="color:${t==='HUGE'?'var(--gold)':'var(--fg)'}">${((d.impact+d.surprise)/2).toFixed(1)}</td>
+      <td><div class="actions">
+        ${btn('huge','★ Gold','huge')}
+        ${btn('high','✓ Keep','high')}
+        ${btn('remove','✖ Remove','remove')}
+        <button onclick="copyNote(this,'${d.id}')" title="Copy the cli.py community-note command for this entry">📝 note</button>
+      </div>${v?`<div class="verdict" style="color:${verdictMeta[v][0]};margin-top:5px">${verdictMeta[v][1]}</div>`:''}</td>
+    </tr>`;
+  }).join('');
 }
-const $=s=>document.querySelector(s);
-$("#filter").addEventListener("change",render);
-$("#q").addEventListener("input",render);
-$("#export").addEventListener("click",()=>{
-  const out={exported:new Date().toISOString(),decisions:DEC};
-  const blob=new Blob([JSON.stringify(out,null,2)],{type:"application/json"});
-  const a=document.createElement("a");
-  a.href=URL.createObjectURL(blob);a.download="review_decisions.json";a.click();
-  const hb=$("#hintbox");hb.style.display='block';
-  hb.innerHTML="Saved <b>review_decisions.json</b> → drop it into <code>data/</code> in the repo (or hand it to your assistant). The watcher applies gold/keep/remove on its next run and GitHub Pages refreshes automatically. Removing archives the entry to <code>data/removed_entries.json</code> — nothing is lost.";
+function render(){
+  $('#rows').innerHTML=rowsHtml();
+  const n=DATA.length,dec=Object.keys(DEC).length;
+  $('#count').textContent=`${n} auto · ${dec} decision(s) pending export`;
+  $('#empty').style.display=n?'none':'block';
+}
+document.querySelectorAll('th[data-s]').forEach(th=>th.onclick=()=>{
+  const k=th.dataset.s;
+  if(SORT.k===k)SORT.dir*=-1;else{SORT.k=k;SORT.dir=-1}
+  render();
 });
-render();
+$('#filter').addEventListener('change',render);
+$('#q').addEventListener('input',render);
+document.addEventListener('keydown',e=>{
+  if(['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName)){
+    if(e.key==='Escape')document.activeElement.blur();
+    return;
+  }
+  if(e.key==='/'){e.preventDefault();$('#q').focus()}
+});
+$('#export').addEventListener('click',()=>{
+  const out={exported:new Date().toISOString(),decisions:DEC};
+  const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);a.download='review_decisions.json';a.click();
+  const hb=$('#hintbox');hb.style.display='block';
+  hb.innerHTML='Saved <b>review_decisions.json</b> → drop it into <code>data/</code> in the repo. The watcher applies gold/keep/remove on its next run (≤2h) and GitHub Pages refreshes automatically. Removals archive to <code>data/removed_entries.json</code> — nothing is lost.';
+});
+
+fetch('data/breakthroughs.json').then(r=>r.json()).then(d=>{
+  DATA=d.filter(x=>(x.tags||[]).includes('auto'));
+  render();
 });
 </script>
 </body>

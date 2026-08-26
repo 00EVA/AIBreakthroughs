@@ -112,8 +112,8 @@ td.cbm{font-weight:700;text-align:center;font-variant-numeric:tabular-nums}
 .score-box .l{font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em}
 .score-box.cb{border-color:var(--gold)} .score-box.cb .v{color:var(--gold)}
 
-/* ---------- site nav ---------- */
-.snav{display:flex;gap:2px;margin-left:4px}
+/* ---------- site nav (shared across pages) ---------- */
+.snav{display:flex;gap:2px;margin-left:auto}
 .snav a{color:var(--muted);text-decoration:none;font-size:12.5px;padding:6px 11px;border-radius:8px;white-space:nowrap}
 .snav a:hover{color:var(--fg);background:var(--card)}
 .snav a.on{color:#0b0e14;background:var(--accent);font-weight:650}
@@ -482,6 +482,10 @@ vList=function(){
 
 document.addEventListener('keydown',e=>{
   const inInput=['INPUT','TEXTAREA'].includes(document.activeElement.tagName);
+  if($('notebd').classList.contains('open')){
+    if(e.key==='Escape')closeNote();
+    return;
+  }
   if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();$('pal-bd').classList.contains('open')?palClose():palOpen();return;}
   if($('pal-bd').classList.contains('open')){
     if(e.key==='Escape')palClose();
