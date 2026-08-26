@@ -30,6 +30,7 @@ Cron:  30 */2 * * * cd ~/AIBreakthroughs && python3 monitor/breakthrough_probe.p
 """
 import argparse
 import datetime
+import email.utils
 import json
 import os
 import re
@@ -64,7 +65,25 @@ SOFT_CONTEXT = re.compile(
     re.I,
 )
 
+# Marketing/award/PR fluff that pattern-matches "breakthrough" language but
+# is not a scientific or capability milestone.
+BREAKTHROUGH_NEGATIVE = re.compile(
+    r"(awards?|of the year|recogniz\w+|honors?|gala|names? \w+ .{0,30}platform|"
+    r"celebrates|announces winners|nominat|webinar|sponsored|press release digest)",
+    re.I,
+)
+
 RECENCY_DAYS = 14
+
+# arXiv abstracts routinely claim "outperforms SOTA baselines" - that is
+# boilerplate, not a milestone. Research listings must clear a higher bar.
+ARXIV_MIN = re.compile(
+    r"(breakthrough|first[- ]ever|for the first time|new record|world record|"
+    r"superhuman|millennium prize|nobel|gold.medal|"
+    r"beats? .{0,30}(?:gpt|gemini|claude|frontier|human experts?|physicians?)|"
+    r"surpass\w* .{0,30}(?:human|expert|physician))",
+    re.I,
+)
 
 ARXIV_FEEDS = [
     ("arXiv cs.AI", "http://export.arxiv.org/rss/cs.AI"),
@@ -79,6 +98,12 @@ HN_QUERIES = [
     "beats GPT",
 ]
 
+REDDITS = ["singularity", "LocalLLaMA", "artificial", "technology",
+           "MachineLearning", "OpenAI", "Anthropic", "ClaudeAI",
+           "generativeai", "agi", "machinelearningnews", "largelanguagemodels",
+           "robotics", "healthcare", "futurology"]
+REDDIT_QUERY = "AI breakthrough OR state-of-the-art OR open weights OR first ever OR beats OR record"
+
 GN_QUERIES = [
     "AI breakthrough announcement",
     "new AI model outperforms state of the art",
@@ -87,7 +112,27 @@ GN_QUERIES = [
     "AI protein OR drug discovery milestone",
     "humanoid robot achieves first",
     "AI weather OR fusion OR materials discovery breakthrough",
+    "AI math proof millennium problem",
+    "robotaxi expansion fully driverless milestone",
+    "AI chip announcement gigawatt fab",
+    "AI diagnostic FDA approval",
+    "AI scientific discovery first",
 ]
+
+X_ACCOUNTS = [
+    # AI news wires / aggregators
+    "_akhaliq", "TheRundownAI", "AIHighlight", "swyx", "smolix",
+    # labs
+    "AnthropicAI", "OpenAI", "GoogleDeepMind", "AIatMeta", "xai",
+    "huggingface", "DeepSeek", "Qwen", "MoonshotAI", "ZhihuZAI",
+    # robotics
+    "Figure_robot", "unitreerobotics", "Waymo", "Tesla_Optimus",
+    # research commentary
+    "karpathy", "demishassabis", "ilyasut", "sama", "jackclarkSF",
+    "schmidhuber", "DrJimFan",
+]
+RSSHUB_INSTANCES = ["https://rsshub.app", "https://rsshub.rssforever.com",
+                    "https://rsshub.pseudoyu.com"]
 
 FEEDS = [
     ("The Register", "https://www.theregister.com/headlines.atom"),
@@ -150,12 +195,81 @@ def fetch(url, timeout=15):
         return r.read()
 
 
+def parse_date(s):
+    """Normalize ISO-8601 or RFC822 dates to ISO yyyy-mm-dd ('' if unknown)."""
+    s = (s or "").strip()
+    if re.match(r"\d{4}-\d{2}-\d{2}", s):
+        return s[:10]
+    try:
+        return email.utils.parsedate_to_datetime(s).date().isoformat()
+    except Exception:
+        return ""
+
+
 def within_window(datestr):
-    d = (datestr or "")[:10]
-    if not re.match(r"\d{4}-\d{2}-\d{2}", d):
-        return True
+    d = parse_date(datestr)
+    if not d:
+        return True  # unknown date: keep, the year gate re-checks later
     cutoff = (datetime.date.today() - datetime.timedelta(days=RECENCY_DAYS)).isoformat()
     return d >= cutoff
+
+
+def reddit_search(limit):
+    out = []
+    for sub in REDDITS:
+        for host in ("www.reddit.com", "old.reddit.com"):
+            url = (f"https://{host}/r/{sub}/search.json"
+                   f"?q={urllib.parse.quote(REDDIT_QUERY)}&sort=new&limit={limit}")
+            try:
+                d = json.loads(fetch(url))
+                if not isinstance(d, dict) or "data" not in d:
+                    continue
+                for c in d.get("data", {}).get("children", []):
+                    p = c.get("data", {})
+                    d8 = datetime.datetime.fromtimestamp(
+                        p.get("created_utc", 0)).strftime("%Y-%m-%d")
+                    if not within_window(d8):
+                        continue
+                    out.append({
+                        "title": p.get("title", ""),
+                        "url": f"https://www.reddit.com{p.get('permalink', '')}",
+                        "source": f"Reddit r/{sub}",
+                        "date": d8,
+                        "snippet": (p.get("selftext") or "")[:300],
+                    })
+                break
+            except Exception:
+                continue
+    return out
+
+
+def twitter_rss(limit):
+    """Best-effort X watchlist via RSSHub mirrors (skip when down)."""
+    out = []
+    for inst in RSSHUB_INSTANCES:
+        if out:
+            break
+        for handle in X_ACCOUNTS:
+            try:
+                raw = fetch(f"{inst}/twitter/user/{handle}", timeout=5)
+                root = ET.fromstring(raw)
+                entries = root.findall("{http://www.w3.org/2005/Atom}entry")
+                for e in entries[:limit]:
+                    t = e.findtext("{http://www.w3.org/2005/Atom}title", "") or ""
+                    lel = e.find("{http://www.w3.org/2005/Atom}link")
+                    link = lel.get("href") if lel is not None else ""
+                    d = (e.findtext("{http://www.w3.org/2005/Atom}updated", ""))[:10]
+                    if not within_window(d):
+                        continue
+                    out.append({"title": t, "url": link, "source": f"X @{handle}",
+                                "date": d, "snippet": t[:300]})
+                if out:
+                    break
+            except Exception:
+                break
+        if not out:
+            print(f"[warn] X watchlist via {inst} unavailable")
+    return out
 
 
 def collect():
@@ -172,10 +286,13 @@ def collect():
                 link = (e.findtext("link", "") or "").strip()
                 desc = re.sub(r"\s+", " ", e.findtext("description", "") or "")
                 out.append({"title": t, "url": link, "source": name,
-                            "date": (e.findtext("pubDate", "") or "")[:10],
+                            "date": parse_date(e.findtext("pubDate", "")),
                             "snippet": desc[:400]})
         except Exception as ex:
             print(f"[warn] {name} failed: {ex}")
+
+    out += reddit_search(8)
+    out += twitter_rss(8)
 
     for q in HN_QUERIES[:2]:
         try:
@@ -206,7 +323,7 @@ def collect():
                 if "news.google.com/rss/articles/" in link:
                     link = urllib.parse.urlsplit(link)._replace(query="").geturl()
                 summ = re.sub(r"<[^>]+>", "", e.findtext("description", "") or "")
-                d = (e.findtext("pubDate", "") or "")[:10]
+                d = parse_date(e.findtext("pubDate", ""))
                 if not within_window(d):
                     continue
                 out.append({"title": t, "url": link, "source": "Google News",
@@ -250,7 +367,7 @@ def collect():
                     lel = e.find("link")
                     link = lel.text if lel is not None else ""
                     summ = e.findtext("description", "") or ""
-                    d = (e.findtext("pubDate", "") or "")[:10]
+                    d = parse_date(e.findtext("pubDate", ""))
                 if not within_window(d):
                     continue
                 out.append({"title": t, "url": link, "source": name,
@@ -318,15 +435,20 @@ def main():
         blob = f"{title} {item['snippet']}"
         if not BREAKTHROUGH_STRONG.search(blob) or not SOFT_CONTEXT.search(blob):
             continue
+        if BREAKTHROUGH_NEGATIVE.search(blob):
+            continue
+        if item["source"].startswith("arXiv") and not ARXIV_MIN.search(blob):
+            continue
         if url in seen or url in known_urls:
             continue
         tnorm = re.sub(r"[^a-z0-9]", "", title.lower())
         if tnorm in known_titles_norm:
             continue
-        year_s = (item["date"] or today)[:4]
+        year_s = (parse_date(item["date"]) or "")[:4]
         if not year_s.isdigit() or int(year_s) < 2024:
             continue  # the timeline covers history; the watcher adds current events
         year = int(year_s)
+        item_date = parse_date(item["date"]) or today
         imp, sur = score(item)
         org = guess_org(blob)
         eid = f"{year}-{slugify(title)}"
@@ -338,7 +460,7 @@ def main():
         rows.append({
             "id": eid,
             "year": year,
-            "date": (item["date"] or today)[:10],
+            "date": item_date,
             "era": "live-discovery",
             "title": title,
             "org": org,
