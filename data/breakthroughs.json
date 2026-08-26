@@ -2552,5 +2552,65 @@
       "crystals",
       "autonomous-labs"
     ]
+  },
+  {
+    "id": "2026-breakthrough-as-scientists-use-ai-to-predict-how",
+    "year": 2026,
+    "date": "2026-08-18",
+    "era": "live-discovery",
+    "title": "Breakthrough as scientists use AI to predict how breast cancer could progress",
+    "org": "Unattributed",
+    "people": [],
+    "paper": "auto-flagged via Hacker News",
+    "url": "https://www.independent.co.uk/news/health/breast-cancer-diagnosis-cure-ai-symptoms-b3034278.html",
+    "what_it_broke": "Breakthrough as scientists use AI to predict how breast cancer could progress [Source: Hacker News].",
+    "why_impossible": "Not yet assessed - auto-ingested by the watcher feed pending a curation pass.",
+    "category": "capability-leap",
+    "impact": 6,
+    "surprise": 6,
+    "tags": [
+      "auto",
+      "hacker"
+    ]
+  },
+  {
+    "id": "2026-mathematicians-despair-as-ai-achieves-jaw-droppi",
+    "year": 2026,
+    "date": "2026-08-16",
+    "era": "live-discovery",
+    "title": "Mathematicians Despair as AI Achieves Jaw-Dropping Breakthroughs",
+    "org": "Unattributed",
+    "people": [],
+    "paper": "auto-flagged via Hacker News",
+    "url": "https://www.telegraph.co.uk/business/2026/08/16/mathematicians-despair-ai-breakthrough/",
+    "what_it_broke": "Mathematicians Despair as AI Achieves Jaw-Dropping Breakthroughs [Source: Hacker News].",
+    "why_impossible": "Not yet assessed - auto-ingested by the watcher feed pending a curation pass.",
+    "category": "capability-leap",
+    "impact": 6,
+    "surprise": 6,
+    "tags": [
+      "auto",
+      "hacker"
+    ]
+  },
+  {
+    "id": "2026-ai-just-had-another-math-breakthrough-with-help",
+    "year": 2026,
+    "date": "2026-08-15",
+    "era": "live-discovery",
+    "title": "AI Just Had Another Math Breakthrough–With Help from a High-School Dropout",
+    "org": "Unattributed",
+    "people": [],
+    "paper": "auto-flagged via Hacker News",
+    "url": "https://www.wsj.com/tech/ai/ai-math-riemann-hypothesis-anthropic-openai-22f98a87",
+    "what_it_broke": "AI Just Had Another Math Breakthrough–With Help from a High-School Dropout [Source: Hacker News].",
+    "why_impossible": "Not yet assessed - auto-ingested by the watcher feed pending a curation pass.",
+    "category": "capability-leap",
+    "impact": 6,
+    "surprise": 6,
+    "tags": [
+      "auto",
+      "hacker"
+    ]
   }
 ]
