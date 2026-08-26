@@ -143,7 +143,7 @@ FEEDS = [
     ("Anthropic News", "https://www.anthropic.com/rss.xml"),
     ("DeepMind Blog", "https://deepmind.google/blog/rss.xml"),
     ("Hugging Face Blog", "https://huggingface.co/blog/feed.xml"),
-    ("NVIDIA Newsroom", "https://nvidianews.nvidia.com/rss"),
+    ("NVIDIA Newsroom", "https://nvidianews.nvidia.com/releases.rdf"),
     ("Nature", "https://www.nature.com/nature.rss"),
     ("Science", "https://www.science.org/rss/news_current.xml"),
     ("NEJM", "https://www.nejm.org/action/showFeed?jc=nejm&type=etoc"),
@@ -524,6 +524,7 @@ def main():
     today = datetime.date.today().isoformat()
     promoted, skipped = [], 0
     raw_items = collect()
+    staged = []
     for item in raw_items:
         if len(promoted) >= args.limit:
             break
@@ -556,81 +557,51 @@ def main():
         while eid in {r["id"] for r in rows}:
             n += 1
             eid = f"{base}-auto{n}"
-        rows.append({
+        staged.append({
             "id": eid,
-             "year": year,
-             "date": item_date,
-             "era": "live-discovery",
-             "title": title,
-             "org": org,
-             "people": [],
-             "paper": f"auto-flagged via {item['source']}",
-             "url": url,
-             "source_hint": item["source"],
-             "what_it_broke": f"{item['snippet'].strip()} [Source: {item['source']}].",
-             "why_impossible": "Not yet assessed - auto-ingested by the watcher feed pending a curation pass.",
-             "category": guess_category(blob),
-             "impact": imp,
-             "surprise": sur,
-             "tier": "huge" if imp + sur >= 13 else "high" if imp + sur >= 11 else "minor",
-             "tags": ["auto", item["source"].split()[0].lower()],
+            "title": title,
+            "url": url,
+            "source": item["source"],
+            "date": item_date,
+            "snippet": item["snippet"].strip()[:400],
+            "impact": imp,
+            "surprise": sur,
+            "org_hint": org,
         })
         promoted.append((eid, title, url))
 
+    # hand staged candidates to the three-lane promotion engine
+    if staged:
+        cand_path = os.path.join(ROOT, "data", "watch_candidates.json")
+        pool = load_json(cand_path, [])
+        known = {c.get("url") for c in pool}
+        pool += [s for s in staged if s["url"] not in known]
+        save_json(cand_path, pool)
+        seen.update(s["url"] for s in staged)
+
     if args.dry_run:
-        print(f"[probe:dry-run] would promote {len(promoted)} item(s)")
-        for eid, t, u in promoted:
-            print(f"  - {t}\n    {u}")
+        print(f"[probe:dry-run] staged {len(staged)} candidate(s) for lane engine")
+        for s in staged:
+            print(f"  - [{s['impact']}/{s['surprise']}] {s['title'][:70]}")
         return
 
-    if not promoted:
-        if applied:
-            subprocess.run([sys.executable, os.path.join(ROOT, "build_csv.py")], check=True)
-            def g0(*a):
-                return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True)
-            g0("add", "data/breakthroughs.json", "data/breakthroughs.csv",
-               "data/review_decisions.json", "data/removed_entries.json")
-            g0("commit", "-m", f"[review] {applied} decision(s) applied [auto]")
-            g0("pull", "--rebase", "-q", "origin", "main")
-            g0("push", "-q", "origin", "main")
-        print(f"[probe] 0 new entr(ies) (total in db: {len(rows)})")
-        return
-
-    # hot-signal fanfare: big finds ping the desktop + HOTLIST.md
-    hot = []
-    for eid, t, u in promoted:
-        src = next((x["source"] for x in raw_items if x["url"] == u), "?")
-        snip = next((x["snippet"] for x in raw_items if x["url"] == u), "")
-        if hot_score({"title": t, "snippet": snip, "url": u}) >= 3:
-            hot.append({"title": t, "source": src, "date": "", "url": u})
-    notify_hot(hot[:3])
-
-    save_json(DBJSON, rows)
-    seen.update(u for _, _, u in promoted)
-    save_json(SEEN, sorted(seen))
-    subprocess.run([sys.executable, os.path.join(ROOT, "build_csv.py")], check=True)
-
-    def git(*a):
-        return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True)
-
-    lines2 = "\n".join(f"- {t}" for _, t, _ in promoted)
-    git("add", "data/breakthroughs.json", "data/breakthroughs.csv", "seen_urls.json",
-        "data/review_decisions.json", "data/removed_entries.json", "HOTLIST.md")
-    c = git("commit", "-m", f"[auto-watch] +{len(promoted)} entries\n\n{lines}")
-    if c.returncode != 0:
-        print(f"[err] commit failed: {c.stderr.strip()}")
-        sys.exit(1)
-    p = git("pull", "--rebase", "-q", "origin", "main")
-    if p.returncode != 0:
-        print(f"[warn] rebase issue: {p.stderr.strip()}")
-    pu = git("push", "-q", "origin", "main")
-    if pu.returncode != 0:
-        print(f"[err] push failed: {pu.stderr.strip()}")
-        sys.exit(1)
-    print(f"[probe] +{len(promoted)} entr(ies) -> db={len(rows)}, committed & pushed")
-    for eid, t, _u in promoted:
-        print(f"  + {eid}: {t[:80]}")
-
+    # run the lane engine (it saves candidates, promotes, builds, pushes)
+    r = subprocess.run([sys.executable, os.path.join(ROOT, "monitor", "auto_promote.py")],
+                       capture_output=True, text=True)
+    out = (r.stdout + r.stderr).strip()
+    print(out or "[promote] (no output)")
+    if applied:
+        subprocess.run([sys.executable, os.path.join(ROOT, "build_csv.py")], check=True)
+        def g0(*a):
+            return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True)
+        g0("add", "data/breakthroughs.json", "data/breakthroughs.csv",
+           "data/review_decisions.json", "data/removed_entries.json")
+        g0("commit", "-m", f"[review] {applied} decision(s) applied [auto]")
+        g0("pull", "--rebase", "-q", "origin", "main")
+        g0("push", "-q", "origin", "main")
+    if not staged:
+        print(f"[probe] 0 new candidates (db: {len(rows)})")
+    return
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "2026-from-atari-to-eve-online-building-on-15-years-of",
+    "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+    "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+    "source": "DeepMind Blog",
+    "date": "2026-08-21",
+    "snippet": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Google DeepMind"
+  },
+  {
+    "id": "2026-putting-sign-language-ai-into-users-hands",
+    "title": "Putting sign language AI into users’ hands",
+    "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+    "source": "DeepMind Blog",
+    "date": "2026-08-12",
+    "snippet": "Introducing sign-language-to-text (SL2T), our breakthrough model powering new sign language features for Deaf and hard of hearing users.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-quantization-aware-healing-a-compressed-4-bit-mo",
+    "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+    "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+    "source": "Hugging Face Blog",
+    "date": "2026-08-25",
+    "snippet": "",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  }
+]
