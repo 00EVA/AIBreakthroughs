@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "id": "2026-from-atari-to-eve-online-building-on-15-years-of",
+    "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+    "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+    "source": "DeepMind Blog",
+    "date": "2026-08-21",
+    "snippet": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Google DeepMind",
+    "reason": "human-promoted",
+    "archived_at": "2026-08-27"
+  },
+  {
+    "id": "2026-putting-sign-language-ai-into-users-hands",
+    "title": "Putting sign language AI into users’ hands",
+    "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+    "source": "DeepMind Blog",
+    "date": "2026-08-12",
+    "snippet": "Introducing sign-language-to-text (SL2T), our breakthrough model powering new sign language features for Deaf and hard of hearing users.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed",
+    "reason": "human-promoted",
+    "archived_at": "2026-08-27"
+  },
+  {
+    "id": "2026-quantization-aware-healing-a-compressed-4-bit-mo",
+    "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+    "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+    "source": "Hugging Face Blog",
+    "date": "2026-08-25",
+    "snippet": "",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed",
+    "reason": "human-promoted",
+    "archived_at": "2026-08-27"
+  },
+  {
+    "id": "2026-streampi-streaming-multimodal-temporal-modeling",
+    "title": "StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models",
+    "url": "https://huggingface.co/papers/2608.26067",
+    "source": "HF daily papers",
+    "date": "2026-08-26",
+    "snippet": "Vision-Language-Action (VLA) models have demonstrated effectiveness in robot manipulation, yet state-of-the-art models such as pi0.5 operate under a single-frame paradigm, limiting their ability to retain past observations and develop precise spatial perception. In this paper, we propose StreamPI, a",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed",
+    "reason": "human-promoted",
+    "archived_at": "2026-08-27"
+  }
+]

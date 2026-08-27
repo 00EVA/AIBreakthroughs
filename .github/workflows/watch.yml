@@ -1,0 +1,47 @@
+# breakthrough-watch: runs the key-free watcher + promotion engine on GitHub's
+# clock so the site keeps updating even when the local Mac cron can't (asleep,
+# offline). Every push to main triggers the dynamic Pages build automatically.
+#
+# Local cron still runs (probe :30, promote :45); this workflow is staggered
+# at :50 to avoid same-minute push races. Both writers rebase before pushing.
+name: breakthrough-watch
+
+on:
+  schedule:
+    - cron: "50 */2 * * *"   # every 2h at :50 UTC (staggered vs local :30/:45)
+  workflow_dispatch:          # manual trigger from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: breakthrough-watch
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Configure git identity (probe commits+pushes internally)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run watcher + three-lane promotion engine
+        run: python monitor/breakthrough_probe.py
+
+      - name: Commit anything the probe left uncommitted (candidates, hotlist, seen_urls)
+        run: |
+          git add -A
+          git diff --cached --quiet || (
+            git commit -m "[auto-watch] scheduled CI run: candidate/seen sync" &&
+            git pull --rebase -q origin main &&
+            git push
+          )

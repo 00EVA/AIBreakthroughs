@@ -2727,5 +2727,115 @@
         ]
       }
     ]
+  },
+  {
+    "id": "2026-quantization-aware-healing-4bit-beats-bf16",
+    "year": 2026,
+    "date": "2026-08-25",
+    "era": "live-discovery",
+    "title": "Quantization-Aware Healing: a compressed 4-bit model that outperforms its own full-precision original",
+    "org": "Multiverse Computing",
+    "people": [
+      "Antonio Tiene",
+      "Iker García-Ferrero",
+      "Ali Hashemi",
+      "Multiverse Computing compression team"
+    ],
+    "paper": "\"Quantization-Aware Healing: A Practical Recipe for Recovering Compressed, 4-Bit LLMs\" (arXiv 2608.20953)",
+    "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+    "source_hint": "Hugging Face Blog",
+    "what_it_broke": "GPT-OSS 120B structurally compressed to 60B parameters and quantized to MXFP4, then healed by distilling directly from the ORIGINAL pre-compression 120B teacher (KL on logits, architecture-agnostic) instead of from the recovered checkpoint. The 4-bit student beats its own bfloat16 checkpoint on 7 of 9 benchmarks (long-context reasoning +7.4 on AA-LCR, math +5.6 on AIME 2025) and beats the full-size 120B teacher on LiveCodeBench (66.5 vs 66.0) - at ~4x less weight memory and roughly half the compute per token. Head-to-head vs QAT: same peak quality, reached ~7x faster (100 vs 700 steps), with no late-training collapse (QAT sheds ~19 points by step 1,200; QAH holds).",
+    "why_impossible": "Compression lore says 4-bit is a lossy tax: you trade capability for memory and buy some of it back with healing. QAH reframes quantization as a second, full pass of distillation against the original teacher - supervision the recovered bf16 checkpoint never received - so the quantized student ends up smaller, cheaper and MORE accurate than the checkpoint it was quantized from. Five years of deploy-time economics assumed smaller-must-be-worse; this inverts it.",
+    "category": "efficiency-breakthrough",
+    "impact": 7,
+    "surprise": 6,
+    "tier": "high",
+    "tags": [
+      "quantization",
+      "distillation",
+      "compression",
+      "mxfp4",
+      "open-weights",
+      "reviewed"
+    ],
+    "promote_note": "human-promoted from lane-3 queue: lab blog + arXiv paper, facts verified against primary source"
+  },
+  {
+    "id": "2026-deepmind-sign-language-sl2t",
+    "year": 2026,
+    "date": "2026-08-12",
+    "era": "live-discovery",
+    "title": "DeepMind ships SL2T sign-language-to-text - live AI interpretation for Deaf users",
+    "org": "Google DeepMind",
+    "people": [
+      "Google DeepMind accessibility team"
+    ],
+    "paper": "\"Putting sign language AI into users' hands\", Google DeepMind blog",
+    "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+    "source_hint": "DeepMind Blog",
+    "what_it_broke": "SL2T (sign-language-to-text) moves from research demo to production: DeepMind ships sign-language features for Deaf and hard-of-hearing users powered by it. Signing is not transcribed speech - it is a two-handed, facially-expressed, spatially-anchored grammar with no fixed word order - and the model maps that continuous visual stream to text in users' hands.",
+    "why_impossible": "Sign-language recognition resisted ML for decades because sign is not encoded speech: grammar lives in facial expression, posture and 3D space, every signer 'accents' differently, and datasets were tiny next to text or audio. A production-grade visual-linguistic model gives 70M+ Deaf signers a mainstream AI interface in their own language for the first time.",
+    "category": "applied-capability",
+    "impact": 6,
+    "surprise": 6,
+    "tier": "high",
+    "tags": [
+      "accessibility",
+      "sign-language",
+      "multimodal",
+      "reviewed"
+    ],
+    "promote_note": "human-promoted from lane-3 queue: official DeepMind primary source, deployed capability"
+  },
+  {
+    "id": "2026-streampi-streaming-vla",
+    "year": 2026,
+    "date": "2026-08-26",
+    "era": "live-discovery",
+    "title": "StreamPI: streaming multimodal temporal modeling breaks the single-frame limit of VLA robot policies",
+    "org": "Unattributed (preprint)",
+    "people": [],
+    "paper": "\"StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models\" (arXiv 2608.26067)",
+    "url": "https://huggingface.co/papers/2608.26067",
+    "source_hint": "HF daily papers",
+    "what_it_broke": "State-of-the-art vision-language-action policies such as pi0.5 consume single frames, so a robot effectively forgets everything between control ticks: past observations, object permanence, motion context. StreamPI models the vision-language-action stream temporally - retaining past observations and building precise spatial perception while streaming, instead of restarting perception from scratch at every step.",
+    "why_impossible": "Pending assessment - preprint under community review, ingested pending human rating. If the streaming result holds across robots and tasks, it attacks the memory horizon that keeps today's manipulation policies brittle outside the lab.",
+    "category": "robotics",
+    "impact": 5,
+    "surprise": 5,
+    "tier": "minor",
+    "tags": [
+      "auto",
+      "vla",
+      "robotics",
+      "preprint"
+    ],
+    "promote_note": "human-approved into db at lane-2 (minor): unproven preprint, pending rating"
+  },
+  {
+    "id": "2026-deepmind-atari-to-eve-online-games",
+    "year": 2026,
+    "date": "2026-08-21",
+    "era": "live-discovery",
+    "title": "DeepMind takes 15 years of game AI research (Atari -> EVE Online) into studio partnerships",
+    "org": "Google DeepMind",
+    "people": [
+      "Google DeepMind games team"
+    ],
+    "paper": "\"From Atari to EVE Online: Building on 15 Years of AI Research in Games\", DeepMind blog",
+    "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+    "source_hint": "DeepMind Blog",
+    "what_it_broke": "Google DeepMind formalizes games as its longest-running research proving ground and partners with game studios - EVE Online among them - to prototype AI gameplay with production players. The arc runs from DQN's superhuman Atari level-play through AlphaGo/AlphaStar to today's agentic 3D environments, now aimed at living virtual worlds with thousands of human participants.",
+    "why_impossible": "Pending assessment - program announcement rather than one measured result, ingested pending human rating. MMORPG-scale agents must hold goals, etiquette and economy interactions for hours alongside real humans - the hardest unsolved agentic testbed there is.",
+    "category": "games-milestone",
+    "impact": 5,
+    "surprise": 5,
+    "tier": "minor",
+    "tags": [
+      "auto",
+      "games",
+      "agents"
+    ],
+    "promote_note": "human-approved into db at lane-2 (minor): announcement, not a measured result"
   }
 ]

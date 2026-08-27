@@ -134,16 +134,26 @@ X_ACCOUNTS = [
     "karpathy", "demishassabis", "ilyasut", "sama", "jackclarkSF",
     "schmidhuber", "DrJimFan",
 ]
-RSSHUB_INSTANCES = ["https://rsshub.app", "https://rsshub.rssforever.com",
-                    "https://rsshub.pseudoyu.com"]
+# Public RSSHub twitter routes have been auth-gated/dead since 2024; keep the
+# collector for when an authed instance is available. Override via env:
+#   RSSHUB_INSTANCES="https://my-rsshub.example" python3 monitor/breakthrough_probe.py
+RSSHUB_INSTANCES = [
+    u for u in os.environ.get("RSSHUB_INSTANCES", "").split(",") if u.strip()
+] or ["https://rsshub.app", "https://rsshub.rssforever.com",
+      "https://rsshub.pseudoyu.com"]
 
 FEEDS = [
     # --- primary / official (labs publish here first) ---
     ("OpenAI News", "https://openai.com/news/rss.xml"),
-    ("Anthropic News", "https://www.anthropic.com/rss.xml"),
+    # anthropic.com publishes no RSS of its own; RSSHub mirrors scrape /news.
+    # Two mirrors - dedupe handles the overlap if both are up.
+    ("Anthropic News", "https://rsshub.rssforever.com/anthropic/news"),
+    ("Anthropic News (mirror)", "https://rsshub.ktachibana.party/anthropic/news"),
     ("DeepMind Blog", "https://deepmind.google/blog/rss.xml"),
     ("Hugging Face Blog", "https://huggingface.co/blog/feed.xml"),
-    ("NVIDIA Newsroom", "https://nvidianews.nvidia.com/releases.rdf"),
+    # releases.rdf was retired; releases.xml is the iPressroom feed.
+    ("NVIDIA Newsroom", "https://nvidianews.nvidia.com/releases.xml"),
+    ("NVIDIA Blog", "https://blogs.nvidia.com/feed/"),
     ("Nature", "https://www.nature.com/nature.rss"),
     ("Science", "https://www.science.org/rss/news_current.xml"),
     ("NEJM", "https://www.nejm.org/action/showFeed?jc=nejm&type=etoc"),
@@ -258,8 +268,14 @@ def reddit_search(limit):
 
 
 def twitter_rss(limit):
-    """Best-effort X watchlist via RSSHub mirrors (skip when down)."""
+    """Best-effort X watchlist via RSSHub mirrors (skip when down).
+
+    Twitter routes on public mirrors have been dead since 2024; this stays
+    key-free and no-ops quietly unless RSSHUB_INSTANCES supplies a live
+    (e.g. authed, self-hosted) instance.
+    """
     out = []
+    failed = []
     for inst in RSSHUB_INSTANCES:
         if out:
             break
@@ -280,9 +296,11 @@ def twitter_rss(limit):
                 if out:
                     break
             except Exception:
+                failed.append(inst)
                 break
-        if not out:
-            print(f"[warn] X watchlist via {inst} unavailable")
+    if not out and failed:
+        print(f"[warn] X watchlist unavailable on {len(failed)}/{len(RSSHUB_INSTANCES)} "
+              f"mirror(s) - set RSSHUB_INSTANCES to add a live instance")
     return out
 
 

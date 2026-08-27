@@ -1,35 +1,24 @@
 [
   {
-    "id": "2026-from-atari-to-eve-online-building-on-15-years-of",
-    "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
-    "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-    "source": "DeepMind Blog",
-    "date": "2026-08-21",
-    "snippet": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
+    "id": "2026-with-groq-3-lpx-in-full-production-nvidia-extend",
+    "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+    "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+    "source": "NVIDIA Newsroom",
+    "date": "2026-08-24",
+    "snippet": "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the AI factory works together. That’s why NVIDIA is extending Vera Rubin NVL72 with fast token generation for agentic systems. Announced today, the NVIDIA Vera Rubin",
     "impact": 6,
     "surprise": 6,
-    "org_hint": "Google DeepMind"
+    "org_hint": "NVIDIA"
   },
   {
-    "id": "2026-putting-sign-language-ai-into-users-hands",
-    "title": "Putting sign language AI into users’ hands",
-    "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
-    "source": "DeepMind Blog",
-    "date": "2026-08-12",
-    "snippet": "Introducing sign-language-to-text (SL2T), our breakthrough model powering new sign language features for Deaf and hard of hearing users.",
+    "id": "2026-with-groq-3-lpx-in-full-production-nvidia-extend",
+    "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+    "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+    "source": "NVIDIA Blog",
+    "date": "2026-08-24",
+    "snippet": "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the AI factory works together. That’s why NVIDIA is extending Vera Rubin NVL72 with fast token generation for agentic systems. Announced today, the NVIDIA Vera Rubin",
     "impact": 6,
     "surprise": 6,
-    "org_hint": "Unattributed"
-  },
-  {
-    "id": "2026-quantization-aware-healing-a-compressed-4-bit-mo",
-    "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
-    "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
-    "source": "Hugging Face Blog",
-    "date": "2026-08-25",
-    "snippet": "",
-    "impact": 7,
-    "surprise": 6,
-    "org_hint": "Unattributed"
+    "org_hint": "NVIDIA"
   }
 ]
