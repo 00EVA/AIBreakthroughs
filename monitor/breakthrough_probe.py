@@ -588,6 +588,12 @@ def main():
         })
         promoted.append((eid, title, url))
 
+    if args.dry_run:
+        print(f"[probe:dry-run] staged {len(staged)} candidate(s) for lane engine")
+        for s in staged:
+            print(f"  - [{s['impact']}/{s['surprise']}] {s['title'][:70]}")
+        return
+
     # hand staged candidates to the three-lane promotion engine
     if staged:
         cand_path = os.path.join(ROOT, "data", "watch_candidates.json")
@@ -596,12 +602,6 @@ def main():
         pool += [s for s in staged if s["url"] not in known]
         save_json(cand_path, pool)
         seen.update(s["url"] for s in staged)
-
-    if args.dry_run:
-        print(f"[probe:dry-run] staged {len(staged)} candidate(s) for lane engine")
-        for s in staged:
-            print(f"  - [{s['impact']}/{s['surprise']}] {s['title'][:70]}")
-        return
 
     # run the lane engine (it saves candidates, promotes, builds, pushes)
     r = subprocess.run([sys.executable, os.path.join(ROOT, "monitor", "auto_promote.py")],
