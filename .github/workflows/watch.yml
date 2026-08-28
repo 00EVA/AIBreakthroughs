@@ -8,7 +8,11 @@ name: breakthrough-watch
 
 on:
   schedule:
-    - cron: "50 */2 * * *"   # every 2h at :50 UTC (staggered vs local :30/:45)
+    # GitHub's cron is best-effort: slots can be delayed under load or dropped.
+    # Two offset slots per 2h window (~90 min apart, both avoiding top-of-hour
+    # congestion) - runs are idempotent (seen_urls dedupe), so overlap is safe.
+    - cron: "50 */2 * * *"
+    - cron: "20 1-23/2 * * *"
   workflow_dispatch:          # manual trigger from the Actions tab
 
 permissions:
