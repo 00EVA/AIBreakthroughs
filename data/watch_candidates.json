@@ -42,5 +42,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-show-hn-will-your-money-last-ai-assisted-financi",
+    "title": "Show HN: Will your money last? AI-assisted financial simulator",
+    "url": "https://futurezapp.com/",
+    "source": "Hacker News",
+    "date": "2026-09-01",
+    "snippet": "Hey all - I&#x27;ve been working on a financial simulator for more years than I can remember. I never felt like I got it right so they always ended up as half-made apps and scripts on my desktop.<p>After years of iterations I feel like I made a breakthrough. Here&#x27;s what led me to build Futurez:",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
