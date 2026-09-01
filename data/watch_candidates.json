@@ -20,5 +20,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "NVIDIA"
+  },
+  {
+    "id": "2026-expert-validated-stem-qa",
+    "title": "Expert-validated STEM QA",
+    "url": "https://arxiv.org/abs/2608.28591",
+    "source": "arXiv cs.AI",
+    "date": "2026-09-01",
+    "snippet": "arXiv:2608.28591v1 Announce Type: new Abstract: Recent advancements in AI are helping scientists achieve breakthroughs in fields such as mathematics, medicine, and materials sciences. New evaluation datasets for AI models contribute to such advancement in AI. In the STEM domain, frontier models have consumed most of the available online data, creating the need for human-created datasets that codif",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-pokaitrainer-scaling-belief-state-search-to-comp",
+    "title": "PokaiTrainer: Scaling Belief-State Search to Competitive Pok\\'emon VGC",
+    "url": "https://arxiv.org/abs/2608.29197",
+    "source": "arXiv cs.LG",
+    "date": "2026-09-01",
+    "snippet": "arXiv:2608.29197v1 Announce Type: new Abstract: Decision-time equilibrium search carried poker to superhuman play, but it has so far relied on tractable subgames: a handful of actions per decision, chance confined to card deals, one player moving at a time. Competitive Pok\\'emon in its official doubles format (VGC) breaks all three assumptions at once. Both players act simultaneously from joint me",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
