@@ -64,5 +64,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-zuck-s-muse-to-spark-joy-with-open-weights-relea",
+    "title": "Zuck's Muse to Spark joy with open weights release 'soon'",
+    "url": "https://www.theregister.com/ai-and-ml/2026/09/02/zucks-muse-to-spark-joy-with-open-weights-release-soon/5294093",
+    "source": "The Register",
+    "date": "2026-09-03",
+    "snippet": "While you wait, Meta says it’s taught the model to stop wasting tokens and ask for help a bit more often",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Meta AI"
   }
 ]
