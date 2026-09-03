@@ -75,5 +75,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Meta AI"
+  },
+  {
+    "id": "2026-post-training-language-models-for-gold-medal-per",
+    "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+    "url": "https://huggingface.co/papers/2609.02849",
+    "source": "HF daily papers",
+    "date": "2026-09-02",
+    "snippet": "Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-end specialization pipeline combining large-scale problem curation, synthetic reasoning traces, super",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
