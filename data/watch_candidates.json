@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "id": "2026-it-s-the-problem-not-the-path-budget-and-difficu",
+    "title": "It's the Problem, Not the Path: Budget and Difficulty Confounds in LLM Reasoning Trajectories",
+    "url": "https://arxiv.org/abs/2609.03436",
+    "source": "arXiv cs.LG",
+    "date": "2026-09-04",
+    "snippet": "arXiv:2609.03436v1 Announce Type: new Abstract: Reasoning traces of large language models are widely read as containing \"breakthrough\" moments and early-legible fates. Both readings rest on measurements missing a counterfactual control at the level of the claim; we supply both controls. First, a restart-controlled truncation probe separates when a solution fits the continuation budget from when a",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  }
+]
