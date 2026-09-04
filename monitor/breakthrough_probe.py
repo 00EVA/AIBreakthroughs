@@ -134,13 +134,14 @@ X_ACCOUNTS = [
     "karpathy", "demishassabis", "ilyasut", "sama", "jackclarkSF",
     "schmidhuber", "DrJimFan",
 ]
-# Public RSSHub twitter routes have been auth-gated/dead since 2024; keep the
-# collector for when an authed instance is available. Override via env:
+# Public RSSHub twitter routes have been auth-gated/dead since 2024: the
+# collector now no-ops silently unless a live (e.g. authed, self-hosted)
+# instance is supplied via env - probing 3 dead mirrors on every cron run was
+# pure log noise. Re-enable with:
 #   RSSHUB_INSTANCES="https://my-rsshub.example" python3 monitor/breakthrough_probe.py
 RSSHUB_INSTANCES = [
     u for u in os.environ.get("RSSHUB_INSTANCES", "").split(",") if u.strip()
-] or ["https://rsshub.app", "https://rsshub.rssforever.com",
-      "https://rsshub.pseudoyu.com"]
+]
 
 FEEDS = [
     # --- primary / official (labs publish here first) ---
@@ -543,6 +544,7 @@ def main():
     promoted, skipped = [], 0
     raw_items = collect()
     staged = []
+    staged_urls = set()
     for item in raw_items:
         if len(promoted) >= args.limit:
             break
@@ -559,6 +561,8 @@ def main():
             continue
         if url in seen or url in known_urls:
             continue
+        if url in staged_urls:
+            continue  # same URL already staged this run (e.g. NVIDIA Newsroom + Blog)
         tnorm = re.sub(r"[^a-z0-9]", "", title.lower())
         if tnorm in known_titles_norm:
             continue
@@ -602,6 +606,7 @@ def main():
         pool += [s for s in staged if s["url"] not in known]
         save_json(cand_path, pool)
         seen.update(s["url"] for s in staged)
+        save_json(SEEN, sorted(seen))  # persist now: avoid re-collect->re-archive churn if promote is skipped/crashes
 
     # run the lane engine (it saves candidates, promotes, builds, pushes)
     r = subprocess.run([sys.executable, os.path.join(ROOT, "monitor", "auto_promote.py")],

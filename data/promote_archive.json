@@ -50,5 +50,70 @@
     "org_hint": "Unattributed",
     "reason": "human-promoted",
     "archived_at": "2026-08-27"
+  },
+  {
+    "id": "2026-with-groq-3-lpx-in-full-production-nvidia-extend",
+    "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+    "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+    "source": "NVIDIA Newsroom",
+    "date": "2026-08-24",
+    "snippet": "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the AI factory works together. That’s why NVIDIA is extending Vera Rubin NVL72 with fast token generation for agentic systems. Announced today, the NVIDIA Vera Rubin",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "NVIDIA",
+    "reason": "duplicate - Vera Rubin inference split already covered by 2026-rubin-inference-split",
+    "archived_at": "2026-09-03"
+  },
+  {
+    "id": "2026-with-groq-3-lpx-in-full-production-nvidia-extend",
+    "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+    "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+    "source": "NVIDIA Blog",
+    "date": "2026-08-24",
+    "snippet": "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the AI factory works together. That’s why NVIDIA is extending Vera Rubin NVL72 with fast token generation for agentic systems. Announced today, the NVIDIA Vera Rubin",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "NVIDIA",
+    "reason": "duplicate - Vera Rubin inference split already covered by 2026-rubin-inference-split",
+    "archived_at": "2026-09-03"
+  },
+  {
+    "id": "2026-expert-validated-stem-qa",
+    "title": "Expert-validated STEM QA",
+    "url": "https://arxiv.org/abs/2608.28591",
+    "source": "arXiv cs.AI",
+    "date": "2026-09-01",
+    "snippet": "arXiv:2608.28591v1 Announce Type: new Abstract: Recent advancements in AI are helping scientists achieve breakthroughs in fields such as mathematics, medicine, and materials sciences. New evaluation datasets for AI models contribute to such advancement in AI. In the STEM domain, frontier models have consumed most of the available online data, creating the need for human-created datasets that codif",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed",
+    "reason": "dataset announcement, not a capability milestone (human review)",
+    "archived_at": "2026-09-03"
+  },
+  {
+    "id": "2026-show-hn-will-your-money-last-ai-assisted-financi",
+    "title": "Show HN: Will your money last? AI-assisted financial simulator",
+    "url": "https://futurezapp.com/",
+    "source": "Hacker News",
+    "date": "2026-09-01",
+    "snippet": "Hey all - I&#x27;ve been working on a financial simulator for more years than I can remember. I never felt like I got it right so they always ended up as half-made apps and scripts on my desktop.<p>After years of iterations I feel like I made a breakthrough. Here&#x27;s what led me to build Futurez:",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed",
+    "reason": "Show HN side project - \"breakthrough\" is keyword false positive, human review",
+    "archived_at": "2026-09-03"
+  },
+  {
+    "id": "2026-zuck-s-muse-to-spark-joy-with-open-weights-relea",
+    "title": "Zuck's Muse to Spark joy with open weights release 'soon'",
+    "url": "https://www.theregister.com/ai-and-ml/2026/09/02/zucks-muse-to-spark-joy-with-open-weights-release-soon/5294093",
+    "source": "The Register",
+    "date": "2026-09-03",
+    "snippet": "While you wait, Meta says it’s taught the model to stop wasting tokens and ask for help a bit more often",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Meta AI",
+    "reason": "rumor/speculation (\"soon\"), no open-weights release yet - revisit when weights ship",
+    "archived_at": "2026-09-03"
   }
 ]

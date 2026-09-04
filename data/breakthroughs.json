@@ -2837,5 +2837,51 @@
       "agents"
     ],
     "promote_note": "human-approved into db at lane-2 (minor): announcement, not a measured result"
+  },
+  {
+    "id": "2026-pokaitrainer-belief-state-equilibrium-search-re",
+    "year": 2026,
+    "date": "2026-09-01",
+    "era": "live-discovery",
+    "title": "PokaiTrainer: belief-state equilibrium search reaches competitive Pokémon VGC (simultaneous moves, hidden information)",
+    "org": "Unattributed (preprint)",
+    "people": [],
+    "paper": "\"PokaiTrainer: Scaling Belief-State Search to Competitive Pokémon VGC\" (arXiv 2608.29197)",
+    "url": "https://arxiv.org/abs/2608.29197",
+    "source_hint": "arXiv cs.LG",
+    "what_it_broke": "Decision-time equilibrium search carried poker to superhuman play but relied on tractable subgames: few actions per decision, chance confined to card deals, alternating turns. Competitive Pokémon VGC breaks all three at once - simultaneous joint action menus in the hundreds, each resolving to hundreds of stochastic outcomes, opponent reserves hidden. PokaiEngine (Rust) enumerates a joint action's  [Source: arXiv cs.LG]",
+    "why_impossible": "Pending assessment - human-approved into db at lane-3 (minor): unproven preprint, pending rating. First belief-state equilibrium search at full VGC scale - simultaneous joint moves, hundreds of stochastic outcomes per action, hidden opponent reserves - a game-theory setting notably harder than the subgame abstractions behind superhuman poker. If the Rust engine ~99% Showdown parity holds, decision-time search scales to a genuinely open-ended imperfect-info domain..",
+    "category": "capability-leap",
+    "impact": 7,
+    "surprise": 6,
+    "tier": "minor",
+    "tags": [
+      "auto",
+      "reviewed"
+    ],
+    "promote_note": "human-approved into db at lane-3 (minor): unproven preprint, pending rating. First belief-state equilibrium search at full VGC scale - simultaneous joint moves, hundreds of stochastic outcomes per action, hidden opponent reserves - a game-theory setting notably harder than the subgame abstractions behind superhuman poker. If the Rust engine ~99% Showdown parity holds, decision-time search scales to a genuinely open-ended imperfect-info domain."
+  },
+  {
+    "id": "2026-open-post-trained-llms-exceed-the-ioi-2025-gold",
+    "year": 2026,
+    "date": "2026-09-02",
+    "era": "live-discovery",
+    "title": "Open post-trained LLMs exceed the IOI 2025 gold threshold (Nemotron-3 Nano-CC 468 / Ultra-CC, GenCorrect test-time search)",
+    "org": "NVIDIA",
+    "people": [],
+    "paper": "\"Post-Training Language Models for Gold-Medal Performance in Coding Competitions\" (arXiv 2609.02849)",
+    "url": "https://huggingface.co/papers/2609.02849",
+    "source_hint": "HF daily papers",
+    "what_it_broke": "End-to-end specialization pipeline - large-scale problem curation, synthetic reasoning traces, SFT, RL, plus GenCorrect (generate/evaluate/refine diverse solutions at test time). Nemotron-3-Nano-CC (30B-A3B) improves from 130 to 291 points after post-training and 468 with GenCorrect on IOI 2025, exceeding the 438.3 gold threshold; Nemotron-3-Ultra-CC (550B-A55B) trained with SFT alone reaches gold [Source: HF daily papers]",
+    "why_impossible": "Pending assessment - human-approved into db at lane-3 (minor): unproven preprint, pending rating. Post-training pipeline (22k curated problems, SFT+RL, GenCorrect test-time refinement) pushes Nemotron-3-Nano-CC (30B-A3B) from 130 to 468 on IOI 2025 - past the 438.3 gold threshold - and Ultra-CC (550B) higher. Verified competition result, but a preprint account: await independent replication before re-rating..",
+    "category": "capability-leap",
+    "impact": 7,
+    "surprise": 6,
+    "tier": "minor",
+    "tags": [
+      "auto",
+      "reviewed"
+    ],
+    "promote_note": "human-approved into db at lane-3 (minor): unproven preprint, pending rating. Post-training pipeline (22k curated problems, SFT+RL, GenCorrect test-time refinement) pushes Nemotron-3-Nano-CC (30B-A3B) from 130 to 468 on IOI 2025 - past the 438.3 gold threshold - and Ultra-CC (550B) higher. Verified competition result, but a preprint account: await independent replication before re-rating."
   }
 ]

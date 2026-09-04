@@ -207,6 +207,7 @@ def main():
 
         # ---- LANE 3: hold for human (stays in candidates) ----
         kept.append(c)
+        seen.add(url)  # mark seen: stop re-collecting -> re-archiving the same candidate every cycle
 
     if args.dry_run:
         print(f"[promote:dry] lane1/2 promote {len(promoted)}, lane3 hold {len(kept)}, "
@@ -217,9 +218,13 @@ def main():
 
     save(CAND, kept)          # lane 3 stays queued for review.html/hotlist
     save(ARCHIVE, archive)
+    save(SEEN, sorted(seen))  # includes lane-3 holds: no re-collect/re-archive churn
     if promoted:
         save(DBJSON, rows)
-        save(SEEN, sorted(seen | {e["url"] for e in promoted}))
+        for e in promoted:
+            if isinstance(e, dict) and e.get("url"):
+                seen.add(e["url"])
+        save(SEEN, sorted(seen))
         subprocess.run([sys.executable, os.path.join(ROOT, "build_csv.py")], check=True)
         git("add", "data/breakthroughs.json", "data/breakthroughs.csv",
             "data/watch_candidates.json", "data/promote_archive.json",
@@ -252,12 +257,12 @@ def make_entry(c, tier, note):
           "open-ecosystem" if re.search(r"(open.?weight|apache|mit license)", blob, re.I) else \
           "robotics" if re.search(r"(robot|humanoid)", blob, re.I) else "capability-leap"
     return {
-        "id": f"{y}-{slug}" or f"auto-{c[:20]}",
+        "id": f"{y}-{slug}" or f"auto-{slugify_fallback(c)}",
         "year": int(y) if y.isdigit() else datetime.date.today().year,
         "date": c.get("date") or today_iso(),
         "era": "live-discovery",
         "title": c.get("title", "")[:200],
-        "org": "Unattributed",
+        "org": c.get("org_hint") or "Unattributed",
         "people": [],
         "paper": f"auto-flagged via {c.get('source','?')}",
         "url": c.get("url", ""),
@@ -271,6 +276,10 @@ def make_entry(c, tier, note):
         "tags": ["auto", (c.get("source", "?").split()[0] or "?").lower()],
         "promote_note": note,
     }
+
+def slugify_fallback(c):
+    import hashlib
+    return hashlib.sha1((c.get("url") or c.get("title", "")).encode()).hexdigest()[:10]
 
 
 def today_iso():
