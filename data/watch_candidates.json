@@ -20,5 +20,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "METR / Redwood"
+  },
+  {
+    "id": "2026-gpt-6-astra-a-new-generation-of-intelligence",
+    "title": "GPT-6 Astra: A new generation of intelligence",
+    "url": "https://openai.com/index/gpt-6-astra",
+    "source": "OpenAI News",
+    "date": "2026-09-03",
+    "snippet": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
