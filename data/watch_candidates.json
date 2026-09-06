@@ -31,5 +31,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-ask-hn-why-was-the-llm-breakthrough-useful-for-i",
+    "title": "Ask HN: (Why) Was the LLM breakthrough useful for images, audio, etc.?",
+    "url": "https://news.ycombinator.com/item?id=49588265",
+    "source": "Hacker News",
+    "date": "2026-09-06",
+    "snippet": "This has been bothering me for a while. I feel like I have a decent conceptual grasp of what LLMs are doing with written text. But it seems like they also unlocked a bunch of progress in understanding and generating images, audio, and video. I can’t twist my brain into understanding the connection.<",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
