@@ -42,5 +42,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-major-math-breakthrough-by-ai",
+    "title": "Major Math Breakthrough by AI",
+    "url": "https://mastodon.social/@tristanbuckmaster/117233413705701198",
+    "source": "Hacker News",
+    "date": "2026-09-08",
+    "snippet": "Major Math Breakthrough by AI",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
