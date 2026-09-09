@@ -75,5 +75,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "OpenAI"
+  },
+  {
+    "id": "2026-eliciting-weak-to-strong-generalization-with-on",
+    "title": "Eliciting Weak-to-Strong Generalization with On-Policy Reverse Distillation",
+    "url": "https://huggingface.co/papers/2609.08798",
+    "source": "HF daily papers",
+    "date": "2026-09-08",
+    "snippet": "Weak-to-strong generalization asks whether stronger models can learn from weaker supervisors and surpass them. This question is particularly important for successive model generations and multi-domain consolidation, where repeating frontier-scale post-training from scratch can be prohibitively expen",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
