@@ -130,5 +130,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-physical-ai-takes-the-wheel-how-the-world-s-robo",
+    "title": "Physical AI Takes the Wheel: How the World’s Robotaxi Leaders Are Building With NVIDIA Technologies",
+    "url": "https://blogs.nvidia.com/blog/robotaxi-leaders-full-stack-open-platform/",
+    "source": "NVIDIA Newsroom",
+    "date": "2026-09-10",
+    "snippet": "The global robotaxi market — physical AI’s first commercial breakthrough — is projected to reach $400 billion by 2035, with over 6 million commercial vehicles in operation as driverless fleets are already moving people through some of the world’s busiest and most complex streets. Deploying a driverl",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "NVIDIA"
+  },
+  {
+    "id": "2026-physical-ai-takes-the-wheel-how-the-world-s-robo",
+    "title": "Physical AI Takes the Wheel: How the World’s Robotaxi Leaders Are Building With NVIDIA Technologies",
+    "url": "https://blogs.nvidia.com/blog/robotaxi-leaders-full-stack-open-platform/",
+    "source": "NVIDIA Blog",
+    "date": "2026-09-10",
+    "snippet": "The global robotaxi market — physical AI’s first commercial breakthrough — is projected to reach $400 billion by 2035, with over 6 million commercial vehicles in operation as driverless fleets are already moving people through some of the world’s busiest and most complex streets. Deploying a driverl",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "NVIDIA"
   }
 ]
