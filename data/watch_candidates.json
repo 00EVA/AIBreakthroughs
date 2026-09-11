@@ -152,5 +152,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "NVIDIA"
+  },
+  {
+    "id": "2026-generative-late-interaction-embeddings-for-visua",
+    "title": "Generative Late-Interaction Embeddings For Visual Document Retrieval",
+    "url": "https://huggingface.co/papers/2609.11808",
+    "source": "HF daily papers",
+    "date": "2026-09-10",
+    "snippet": "Late-interaction retrieval is the state-of-the-art for visual document search, but it pays for its accuracy in storage. Existing compression methods retain a subset or local average of the N~1,000 vectors per page. Under aggressive storage budgets, however, these methods degrade sharply, and alterna",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
