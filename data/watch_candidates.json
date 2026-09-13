@@ -174,5 +174,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "OpenAI"
+  },
+  {
+    "id": "2026-i-m-terrified-a-mathematician-grapples-with-ai-s",
+    "title": "'I'm Terrified': A Mathematician Grapples with AI's Recent Breakthroughs",
+    "url": "https://www.wired.com/story/mathematician-steven-strogatz-grapples-with-ai-recent-breakthroughs/",
+    "source": "Hacker News",
+    "date": "2026-09-13",
+    "snippet": "'I'm Terrified': A Mathematician Grapples with AI's Recent Breakthroughs",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
