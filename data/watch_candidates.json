@@ -229,5 +229,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "NVIDIA"
+  },
+  {
+    "id": "2026-vc-attention-value-smoothing-and-softmax-casting",
+    "title": "VC-Attention: Value Smoothing and Softmax Casting for Low-bit Attention",
+    "url": "https://huggingface.co/papers/2609.15810",
+    "source": "HF daily papers",
+    "date": "2026-09-14",
+    "snippet": "Diffusion Transformers deliver state-of-the-art video generation, but their long spatiotemporal sequences make attention the dominant deployment cost, and a deployable low-bit kernel must be accurate and fast. Accuracy is limited by outliers: a block's quantization scale is set by its largest entrie",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
