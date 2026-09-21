@@ -262,5 +262,27 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-scaling-discovery-through-test-time-communicatio",
+    "title": "Scaling Discovery through Test-Time Communication",
+    "url": "https://arxiv.org/abs/2609.21032",
+    "source": "arXiv cs.LG",
+    "date": "2026-09-21",
+    "snippet": "arXiv:2609.21032v1 Announce Type: new Abstract: Science advances not in isolation but through collaboration, yet existing agentic systems capture little of this. Whether communicating agents help remains an open question with mixed prior results. We show that test-time communication can substantially outperform independent parallel attempts on challenging tasks, where sharing a breakthrough can pu",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-chinese-memory-maker-cxmt-claims-dram-production",
+    "title": "Chinese memory-maker CXMT claims DRAM production breakthrough",
+    "url": "https://www.theregister.com/systems/2026/09/21/chinese-memory-maker-cxmt-claims-dram-production-breakthrough/5297633",
+    "source": "The Register",
+    "date": "2026-09-21",
+    "snippet": "PLUS: Toyota's robot hiring spree; China's CDNs struggle; India to charge for some UPI payments; and more!",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
