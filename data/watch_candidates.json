@@ -284,5 +284,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-why-do-video-diffusion-models-violate-physics-un",
+    "title": "Why Do Video Diffusion Models Violate Physics? Unveiling the Flaws in Attention Mechanisms",
+    "url": "https://huggingface.co/papers/2609.23658",
+    "source": "HF daily papers",
+    "date": "2026-09-20",
+    "snippet": "Despite impressive visual quality, state-of-the-art video diffusion models often generate content that violates real-world physical laws. While existing solutions rely on external priors or specialized data, we investigate the root cause by exploring the internal mechanisms of these models. Specific",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
