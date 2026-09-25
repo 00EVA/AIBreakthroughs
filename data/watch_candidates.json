@@ -317,5 +317,38 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "NVIDIA"
+  },
+  {
+    "id": "2026-fastino-releases-gliner2-5-decide-a-340m-open-we",
+    "title": "Fastino Releases GLiNER2.5-Decide: A 340M Open-Weight Decision Model That Runs on CPU - MarkTechPost",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZHRvVU5TN3pqcDhpMHVyMTdweXhVVGpkRUpXNnVUbk5KZ3AzaHMyMl9PTDgwSkRUMlpDb0g1ZzV1TjRHeDBFY05Da25JeEJ5a2txYi1SVllHcGdMLU1QSVVOT29fc0N2WENQVjM3SkR4aDh3c190X0R2RzFXSEJLRC1JbHAzOUJxNzktVGFNTVdZTGZHMFd1aUl3NTgtYWx4aE5Rckh6Rm9xUVlZYlk3anZqdDl0Q2FKRFhRWXRTbHAxaTTSAcgBQVVfeXFMT093bFlPS2Y2RGhMT25ubHVFWTduNklwdUNXbEM0Q1YtcF90R1U2c0FUS0ttRURzSWNQQ2NNWFpvZ2htYml3WFBDM1hVN19LMDhMU0FGQkhKeEZhaVBHNzNIOVN5bDA5cVVuVWZLVzRZSUQyN0FOZHdFRDN4dnZieXh3c2hjZTlqZlRPQXlwSVdVNGNxRHBzVkFhSERJdU9mdUJBU2lJeWUyWFNtU1h5VEUtTjNxN0xXaTItN1pmUlFselBma1E4a2g",
+    "source": "Google News",
+    "date": "2026-09-25",
+    "snippet": "Fastino Releases GLiNER2.5-Decide: A 340M Open-Weight Decision Model That Runs on CPU&nbsp;&nbsp;MarkTechPost",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-lightspeed-targets-250m-for-new-india-fund-focus",
+    "title": "Lightspeed targets $250M for new India fund, focusing on early-stage AI",
+    "url": "https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/",
+    "source": "TechCrunch AI",
+    "date": "2026-09-25",
+    "snippet": "The venture firm is aligning its India fundraising cycle with its global funds for the first time, as it shifts to a shorter investment period.",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-fastino-releases-gliner2-5-decide-a-340m-open-we",
+    "title": "Fastino Releases GLiNER2.5-Decide: A 340M Open-Weight Decision Model That Runs on CPU",
+    "url": "https://www.marktechpost.com/2026/09/24/fastino-releases-gliner2-5-decide-a-340m-open-weight-decision-model-that-runs-on-cpu/",
+    "source": "MarkTechPost",
+    "date": "2026-09-25",
+    "snippet": "<p>Fastino Labs has released GLiNER2.5-Decide, a 340M-parameter open-weight decision model. It takes text and a schema of typed questions and returns structured answers. Each answer comes with a probability distribution, a confidence score, and constraint-feasibility metadata. It targets the frequen",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
