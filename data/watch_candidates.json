@@ -372,5 +372,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-distillation-defenses-easily-break-after-reinfor",
+    "title": "Distillation Defenses Easily Break After Reinforcement Learning",
+    "url": "https://huggingface.co/papers/2609.35699",
+    "source": "HF daily papers",
+    "date": "2026-09-28",
+    "snippet": "Distillation attacks copy the reasoning capabilities of closed-source large language models, allowing bad actors to replicate state-of-the-art performance at low cost. Attackers systematically collect a large volume of frontier model reasoning traces and then train (i.e., \"distill\") their own models",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
