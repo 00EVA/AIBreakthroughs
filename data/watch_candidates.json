@@ -405,5 +405,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "METR / Redwood"
+  },
+  {
+    "id": "2026-airbus-gets-a-new-freighter-and-its-giant-door-i",
+    "title": "Airbus gets a new freighter – and its giant door – into the air for the first time",
+    "url": "https://www.theregister.com/offbeat/2026/09/30/airbus-gets-a-new-freighter-and-its-giant-door-into-the-air-for-the-first-time/5299972",
+    "source": "The Register",
+    "date": "2026-09-30",
+    "snippet": "The A350F is apparently good for carrying servers",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
