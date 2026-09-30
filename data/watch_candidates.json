@@ -383,5 +383,27 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-hyperspherical-semantic-trajectory-analysis-mapp",
+    "title": "Hyperspherical Semantic Trajectory Analysis: Mapping Technological Diffusion across Academic Preprints, Patent Signals, and Compute Scaling",
+    "url": "https://arxiv.org/abs/2609.35845",
+    "source": "arXiv cs.CL",
+    "date": "2026-09-30",
+    "snippet": "arXiv:2609.35845v1 Announce Type: new Abstract: Macroeconomic productivity metrics, such as Total Factor Productivity, register technological breakthroughs with multi-year reporting lags due to administrative survey intervals and national accounting conventions. This paper introduces Hyperspherical Semantic Trajectory Analysis (HSTA), an unsupervised quantitative methodology that tracks technology",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "METR / Redwood"
+  },
+  {
+    "id": "2026-hyperspherical-semantic-trajectory-analysis-mapp",
+    "title": "Hyperspherical Semantic Trajectory Analysis: Mapping Technological Diffusion across Academic Preprints, Patent Signals, and Compute Scaling",
+    "url": "https://huggingface.co/papers/2609.35845",
+    "source": "HF daily papers",
+    "date": "2026-09-25",
+    "snippet": "Macroeconomic productivity metrics, such as Total Factor Productivity, register technological breakthroughs with multi-year reporting lags due to administrative survey intervals and national accounting conventions. This paper introduces Hyperspherical Semantic Trajectory Analysis (HSTA), an unsuperv",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "METR / Redwood"
   }
 ]
