@@ -416,5 +416,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-google-gemini-4-argon-beats-claude-opus-5-5-on-a",
+    "title": "Google Gemini 4 Argon Beats Claude Opus 5.5 on Arena AI - Geeky Gadgets",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBiNnR2NjByQlFGWVJYRVl5Q3N4aVNBN2N6X2dSa0o4em9JZUthbS1GNUtvU1FMUVRXNnlvNmtaNU94bEliVnA4NjdIS0hDWTktVVFvQTU1MjktSVdUNGhIbFFn",
+    "source": "Google News",
+    "date": "2026-10-01",
+    "snippet": "Google Gemini 4 Argon Beats Claude Opus 5.5 on Arena AI&nbsp;&nbsp;Geeky Gadgets",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Google DeepMind"
   }
 ]
