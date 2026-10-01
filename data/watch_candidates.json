@@ -427,5 +427,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Google DeepMind"
+  },
+  {
+    "id": "2026-the-eternal-complement",
+    "title": "The eternal complement",
+    "url": "https://openai.com/index/the-eternal-complement",
+    "source": "OpenAI News",
+    "date": "2026-10-01",
+    "snippet": "Advanced AI may matter most for the routine work behind breakthrough ideas. Explore why execution could shape the next economy and the pace of progress.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
