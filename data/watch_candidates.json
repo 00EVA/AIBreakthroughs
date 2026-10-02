@@ -438,5 +438,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-autodatabench-a-data-centric-testbed-for-acceler",
+    "title": "AutoDataBench: A Data-centric Testbed for Accelerating Auto Research",
+    "url": "https://huggingface.co/papers/2609.40097",
+    "source": "HF daily papers",
+    "date": "2026-09-30",
+    "snippet": "Existing auto-research benchmarks often entangle multiple sources of improvement, including training frameworks, hyperparameters, compute budgets, and data, making it difficult to attribute why one frontier agent outperforms another to specific research capabilities. In this work, we isolate and sys",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
