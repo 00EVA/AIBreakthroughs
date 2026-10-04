@@ -460,5 +460,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-ask-hn-mainstream-media-overplaying-the-threat-o",
+    "title": "Ask HN: Mainstream media overplaying the threat of AI, or industry underplaying?",
+    "url": "https://news.ycombinator.com/item?id=49958383",
+    "source": "Hacker News",
+    "date": "2026-10-04",
+    "snippet": "When I turn on any mainstream media I feel as though I only hear AI discussed in the apocalyptic terms. Then when I “switch” to industry media I only hear it discussed glowing, all the things breakthroughs will allow.<p>Both sides have countless reasons to take extreme positions (ratings&#x2F;clicks",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
