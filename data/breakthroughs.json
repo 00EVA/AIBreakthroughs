@@ -2907,5 +2907,28 @@
       "reviewed"
     ],
     "promote_note": "human-approved into db at lane-3 (minor): unproven preprint, pending rating. Post-training pipeline (22k curated problems, SFT+RL, GenCorrect test-time refinement) pushes Nemotron-3-Nano-CC (30B-A3B) from 130 to 468 on IOI 2025 - past the 438.3 gold threshold - and Ultra-CC (550B) higher. Verified competition result, but a preprint account: await independent replication before re-rating."
+  },
+  {
+    "id": "2026-language-models-that-play-chess-and-explain-thei",
+    "year": 2026,
+    "date": "2026-10-02",
+    "era": "live-discovery",
+    "title": "Language Models that Play Chess and Explain Their Moves",
+    "org": "Unattributed",
+    "people": [],
+    "paper": "auto-flagged via HF daily papers",
+    "url": "https://huggingface.co/papers/2610.03695",
+    "source_hint": "HF daily papers",
+    "what_it_broke": "Modern chess engines are silent experts: they play at a superhuman level, but do not offer explanations for their play. On the other hand, language models (LMs) can generate plausible-sounding explanations, but their weak playing strength limits the utility of their explanations. We introduce Queen, [Source: HF daily papers]",
+    "why_impossible": "Pending assessment - auto-ingested - pending human rating.",
+    "category": "capability-leap",
+    "impact": 5,
+    "surprise": 5,
+    "tier": "minor",
+    "tags": [
+      "auto",
+      "hf"
+    ],
+    "promote_note": "auto-ingested - pending human rating"
   }
 ]
