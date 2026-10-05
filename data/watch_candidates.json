@@ -493,5 +493,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Alibaba Qwen"
+  },
+  {
+    "id": "2026-controlling-the-brain-with-light-earns-a-physiol",
+    "title": "Controlling the brain with light earns a physiology Nobel",
+    "url": "https://arstechnica.com/science/2026/10/controlling-the-brain-with-light-earns-a-physiology-nobel/",
+    "source": "Ars Technica",
+    "date": "2026-10-05",
+    "snippet": "The entire field of optogenetics traces back to light-seeking algae.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
