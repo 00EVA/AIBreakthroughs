@@ -515,5 +515,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Mistral AI"
+  },
+  {
+    "id": "2026-google-claims-embeddinggemma-2-outperforms-rival",
+    "title": "Google claims EmbeddingGemma 2 outperforms rival embedding models twice its size",
+    "url": "https://the-decoder.com/google-claims-embeddinggemma-2-outperforms-rival-embedding-models-twice-its-size/",
+    "source": "The Decoder",
+    "date": "2026-10-06",
+    "snippet": "<p><img width=\"1536\" height=\"1024\" src=\"https://the-decoder.com/wp-content/uploads/2026/09/gemini_blue.png\" class=\"attachment-full size-full wp-post-image\" alt=\"\" style=\"height: auto; margin-bottom: 10px;\" decoding=\"async\" fetchpriority=\"high\" /></p>\n<p>        Google released EmbeddingGemma 2, an o",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Google DeepMind"
+  },
+  {
+    "id": "2026-microsoft-publishes-nobel-economist-s-bearish-ai",
+    "title": "Microsoft publishes Nobel economist's bearish AI forecast of just 1.5% GDP growth over a decade",
+    "url": "https://the-decoder.com/microsoft-publishes-nobel-economists-bearish-ai-forecast-of-just-1-5-gdp-growth-over-a-decade/",
+    "source": "The Decoder",
+    "date": "2026-10-06",
+    "snippet": "<p><img width=\"1376\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/10/microsoft_human_touch.png\" class=\"attachment-full size-full wp-post-image\" alt=\"\" style=\"height: auto; margin-bottom: 10px;\" decoding=\"async\" /></p>\n<p>        Microsoft published a bearish AI outlook from Nobe",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Microsoft"
   }
 ]
