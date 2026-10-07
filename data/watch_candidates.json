@@ -537,5 +537,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Microsoft"
+  },
+  {
+    "id": "2026-multilinguality-in-hybrid-attention-llms",
+    "title": "Multilinguality in Hybrid Attention LLMs",
+    "url": "https://huggingface.co/papers/2609.35378",
+    "source": "HF daily papers",
+    "date": "2026-09-28",
+    "snippet": "In response to the growing demand for long sequences in agentic and reasoning use cases, many state-of-the-art LLMs combine multiple variants of attention to mitigate the quadratic complexity of traditional softmax attention. These hybrid attention LLMs aim to balance the strengths and limitations o",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
