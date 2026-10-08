@@ -581,5 +581,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-openai-s-new-math-breakthroughs-put-ai-s-role-in",
+    "title": "OpenAI's New Math Breakthroughs Put AI's Role in Science Under the Microscope",
+    "url": "https://medium.com/@d02514047/openais-new-math-breakthroughs-put-ai-s-role-in-science-under-the-microscope-cc2304f548f3",
+    "source": "Hacker News",
+    "date": "2026-10-08",
+    "snippet": "OpenAI's New Math Breakthroughs Put AI's Role in Science Under the Microscope",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "OpenAI"
   }
 ]
