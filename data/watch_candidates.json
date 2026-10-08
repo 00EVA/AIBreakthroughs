@@ -559,5 +559,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "OpenAI"
+  },
+  {
+    "id": "2026-ai-breakthroughs-in-robotics-won-t-change-your-l",
+    "title": "AI breakthroughs in robotics won't change your life any time soon",
+    "url": "https://www.technologyreview.com/2026/10/08/1145923/ai-breakthroughs-in-robotics-wont-change-your-life-any-time-soon/",
+    "source": "Hacker News",
+    "date": "2026-10-08",
+    "snippet": "AI breakthroughs in robotics won't change your life any time soon",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-ai-math-breakthroughs-have-ethereum-researchers",
+    "title": "AI math breakthroughs have Ethereum researchers debating how fast wallet security could collapse",
+    "url": "https://the-decoder.com/ai-math-breakthroughs-have-ethereum-researchers-debating-how-fast-wallet-security-could-collapse/",
+    "source": "The Decoder",
+    "date": "2026-10-08",
+    "snippet": "<p><img width=\"1376\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/10/ethereum_crypto_risks.png\" class=\"attachment-full size-full wp-post-image\" alt=\"\" style=\"height: auto; margin-bottom: 10px;\" decoding=\"async\" fetchpriority=\"high\" /></p>\n<p>        Ethereum researcher Justin Dr",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
