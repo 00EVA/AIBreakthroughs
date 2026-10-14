@@ -636,5 +636,27 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-mistral-releases-le-chonk-a-1-trillion-parameter",
+    "title": "Mistral Releases Le Chonk, a 1 Trillion Parameter Open Weight Model - Startup Fortune",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPMnhZbGk0NWEtZTdPNXd0NXpaV2tnam1oSXBfNkFlVEZOU3ZmcjBrcFZqLWMxRFZYQkR0TVo5WUxDNE82YXVKdlRTZ3ByWk5EY0lTWXlPbE96azVpeWdWMDJnNlBmczM2cEoyRlpnaHJRd1FEMHJvTTFHal9qQ01EY3V1UkpvYUVmTF9vWk8tNy14cVNKM3Njblhn",
+    "source": "Google News",
+    "date": "2026-10-14",
+    "snippet": "Mistral Releases Le Chonk, a 1 Trillion Parameter Open Weight Model&nbsp;&nbsp;Startup Fortune",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Mistral AI"
+  },
+  {
+    "id": "2026-fish-audio-releases-drama-3-a-35b-open-weight-mo",
+    "title": "Fish Audio Releases Drama 3, a 35B Open-Weight MoE Text-to-Speech Model",
+    "url": "https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/",
+    "source": "MarkTechPost",
+    "date": "2026-10-14",
+    "snippet": "<p>Fish Audio released Drama 3, a 35B mixture-of-experts text-to-speech model with about 3B active parameters. It takes plain-language direction, covers 83 languages and ships open weights under a revenue-capped community license.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/10/14/fish",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
