@@ -680,5 +680,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "NVIDIA"
+  },
+  {
+    "id": "2026-what-ai-s-mathematical-breakthroughs-mean-for-sp",
+    "title": "What AI's Mathematical Breakthroughs Mean for Specialised Models",
+    "url": "https://libido-sciendi.com/deep-dives/general-specialised-models",
+    "source": "Hacker News",
+    "date": "2026-10-15",
+    "snippet": "What AI's Mathematical Breakthroughs Mean for Specialised Models",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-new-5-6b-parameter-flux-3-image-klein-debuts-as",
+    "title": "New 5.6B-Parameter FLUX 3 Image Klein Debuts as Open-Weights Release - Unite.AI",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSWJQZUhVZ1hUaHJWczg4ZHMxZ0N6Q3lvYzlOVGdONGhNNXlkTzlyM1pCNnRCUzQ1Ml9uTTV1eFQzTHJWZjdodHFvSFpSbDZQOW80NkVjb2ZrTUlMZ3dLR2o3U21STTdKb0FSOHd0RGlha1lWaEZzcUpZNW1rTFBGVW1RdDI0bzZpM05wSkJtcDl3NDYy",
+    "source": "Google News",
+    "date": "2026-10-15",
+    "snippet": "New 5.6B-Parameter FLUX 3 Image Klein Debuts as Open-Weights Release&nbsp;&nbsp;Unite.AI",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
