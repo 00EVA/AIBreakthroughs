@@ -658,5 +658,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-nvidia-expands-advanced-technology-access-for-eu",
+    "title": "NVIDIA Expands Advanced Technology Access for Europe’s Scientific Community Through Open Learning Resources, Collaborations and Compute",
+    "url": "https://blogs.nvidia.com/blog/ec-scientific-computing-pledge/",
+    "source": "NVIDIA Newsroom",
+    "date": "2026-10-15",
+    "snippet": "Much of today’s scientific progress begins with computation.  But turning accelerated computing’s potential into scientific progress — modeling climate systems, designing molecules, simulating materials and more — depends on more than breakthrough technology. Especially for smaller labs, early-caree",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "NVIDIA"
+  },
+  {
+    "id": "2026-nvidia-expands-advanced-technology-access-for-eu",
+    "title": "NVIDIA Expands Advanced Technology Access for Europe’s Scientific Community Through Open Learning Resources, Collaborations and Compute",
+    "url": "https://blogs.nvidia.com/blog/ec-scientific-computing-pledge/",
+    "source": "NVIDIA Blog",
+    "date": "2026-10-15",
+    "snippet": "Much of today’s scientific progress begins with computation.  But turning accelerated computing’s potential into scientific progress — modeling climate systems, designing molecules, simulating materials and more — depends on more than breakthrough technology. Especially for smaller labs, early-caree",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "NVIDIA"
   }
 ]
