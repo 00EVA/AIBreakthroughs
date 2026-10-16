@@ -702,5 +702,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-meta-releases-muse-spark-open-816b-open-weight-m",
+    "title": "Meta Releases Muse Spark Open: 816B Open-Weight MoE With 1M Context",
+    "url": "https://www.marktechpost.com/2026/10/15/meta-muse-spark-open-816b-open-weight-model/",
+    "source": "MarkTechPost",
+    "date": "2026-10-16",
+    "snippet": "<p>Meta released Muse Spark Open, an 816B-parameter open-weight MoE model with 42B active parameters and a 1M-token context. It leads open models on MCP-Atlas and runs on 2 M5 Ultra Mac Studios.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/10/15/meta-muse-spark-open-816b-open-weight-mo",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Meta AI"
   }
 ]
