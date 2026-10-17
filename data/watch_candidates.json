@@ -746,5 +746,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-stepfun-releases-step-5-preview-open-weights-600",
+    "title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+    "url": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+    "source": "MarkTechPost",
+    "date": "2026-10-17",
+    "snippet": "<p>StepFun has released Step 5 Preview as open weights. FP8 and BF16 checkpoints are live on Hugging Face and ModelScope. Step 5 Preview is a sparse Mixture-of-Experts model from StepFun built for long-horizon agentic work. It has 600B total parameters, 27B active per token and up to 1M tokens of co",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
