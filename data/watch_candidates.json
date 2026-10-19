@@ -757,5 +757,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-at-the-limits-of-computability-steps-towards-aut",
+    "title": "At the Limits of Computability: Steps Towards Autonomous AI Discovery on the Busy Beaver Frontier",
+    "url": "https://arxiv.org/abs/2610.22603",
+    "source": "arXiv cs.AI",
+    "date": "2026-10-19",
+    "snippet": "arXiv:2610.22603v1 Announce Type: new Abstract: Recent breakthroughs in AI for mathematics---ranging from Olympiad medal performances to resolving long-standing open conjectures---have rapidly expanded what automated systems can achieve. Yet these successes primarily concern predefined, human-formulated problems, leaving open how AI systems can autonomously uncover mathematical structure and formu",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-mistral-ai-releases-timestral-a-209m-forecasting",
+    "title": "Mistral AI Releases Timestral: A 209M Forecasting Model Family That Outperforms Google’s TimesFM-3",
+    "url": "https://www.marktechpost.com/2026/10/18/mistral-timestral-time-series-foundation-model/",
+    "source": "MarkTechPost",
+    "date": "2026-10-19",
+    "snippet": "<p>Mistral released Timestral, a time series foundation model family from 5M to 209M parameters. The 209M model leads GIFT-Eval, TIME and fev-bench among zero-shot models and runs on CPU.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/10/18/mistral-timestral-time-series-foundation-model/",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Google DeepMind"
   }
 ]
