@@ -779,5 +779,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Google DeepMind"
+  },
+  {
+    "id": "2026-lean4agenticrl-advancing-agentic-rl-with-verifia",
+    "title": "Lean4AgenticRL: Advancing Agentic RL with Verifiable Multi-level Process Rewards",
+    "url": "https://huggingface.co/papers/2610.22448",
+    "source": "HF daily papers",
+    "date": "2026-10-15",
+    "snippet": "Enhancing the agentic capabilities of Large Language Models (LLMs) to tackle complex software engineering (SWE) and general terminal-usage problems is a pressing challenge. Current state-of-the-art LLMs often go through large-scale agentic Reinforcement Learning (RL). However, they mostly rely on hi",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
