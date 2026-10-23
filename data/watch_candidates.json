@@ -845,5 +845,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Microsoft"
+  },
+  {
+    "id": "2026-human-receives-ai-designed-virus-for-the-first-t",
+    "title": "Human receives AI-designed virus for the first time",
+    "url": "https://www.theregister.com/science/2026/10/22/human-receives-ai-designed-virus-for-the-first-time/5304874",
+    "source": "The Register",
+    "date": "2026-10-22",
+    "snippet": "Not to kill the human, of course – to kill the antibiotic-resistant bacteria causing their infection",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
