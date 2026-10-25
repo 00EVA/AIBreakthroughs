@@ -856,5 +856,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-moonshot-ai-releases-kimi-k3-1-pro-open-weight-m",
+    "title": "Moonshot AI releases Kimi K3.1 Pro open weight model to rival Claude - Startup Fortune",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT3VwQndMemVCbVNzZFc2UmZkdGdySTJ3cGZwaTFwcUpsc3ZURW9VRW45QUtFVUxSS2RNZWdmYUR3bG1neUdmYWljOHJTaHpuaVRtaG11Y3dvSUdiZW9WbnI4cW9KakNNVnRPWXBVMm1OMEhDcUd6dUpuQU53TFdSbEt6RXdKaTR6VTN0Y09vWGdsTG1rZHU2b3dCSQ",
+    "source": "Google News",
+    "date": "2026-10-23",
+    "snippet": "Moonshot AI releases Kimi K3.1 Pro open weight model to rival Claude&nbsp;&nbsp;Startup Fortune",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Anthropic"
   }
 ]
