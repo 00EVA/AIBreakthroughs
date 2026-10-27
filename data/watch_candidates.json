@@ -878,5 +878,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Alibaba Qwen"
+  },
+  {
+    "id": "2026-science-through-covers-microsoft-ai-diagnostic-t",
+    "title": "[Science Through Covers] Microsoft AI diagnostic tool outperforms doctors in accuracy - DongA Science",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE83MFgyalBOZmF3VDlqeVlzNjE5M0VVUHBtT1Rxd2JFVFZQSV9jQllmVmdXUmZiNm5kWUNfVHliQjFUODZ5X2lHZ1NOODR3aUJaTVRkMg",
+    "source": "Google News",
+    "date": "2026-10-24",
+    "snippet": "[Science Through Covers] Microsoft AI diagnostic tool outperforms doctors in accuracy&nbsp;&nbsp;DongA Science",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Microsoft"
   }
 ]
