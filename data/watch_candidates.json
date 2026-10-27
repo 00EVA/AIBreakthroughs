@@ -922,5 +922,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "OpenAI"
+  },
+  {
+    "id": "2026-can-test-time-memory-evolution-outperform-test-t",
+    "title": "Can Test-Time Memory Evolution Outperform Test-Time Training for Scientific Discovery?",
+    "url": "https://huggingface.co/papers/2610.32046",
+    "source": "HF daily papers",
+    "date": "2026-10-23",
+    "snippet": "Recent test-time training (TTT) frameworks have enabled open-weight large language models (LLMs) to outperform inference-only frameworks powered by frontier models on scientific discovery tasks. However, TTT introduces additional computational cost for online weight updates during the discovery proc",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-anthropic-says-it-will-revolutionize-biology-som",
+    "title": "Anthropic Says It Will Revolutionize Biology—Some Day",
+    "url": "https://www.wired.com/story/anthropic-says-it-will-revolutionize-biology-some-day/",
+    "source": "WIRED AI",
+    "date": "2026-10-27",
+    "snippet": "In breathless press releases and posts, the company has touted its models’ ability to deliver scientific breakthroughs. But its IPO filing taps the brakes on just how fast its AI will lead to big discoveries.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Anthropic"
   }
 ]
