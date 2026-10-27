@@ -900,5 +900,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Google DeepMind"
+  },
+  {
+    "id": "2026-roboharness-a-simple-harness-outperforms-vla-and",
+    "title": "RoboHarness: A Simple Harness Outperforms VLA and World Action Models",
+    "url": "https://huggingface.co/papers/2610.14018",
+    "source": "HF daily papers",
+    "date": "2026-10-16",
+    "snippet": "The rise of large language models (LLMs) has opened a path toward generalist embodied AI, raising the question of how LLMs can act in the physical world. One straightforward approach is training the model to generate actions: collect robot-action data and video demonstration, refine LLM architecture",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-openai-asks-outside-experts-including-a-nobel-la",
+    "title": "OpenAI asks outside experts, including a Nobel laureate, to check proofs its AI produced in math, computer science, and physics",
+    "url": "https://the-decoder.com/openai-asks-outside-experts-including-a-nobel-laureate-to-check-proofs-its-ai-produced-in-math-computer-science-and-physics/",
+    "source": "The Decoder",
+    "date": "2026-10-27",
+    "snippet": "<p><img width=\"1376\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/10/openai_navier.png\" class=\"attachment-full size-full wp-post-image\" alt=\"\" style=\"height: auto; margin-bottom: 10px;\" decoding=\"async\" fetchpriority=\"high\" /></p>\n<p>        OpenAI says its internal AI models ha",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "OpenAI"
   }
 ]
