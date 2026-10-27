@@ -889,5 +889,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Microsoft"
+  },
+  {
+    "id": "2026-17-organizations-using-ai-to-accelerate-scientif",
+    "title": "17 organizations using AI to accelerate scientific breakthroughs - blog.google",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYzB3aWs5clBZYldydVVUcFRjN2dUUHFxMm42SC1wRDIxdU82ZXJnQXh6U1QyTlZ6X09wNEtpNi1yLVBlaV9HTUtkQl83SHZ1S2NUZHhFM0JQOFZDd203TUpuLVRLTllhNmFMS3RRZmdzblNjMVVOaHQ4RVVhWGNEeDBCc0h5TE1kYUxpSDBIaDJNdU1JSlplVko0UzBTRktfR2pSWGZuRWxfa0RQ",
+    "source": "Google News",
+    "date": "2026-10-14",
+    "snippet": "17 organizations using AI to accelerate scientific breakthroughs&nbsp;&nbsp;blog.google",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Google DeepMind"
   }
 ]
