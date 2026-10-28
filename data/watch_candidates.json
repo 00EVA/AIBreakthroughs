@@ -955,5 +955,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-docxeval-a-systematic-evaluation-of-explainabili",
+    "title": "DocXEval: A Systematic Evaluation of Explainability in Multimodal Document Understanding",
+    "url": "https://arxiv.org/abs/2610.36929",
+    "source": "arXiv cs.CL",
+    "date": "2026-10-28",
+    "snippet": "arXiv:2610.36929v1 Announce Type: new Abstract: Multimodal transformer models have driven unprecedented performance breakthroughs in modern document understanding. However, the inherent black-box nature of these models remains a major obstacle to their safe deployment in high-stakes sectors. Despite significant progress in explainability for vision and language tasks, explainable AI (XAI) research",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "xAI"
   }
 ]
