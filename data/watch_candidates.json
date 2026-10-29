@@ -988,5 +988,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "DeepSeek"
+  },
+  {
+    "id": "2026-baseten-releases-joey-1-a-2b-open-weights-decisi",
+    "title": "Baseten Releases Joey-1, a 2B Open-Weights Decision Model - Unite.AI",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTVRyVVZBa1MwV1hoNGRqMHhDNzRNUnJRc3JvaFZQWEhyNlRWblk3UHprQk9KbVU1ODBWRzF6NGxxZDVHazhPdkRXak5WUW5GcVN6c0lLNUFfblRnSU8zOFR1UWFRbEJkLXJlNjYwU2dyMGJUYTBHalBMQW5ndmYzTUVUSEo",
+    "source": "Google News",
+    "date": "2026-10-29",
+    "snippet": "Baseten Releases Joey-1, a 2B Open-Weights Decision Model&nbsp;&nbsp;Unite.AI",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
