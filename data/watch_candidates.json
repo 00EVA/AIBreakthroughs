@@ -999,5 +999,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-samaya-ai-releases-sterling-a-3b-active-finance",
+    "title": "Samaya AI Releases Sterling: A 3B-Active Finance Research Agent Model that Beats Claude Fable 5.1 on FrontierFinance at 11x Lower Cost",
+    "url": "https://www.marktechpost.com/2026/10/30/samaya-sterling-post-trained-finance-research-model-frontierfinance/",
+    "source": "MarkTechPost",
+    "date": "2026-10-30",
+    "snippet": "<p>Samaya AI’s Sterling is a post-trained Nemotron 3.5 Lightning model for financial research. It scores 58.9% on FrontierFinance at $0.61 per question, beating Claude Fable 5.1’s 55.9% at $6.89.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/10/30/samaya-sterling-post-trained-finance-re",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Anthropic"
   }
 ]
