@@ -1010,5 +1010,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Anthropic"
+  },
+  {
+    "id": "2026-beyond-the-breakthrough-what-comes-next-for-ai-v",
+    "title": "Beyond the Breakthrough: What Comes Next for AI [video] [Peter Norvig]",
+    "url": "https://www.youtube.com/watch?v=GU9msk_eH7w",
+    "source": "Hacker News",
+    "date": "2026-11-01",
+    "snippet": "Beyond the Breakthrough: What Comes Next for AI [video] [Peter Norvig]",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
