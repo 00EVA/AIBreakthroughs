@@ -1021,5 +1021,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-deep-principle-releases-hydrogen-1-0-a-753b-open",
+    "title": "Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery",
+    "url": "https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/",
+    "source": "MarkTechPost",
+    "date": "2026-11-02",
+    "snippet": "<p>Deep Principle has released Hydrogen-1.0, an open-weight scientific model for chemistry, materials science and life sciences. It is built by post-training Z.ai&#8217;s GLM-5.3 on domain data, laboratory records and agent discovery trajectories. For developers, it offers open weights that report a",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Z.ai"
   }
 ]
