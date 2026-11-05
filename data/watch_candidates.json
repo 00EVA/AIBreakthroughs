@@ -1043,5 +1043,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-the-simple-law-for-energy-cost-of-llm-inference",
+    "title": "The SIMPLE Law for Energy Cost of LLM Inference",
+    "url": "https://huggingface.co/papers/2611.03330",
+    "source": "HF daily papers",
+    "date": "2026-11-02",
+    "snippet": "Generative AI is billed per token, yet tokens are not equally expensive. Each token enters the KV-cache and raises the cost of those that follow, so energy grows non-linearly along a sequence whose tokens look identical. No analytical model states what a token costs, and the most accurate SOTA model",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
