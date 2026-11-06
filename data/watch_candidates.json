@@ -1054,5 +1054,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-synthfaces-balanced-large-scale-human-dataset",
+    "title": "SynthFaces: Balanced Large Scale Human Dataset",
+    "url": "https://huggingface.co/papers/2610.40119",
+    "source": "HF daily papers",
+    "date": "2026-10-29",
+    "snippet": "The pursuit of fair and equitable AI in human-centric tasks is critically hindered by the inherent biases and privacy risks of real-world datasets, which offer imbalanced representations of identity and often contain sensitive personal information. Consequently, state-of-the-art generative models tr",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
