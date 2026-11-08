@@ -1065,5 +1065,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-ask-hn-is-it-possible-to-backtest-math-scinse-br",
+    "title": "Ask HN: Is it possible to backtest math/scinse breakthroughs with AI models?",
+    "url": "https://news.ycombinator.com/item?id=50413158",
+    "source": "Hacker News",
+    "date": "2026-11-08",
+    "snippet": "By creating a synthetic dataset of everything we know with a cutoff of say 1900 and see if it actually can come up with the same (or more interestingly, different) theories.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
