@@ -1076,5 +1076,16 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-baidu-s-ernie-evolve-automated-research-system-b",
+    "title": "Baidu’s ERNIE Evolve Automated Research System Beats NanoChat and NanoGPT Records",
+    "url": "https://www.marktechpost.com/2026/11/09/baidu-ernie-evolve-automated-research-system/",
+    "source": "MarkTechPost",
+    "date": "2026-11-09",
+    "snippet": "<p>Baidu’s ERNIE Evolve is an automated research system that edits code, runs experiments and keeps only verified gains. It beat public bests on NanoChat and NanoGPT Speedrun and sped up ERNIE-5.5-Flash inference.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/11/09/baidu-ernie-evolve-au",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
