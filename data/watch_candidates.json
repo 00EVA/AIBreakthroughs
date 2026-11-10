@@ -1087,5 +1087,27 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-instanthmr-real-time-human-mesh-recovery-on-your",
+    "title": "InstantHMR : Real-Time Human Mesh Recovery on Your Phone",
+    "url": "https://huggingface.co/papers/2611.09195",
+    "source": "HF daily papers",
+    "date": "2026-11-06",
+    "snippet": "Real-time 3D human mesh recovery from a single image on mobile devices is a challenging problem with many applications, including robotics, biomechanics, AR/VR, and exergames. Current state-of-the-art models are either too slow to run efficiently on mobile devices or sacrifice accuracy for speed. We",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-introducing-alphaproof-code-a-breakthrough-in-ve",
+    "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+    "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+    "source": "DeepMind Blog",
+    "date": "2026-11-10",
+    "snippet": "AlphaProof Code agents wrote three  million lines of proofs in Lean to verify Signal’s core encryption.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
