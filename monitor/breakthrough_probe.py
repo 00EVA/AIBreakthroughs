@@ -146,10 +146,9 @@ RSSHUB_INSTANCES = [
 FEEDS = [
     # --- primary / official (labs publish here first) ---
     ("OpenAI News", "https://openai.com/news/rss.xml"),
-    # anthropic.com publishes no RSS of its own; RSSHub mirrors scrape /news.
-    # Two mirrors - dedupe handles the overlap if both are up.
-    ("Anthropic News", "https://rsshub.rssforever.com/anthropic/news"),
-    ("Anthropic News (mirror)", "https://rsshub.ktachibana.party/anthropic/news"),
+    # anthropic.com publishes no RSS of its own; this RSSHub mirror scrapes
+    # /news. The rssforever mirror answered 503 on every poll - dropped.
+    ("Anthropic News", "https://rsshub.ktachibana.party/anthropic/news"),
     ("DeepMind Blog", "https://deepmind.google/blog/rss.xml"),
     ("Hugging Face Blog", "https://huggingface.co/blog/feed.xml"),
     # releases.rdf was retired; releases.xml is the iPressroom feed.
@@ -163,9 +162,10 @@ FEEDS = [
     ("Ars Technica", "https://arstechnica.com/feed/"),
     ("The Decoder", "https://the-decoder.com/feed/"),
     ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
-    ("VentureBeat AI", "https://venturebeat.com/category/ai/feed"),
     ("WIRED AI", "https://www.wired.com/feed/tag/ai/latest/rss"),
-    ("MarkTechPost", "https://marktechpost.com/feed/"),
+    # VentureBeat (429 on every poll) and MarkTechPost (hard 403 to non-browser
+    # UAs) removed; The Verge AI fills the same general-press slot.
+    ("The Verge AI", "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"),
 ]
 
 HF_PAPERS = "https://huggingface.co/api/daily_papers"

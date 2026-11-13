@@ -21,7 +21,8 @@
       "neural-networks",
       "theory",
       "neurons"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1950-shannon-chess-program",
@@ -45,7 +46,8 @@
       "search",
       "shannon",
       "minimax"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "1950-turing-test",
@@ -68,7 +70,8 @@
       "philosophy",
       "turing",
       "benchmark"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1951-snarc-first-neural-machine",
@@ -92,7 +95,8 @@
       "neural-networks",
       "hardware",
       "reinforcement"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "1956-logic-theorist",
@@ -118,7 +122,8 @@
       "theorem-proving",
       "newell",
       "simon"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1956-dartmouth-workshop",
@@ -143,7 +148,8 @@
     "tags": [
       "history",
       "field-founder"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1957-general-problem-solver-lineage",
@@ -168,7 +174,8 @@
       "symbolic-ai",
       "problem-solving",
       "cognitive-architecture"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "1958-perceptron",
@@ -190,7 +197,8 @@
     "tags": [
       "neural-networks",
       "supervised-learning"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1958-lisp-language",
@@ -214,7 +222,8 @@
       "programming-languages",
       "symbolic-ai",
       "garbage-collection"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1959-samuel-checkers-selflearning",
@@ -239,7 +248,8 @@
       "machine-learning",
       "samuel",
       "ibm"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1965-deep-learning-foundations",
@@ -262,7 +272,8 @@
     "tags": [
       "deep-learning",
       "overlooked"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1965-dendral-expert-system-begins",
@@ -288,7 +299,8 @@
       "chemistry",
       "feigenbaum",
       "knowledge-engineering"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "1966-eliza",
@@ -311,7 +323,8 @@
       "chatbot",
       "nlp",
       "human-computer-interaction"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1969-perceptrons-book-freeze",
@@ -336,7 +349,8 @@
       "ai-winter",
       "perceptrons",
       "negative-result"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "1970-backprop-vision",
@@ -359,7 +373,8 @@
       "backpropagation",
       "autodiff",
       "overlooked"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "1971-shrdlu-micro worlds",
@@ -383,7 +398,8 @@
       "dialogue",
       "micro-worlds",
       "winograd"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1972-mycin-medical-expert",
@@ -409,7 +425,8 @@
       "medicine",
       "explainability",
       "certainty-factors"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "1972-prolog-invented",
@@ -434,7 +451,8 @@
       "prolog",
       "logic-programming",
       "fifth-generation"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1973-lighthill-report-winter-one",
@@ -458,7 +476,8 @@
       "funding-collapse",
       "lighthill",
       "history"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "1980-neocognitron-cnn-vision",
@@ -482,7 +501,8 @@
       "vision",
       "fukushima",
       "overlooked"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1982-hopfield-networks",
@@ -507,7 +527,8 @@
       "associative-memory",
       "revival",
       "nobel"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1982-japan-fifth-generation",
@@ -532,7 +553,8 @@
       "japan",
       "prolog",
       "national-programs"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "1985-boltzmann-machines",
@@ -546,7 +568,7 @@
       "Terrence Sejnowski"
     ],
     "paper": "\"Learning and Relearning in Boltzmann Machines\" (Parallel Distributed Processing vol. 1)",
-    "url": "https://psycnet.apa.org/record/1986-98344-001",
+    "url": "https://doi.org/10.1207/s15516709cog0901_7",
     "what_it_broke": "Networks as generative energy models learning internal representations WITHOUT labels via simulated annealing — the conceptual bridge from Hopfield dynamics to modern unsupervised/generative learning (DBNs, RBMs pretraining).",
     "why_impossible": "Learning without teachers was the holy grail; making noise WORK (annealing escapes local minima) inverted the deterministic-computation intuition.",
     "category": "generative-models",
@@ -558,7 +580,8 @@
       "unsupervised",
       "hinton",
       "nobel"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1986-backprop-popularized",
@@ -583,7 +606,8 @@
       "backpropagation",
       "neural-networks",
       "revival"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1988-pearl-bayesian-networks",
@@ -608,7 +632,8 @@
       "probability",
       "turing-award",
       "pearl"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1988-sutton-temporal-difference",
@@ -631,7 +656,8 @@
       "temporal-difference",
       "sutton",
       "credit-assignment"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1989-cnn-convolution",
@@ -656,7 +682,8 @@
       "cnn",
       "computer-vision",
       "convolution"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1989-hinton-dist-belief",
@@ -681,7 +708,8 @@
       "pdp",
       "cognitive-science",
       "manifesto"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "1990-brooks-behavior-robotics",
@@ -706,7 +734,8 @@
       "embodiment",
       "brooks",
       "roomba"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1992-td-gammon",
@@ -729,7 +758,8 @@
       "reinforcement-learning",
       "self-play",
       "games"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1992-q-learning-formal",
@@ -754,7 +784,8 @@
       "reinforcement-learning",
       "watkins",
       "convergence-proof"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1995-svm-statistical-learning",
@@ -780,7 +811,8 @@
       "statistical-learning",
       "kernels",
       "vc-theory"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1997-deep-blue",
@@ -805,7 +837,8 @@
       "chess",
       "search",
       "human-champion"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1997-lstm",
@@ -829,7 +862,8 @@
       "rnn",
       "sequence-modeling",
       "lstm"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "1998-lenet5-gradient-document",
@@ -857,7 +891,8 @@
       "production-ml",
       "lecun",
       "overlooked"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "2006-deep-belief-nets",
@@ -881,7 +916,8 @@
     "tags": [
       "deep-learning",
       "pretraining"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "2009-imagenet",
@@ -906,7 +942,8 @@
       "dataset",
       "computer-vision",
       "benchmarking"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2012-alexnet",
@@ -932,7 +969,8 @@
       "imagenet",
       "scaling",
       "deep-learning"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2013-word2vec",
@@ -959,7 +997,8 @@
       "embeddings",
       "nlp",
       "representation-learning"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2013-vae-reparameterization",
@@ -985,7 +1024,8 @@
       "kingma",
       "welling",
       "generative"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2014-dqn-atari",
@@ -1010,7 +1050,8 @@
       "reinforcement-learning",
       "atari",
       "deepmind"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2014-gan",
@@ -1035,7 +1076,8 @@
       "gan",
       "generative",
       "adversarial"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2014-seq2seq-encoder-decoder",
@@ -1061,7 +1103,8 @@
       "translation",
       "lstm",
       "sutskever"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2015-diffusion-foundations",
@@ -1089,7 +1132,8 @@
       "overlooked",
       "sohl-dickstein",
       "ddpm"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2015-bahdanau-attention",
@@ -1115,7 +1159,8 @@
       "alignment",
       "bengio",
       "machine-translation"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2016-alphago",
@@ -1166,7 +1211,8 @@
           "https://arxiv.org/abs/2609.02849"
         ]
       }
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2016-huggingface-launch",
@@ -1192,7 +1238,8 @@
       "open-science",
       "infrastructure",
       "ecosystem"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2017-mixture-of-experts-sparsely",
@@ -1220,7 +1267,8 @@
       "shazeer",
       "routing",
       "efficiency"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2017-transformer",
@@ -1250,7 +1298,8 @@
       "attention",
       "architecture",
       "foundation"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2018-gpt1-scaling-hint",
@@ -1276,7 +1325,8 @@
       "gpt",
       "scaling",
       "openai"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2018-bert",
@@ -1302,7 +1352,8 @@
       "bert",
       "transfer-learning",
       "nlp"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2019-openai-five-dota",
@@ -1328,7 +1379,8 @@
       "self-play",
       "long-horizon",
       "multi-agent"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2019-vq-vae-2-masks-to-image",
@@ -1354,7 +1406,8 @@
       "tokenization",
       "multimodal",
       "discrete-latents"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2019-t5-text-to-text",
@@ -1382,7 +1435,8 @@
       "raffel",
       "unification",
       "instruction-format"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "2019-huggingface-transformers-library",
@@ -1409,7 +1463,8 @@
       "transformers",
       "democratization",
       "library"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2020-scaling-laws",
@@ -1436,7 +1491,8 @@
       "scaling-laws",
       "kaplan",
       "forecastability"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2020-retrieval-augmentation",
@@ -1462,7 +1518,8 @@
       "retrieval",
       "grounding",
       "enterprise"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "2020-gpt3-emergence",
@@ -1494,7 +1551,8 @@
       "emergence",
       "few-shot",
       "scaling"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2020-ddpm-diffusion-works",
@@ -1520,7 +1578,8 @@
       "ddpm",
       "jonathan-ho",
       "image-generation"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2020-alphafold2-casp14",
@@ -1547,7 +1606,8 @@
       "biology",
       "grand-challenge",
       "attention"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2021-dalle-clip",
@@ -1574,7 +1634,8 @@
       "clip",
       "text-to-image",
       "multimodal"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2021-huggingface-hub-datasets",
@@ -1598,7 +1659,8 @@
       "datasets",
       "data-access",
       "hub"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2021-megatron-trident-scaling-infra",
@@ -1626,7 +1688,8 @@
       "distributed-training",
       "systems",
       "nvidia"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "2021-lora-lowrank",
@@ -1653,7 +1716,8 @@
       "democratization",
       "qlora",
       "adapters"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2021-codex-human-eval",
@@ -1679,7 +1743,8 @@
       "code-generation",
       "benchmarks",
       "human-eval"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2021-codex-copilot",
@@ -1695,7 +1760,7 @@
       "Qiming Yuan"
     ],
     "paper": "\"Evaluating Large Language Models Trained on Code\", arXiv",
-    "url": "https://arxiv.org/abs/2107.03374",
+    "url": "https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/",
     "what_it_broke": "First mass-market tool where an AI writes functional software inside developers' editors. Programming became the first profession transformed in daily practice.",
     "why_impossible": "Code generation was thought to need formal verification and syntax-aware design; a text predictor outperformed dedicated program synthesis systems.",
     "category": "applied-capability",
@@ -1705,7 +1770,8 @@
       "code",
       "copilot",
       "developer-tools"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2022-instructgpt-align-first",
@@ -1733,7 +1799,8 @@
       "instructgpt",
       "alignment-beats-scale",
       "chatgpt-precursor"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2022-chinchilla-compute-optimal",
@@ -1760,7 +1827,8 @@
       "scaling-laws",
       "compute-optimal",
       "deepmind"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2022-flashattention-exact",
@@ -1789,7 +1857,8 @@
       "tri-dao",
       "long-context",
       "systems"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2022-alphafold2-solved",
@@ -1804,7 +1873,7 @@
       "Kathryn Tunyasuvunakool"
     ],
     "paper": "\"Highly accurate protein structure prediction with AlphaFold\", Nature",
-    "url": "https://doi.org/10.1038/s41586-021-03819-2",
+    "url": "https://deepmind.google/discover/blog/alphafold-reveals-the-structure-of-the-protein-universe/",
     "what_it_broke": "Solved protein folding prediction at experimental accuracy and gave away ALL structures — 200 million of them, nearly every known protein. Structural biology compressed decades into a database query.",
     "why_impossible": "Levinthal's paradox implied folding prediction was computationally hopeless; CASP13 in 2018 still had mediocre results. Two years later the 50-year problem was DONE, and Nobel-level impact followed in 2024.",
     "category": "ai-for-science",
@@ -1815,7 +1884,8 @@
       "biology",
       "grand-challenge",
       "nobel"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2022-emergent-abilities-paper",
@@ -1842,7 +1912,8 @@
       "scaling",
       "phase-transition",
       "jason-wei"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2022-stable-diffusion-openweights",
@@ -1869,7 +1940,8 @@
       "diffusion",
       "open-weights",
       "latent-space"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2022-whisper-robust-asr",
@@ -1896,7 +1968,8 @@
       "speech-recognition",
       "open-weights",
       "accessibility"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "2022-chatgpt-moment",
@@ -1924,7 +1997,8 @@
       "rlhf",
       "mass-adoption",
       "alignment"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2023-llama-open-frontier",
@@ -1951,7 +2025,8 @@
       "open-weights",
       "leak",
       "fine-tuning"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2023-rlhf-alignment-scaling",
@@ -1980,7 +2055,8 @@
       "alignment",
       "constitutional-ai",
       "anthropic"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2023-gpt4-multimodal-reasoning",
@@ -2007,7 +2083,8 @@
       "reasoning",
       "exams",
       "multimodal"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2023-agents-tool-use",
@@ -2032,7 +2109,8 @@
       "tool-use",
       "function-calling",
       "autogpt"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2023-segment-anything-vision-foundation",
@@ -2060,7 +2138,8 @@
       "meta",
       "foundation-model",
       "promptable"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2024-alphageometry-olympiad",
@@ -2088,7 +2167,8 @@
       "olympiad",
       "neuro-symbolic",
       "proofs"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2024-mamba-state-space",
@@ -2113,7 +2193,8 @@
       "ssm",
       "linear-attention",
       "architecture-race"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2024-sora-video",
@@ -2139,7 +2220,8 @@
       "world-model",
       "sora",
       "diffusion-transformer"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2024-o1-reasoning-paradigm",
@@ -2166,7 +2248,8 @@
       "chain-of-thought",
       "test-time-compute",
       "reasoning"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2024-nobel-ai",
@@ -2194,7 +2277,8 @@
       "recognition",
       "hopfield",
       "alphafold"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2024-deepseek-v3-efficiency",
@@ -2220,7 +2304,8 @@
       "fp8",
       "cost-collapse",
       "export-controls"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2025-deepseek-r1-open-reasoning",
@@ -2246,7 +2331,8 @@
       "open-weights",
       "market-shock",
       "reasoning"
-    ]
+    ],
+    "tier": "huge"
   },
   {
     "id": "2025-agentic-coding-mainstream",
@@ -2273,7 +2359,8 @@
       "claude-code",
       "devin",
       "swe-bench"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2025-llm-jepa",
@@ -2301,7 +2388,8 @@
       "finetuning",
       "world-models",
       "lecun"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2025-china-open-weight-surge",
@@ -2330,7 +2418,8 @@
       "qwen3",
       "glm",
       "deepseek"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2025-gpt-oss-open-weights",
@@ -2355,7 +2444,8 @@
       "apache-2.0",
       "reasoning",
       "openai"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2026-rubin-inference-split",
@@ -2381,7 +2471,8 @@
       "inference",
       "hbm4",
       "hardware"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2026-wafer-scale-vindicated",
@@ -2408,7 +2499,8 @@
       "inference",
       "ipo",
       "hardware"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2026-open-weights-code-crown",
@@ -2436,7 +2528,8 @@
       "glm-5.2",
       "terminal-bench",
       "swe-bench"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2024-robot-foundation-models-vla",
@@ -2465,7 +2558,8 @@
       "gemini-robotics",
       "humanoids",
       "foundation-model"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2025-mai-dxo-medical-superintelligence",
@@ -2493,7 +2587,8 @@
       "nejm",
       "healthcare",
       "orchestration"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2025-isomorphic-ai-drugs-clinic",
@@ -2520,7 +2615,8 @@
       "isomorphic-labs",
       "clinical-trials",
       "medicine"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "2025-ai-weather-operational",
@@ -2548,7 +2644,8 @@
       "ecmwf",
       "climate",
       "operational-ai"
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2023-gnome-materials-discovery",
@@ -2575,7 +2672,8 @@
       "chemistry",
       "crystals",
       "autonomous-labs"
-    ]
+    ],
+    "tier": "minor"
   },
   {
     "id": "2026-breakthrough-as-scientists-use-ai-to-predict-how",
@@ -2615,7 +2713,7 @@
         ]
       }
     ],
-    "tier": "high"
+    "tier": "minor"
   },
   {
     "id": "2026-mathematicians-despair-as-ai-achieves-jaw-droppi",
@@ -2657,7 +2755,7 @@
         ]
       }
     ],
-    "tier": "high"
+    "tier": "minor"
   },
   {
     "id": "2026-ai-just-had-another-math-breakthrough-with-help",
@@ -2700,7 +2798,7 @@
         ]
       }
     ],
-    "tier": "high"
+    "tier": "minor"
   },
   {
     "id": "2026-intismeran-mrna-phase3",
@@ -2750,7 +2848,8 @@
           "https://www.nature.com/articles/d41586-026-02612-3"
         ]
       }
-    ]
+    ],
+    "tier": "high"
   },
   {
     "id": "2026-quantization-aware-healing-4bit-beats-bf16",
@@ -2773,7 +2872,7 @@
     "category": "efficiency-breakthrough",
     "impact": 7,
     "surprise": 6,
-    "tier": "high",
+    "tier": "minor",
     "tags": [
       "quantization",
       "distillation",
@@ -2802,7 +2901,7 @@
     "category": "applied-capability",
     "impact": 6,
     "surprise": 6,
-    "tier": "high",
+    "tier": "minor",
     "tags": [
       "accessibility",
       "sign-language",

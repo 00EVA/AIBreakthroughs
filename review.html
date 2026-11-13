@@ -118,7 +118,7 @@ let DATA=[],SORT={k:'comb',dir:-1};
 const LS_KEY='aib_decisions_v1';
 let DEC=JSON.parse(localStorage.getItem(LS_KEY)||'{}');
 const persist=()=>localStorage.setItem(LS_KEY,JSON.stringify(DEC));
-const tier=d=>{const s=d.impact+d.surprise;return s>=13?'HUGE':s>=11?'HIGH':'MINOR'};
+const tier=d=>{const s=d.impact+d.surprise;return (d.tier?d.tier.toUpperCase():(s>=18?'HUGE':s>=15?'HIGH':'MINOR'))};
 const verdictMeta={huge:['var(--gold)','★ Gold-tier verified'],high:['var(--ok)','✓ Verified keep'],remove:['var(--hot)','✖ Archived on export']};
 
 function decide(id,d){
