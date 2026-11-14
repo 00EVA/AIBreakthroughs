@@ -1153,5 +1153,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "METR / Redwood"
+  },
+  {
+    "id": "2026-science-prediction-universe",
+    "title": "Science Prediction Universe",
+    "url": "https://arxiv.org/abs/2611.15049",
+    "source": "arXiv cs.AI",
+    "date": "2026-11-14",
+    "snippet": "arXiv:2611.15049v1 Announce Type: new Abstract: Humanity has long sought to explain natural phenomena. Reliable prediction of experimental outcomes is a central test of our understanding of the processes that produce them. If artificial general intelligence (AGI) is to surpass human scientific capabilities, it must also predict experimental outcomes more reliably than humans. Such capabilities cou",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
