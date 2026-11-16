@@ -1175,5 +1175,27 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "OpenAI"
+  },
+  {
+    "id": "2026-nvidia-announces-collaboration-with-ibm-and-ferm",
+    "title": "NVIDIA Announces Collaboration With IBM and Fermi National Accelerator Laboratory to Launch Quantum-Classical Codesign Platform, Plus Error-Correction Breakthrough to Advance Practical Quantum Computing",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-announces-collaboration-with-ibm-and-fermi-national-accelerator-laboratory-to-launch-quantum-classical-codesign-platform-plus-error-correction-breakthrough-to-advance-practical-quantum-computing",
+    "source": "NVIDIA Newsroom",
+    "date": "2026-11-16",
+    "snippet": "NVIDIA today announced plans for new collaborations with IBM and the U.S. Department of Energy’s Fermi National Accelerator Laboratory that will span research into next-generation modular architectures for quantum computers, scientific applications and supercomputing integration.",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "NVIDIA"
+  },
+  {
+    "id": "2026-nvidia-expands-vera-cpu-platform-to-accelerate-s",
+    "title": "NVIDIA Expands Vera CPU Platform to Accelerate Scientific Discovery",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-expands-vera-cpu-platform-to-accelerate-scientific-discovery",
+    "source": "NVIDIA Newsroom",
+    "date": "2026-11-16",
+    "snippet": "NVIDIA today announced the NVIDIA Vera CPU rack-scale platform for high-performance computing — combining NVIDIA’s first fully custom data center CPU with the gold standard for HPC networking to drive extreme efficiency and throughput for state-of-the-art scientific modeling, simulation and agentic",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "NVIDIA"
   }
 ]
