@@ -1208,5 +1208,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Google DeepMind"
+  },
+  {
+    "id": "2026-openai-opens-its-ai-systems-to-four-independent",
+    "title": "OpenAI opens its AI systems to four independent on-site auditors for the first time",
+    "url": "https://the-decoder.com/openai-opens-its-ai-systems-to-four-independent-on-site-auditors-for-the-first-time/",
+    "source": "The Decoder",
+    "date": "2026-11-18",
+    "snippet": "<p><img width=\"1376\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/10/openai_logo-1.png\" class=\"attachment-full size-full wp-post-image\" alt=\"\" style=\"height: auto; margin-bottom: 10px;\" decoding=\"async\" /></p>\n<p>        OpenAI is giving four independent audit organizations, inc",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "OpenAI"
   }
 ]
