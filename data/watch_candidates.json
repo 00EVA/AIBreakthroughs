@@ -1219,5 +1219,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "OpenAI"
+  },
+  {
+    "id": "2026-language-models-can-rewrite-their-own-weights",
+    "title": "Language Models Can Rewrite Their Own Weights",
+    "url": "https://arxiv.org/abs/2611.21885",
+    "source": "arXiv cs.AI",
+    "date": "2026-11-19",
+    "snippet": "arXiv:2611.21885v2 Announce Type: new Abstract: A language model is trained once and frozen. Making it better takes another training run, or a prompt, a harness or extra computation at inference that is gone once the task ends. We show a third way: to our knowledge for the first time, a language model rewrites its own weights by its own reasoning and becomes better, with no gradients and no traini",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
