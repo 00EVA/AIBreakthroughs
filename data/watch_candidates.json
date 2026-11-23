@@ -1285,5 +1285,38 @@
     "impact": 6,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-correct-precedents-induce-policy-violations-in-o",
+    "title": "Correct Precedents Induce Policy Violations in On-Device LLM Agents",
+    "url": "https://arxiv.org/abs/2611.27216",
+    "source": "arXiv cs.CL",
+    "date": "2026-11-23",
+    "snippet": "arXiv:2611.27216v1 Announce Type: new Abstract: Local-cloud agent systems pair a cloud model with a small on-device agent that acts on private data, often as the last check before an irreversible action. We identify, for the first time, a failure in which such an agent is led into a violation by its own correct decisions within a session. After it correctly releases an item whose restriction was l",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-inkling-2-mini-2026-s-local-ai-outperforms-last",
+    "title": "Inkling 2 Mini: 2026’s local AI outperforms last year’s Claude - Techzine Global",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZVBnUmFiRUM4aWhrVzFSMzdJTXlBSjZ0eEU2Z0xfWFlkbUJ3ajZwMEVxQkdOQTJXaDB5T3J0M3hpWDVlM201Q1NvNlJ6WERPRmVlajNsOGZ6T2JkUlluTGJvOEtvVDVMRHNhREhkR251OG5KbkUtY0NyeVU0Um1hSWxSVHRrQ3hnWUpTQXBYZDlfR09HVHZlQWZfdG8tMWNJQWJ4aFRLUGRnRkVXN1E",
+    "source": "Google News",
+    "date": "2026-11-23",
+    "snippet": "Inkling 2 Mini: 2026’s local AI outperforms last year’s Claude&nbsp;&nbsp;Techzine Global",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Anthropic"
+  },
+  {
+    "id": "2026-inkling-2-mini-2026-s-local-ai-outperforms-last",
+    "title": "Inkling 2 Mini: 2026’s local AI outperforms last year’s Claude - Techzine Global",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZVBnUmFiRUM4aWhrVzFSMzdJTXlBSjZ0eEU2Z0xfWFlkbUJ3ajZwMEVxQkdOQTJXaDB5T3J0M3hpWDVlM201Q1NvNlJ6WERPRmVlajNsOGZ6T2JkUlluTGJvOEtvVDVMRHNhREhkR251OG5KbkUtY0NyeVU0Um1hSWxSVHRrQ3hnWUpTQXBYZDlfR09HVHZlQWZfdG8tMWNJQWJ4aFRLUGRnRkVXN1E",
+    "source": "Google News",
+    "date": "2026-11-23",
+    "snippet": "Inkling 2 Mini: 2026’s local AI outperforms last year’s Claude&nbsp;&nbsp;Techzine Global",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Anthropic"
   }
 ]
