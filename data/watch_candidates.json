@@ -1351,5 +1351,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-worldlatent-a-unified-4d-latent-space-for-world",
+    "title": "WorldLatent: A Unified 4D Latent Space for World Perception and Generation",
+    "url": "https://huggingface.co/papers/2611.31209",
+    "source": "HF daily papers",
+    "date": "2026-11-23",
+    "snippet": "Generative Pre-Training (GPT) represents a profound milestone in natural language processing, serving as the foundation for most of today's state-of-the-art large language models. By casting diverse understanding and generation problems into a shared token representation, GPT enables a single archit",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
