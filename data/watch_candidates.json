@@ -1362,5 +1362,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-pretrained-tabular-features-and-the-measurement",
+    "title": "Pretrained Tabular Features and the Measurement of Financial Proximity",
+    "url": "https://huggingface.co/papers/2611.31491",
+    "source": "HF daily papers",
+    "date": "2026-11-23",
+    "snippet": "Spatial arbitrage pricing theory (S-APT) extends factor models to allow returns to spill over between connected firms, beyond what common risk factors explain. In recent years, tabular foundation models (TFMs) have matched or outperformed tuned gradient-boosted and bagged ensembles on small and medi",
+    "impact": 7,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
