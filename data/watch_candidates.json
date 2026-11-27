@@ -1373,5 +1373,16 @@
     "impact": 7,
     "surprise": 6,
     "org_hint": "Unattributed"
+  },
+  {
+    "id": "2026-show-hn-place-ai-and-math-breakthroughs-on-a-tim",
+    "title": "Show HN: Place AI and math breakthroughs on a timeline vs. Scott Aaronson",
+    "url": "https://youraitimelines.com/",
+    "source": "Hacker News",
+    "date": "2026-11-27",
+    "snippet": "Saw the Polylog × Scott Aaronson video <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=0xa_JFSUEDg\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=0xa_JFSUEDg</a> and thought it would be cool to see other people&#x27;s ideas and timelines.<p>Would be good to get thoughts and c",
+    "impact": 6,
+    "surprise": 6,
+    "org_hint": "Unattributed"
   }
 ]
